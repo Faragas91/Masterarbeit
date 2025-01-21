@@ -1,0 +1,101 @@
+NEIGHBOURHOOD = "neighbourhoods/bsubtilis401.nei"
+TREE = "trees/alina.tree"
+
+# Parameters for sequence creation. TODO -> Read in the parameters via a file
+FREQUENCIES_SINGLE = "0.422360 0.105590 0.236025 0.236025"
+FREQUENCIES_DOUBLE = "0.000423 0.004228 0.012685 0.169133 0.004228 0.000423 0.262156 0.000423 0.012685 0.262156 0.000423 0.042283 0.169133 0.000423 0.042283 0.016915"
+
+POS_SAMPLES = ["pos_sample"]
+NEG_SAMPLES = ["neg_sample_SISSIzV3_monoShuffled", "neg_sample_SISSIzV3_diShuffled", 
+			   "neg_sample_multiperm", 
+			   "neg_sample_ALIFOLDz", ]
+
+#PRED_TOOLS = ["SISSIz", "RNAz", "EvoFold"]
+PRED_TOOLS = ["SISSIz"]
+
+# Setting path or command to corresponding tool. Can be adjusted here according to server or environment
+SISSI = "~/Masterarbeit/tools/sissi/sissi099"
+SISSIZV1 = "~/tools/SISSIzV1"
+SISSIZV3 = "~/Masterarbeit/tools/sissiz_v3/src/SISSIz"
+#EVOFOLD = "EvoFoldV2.sh"
+ALIFOLDZ = "perl ~/Masterarbeit/tools/shuffle-aln.pl"
+#RNAZ = "RNAz"
+MULTIPERM = "~/Masterarbeit/tools/multiperm-0.9.4/multiperm"
+#CONVERTER = "~/tools/cluTOama_conv.py"
+
+# Use config file for setting ranges
+configfile: "snakemake_config.json"
+
+
+# Two different expand() commands needed for pos- and neg-samples, as different amount of pos- and neg-samples will be generated.
+rule all:
+	input:
+		# Expand for negative samples
+		expand("starphy2.0/predictions_{pred_tool}/{sample}_{pos_index}_{neg_index}.txt",
+			   pred_tool = PRED_TOOLS,
+               sample = NEG_SAMPLES,
+			   pos_index = range(config["POS_ITER_START"], config["POS_ITER_END"]),
+			   neg_index = range(0, config["NEG_ITER"])),
+
+		# Expand for positive samples
+		expand("starphy2.0/predictions_{pred_tool}/pos_sample_{pos_index}.txt",
+			   pred_tool = PRED_TOOLS,
+			   pos_index = range(config["POS_ITER_START"], config["POS_ITER_END"]))
+
+
+# STEP 1 - GENERATING POS SAMPLE
+rule generatePosSample:
+	input:
+		nn = NEIGHBOURHOOD,
+		tree = TREE
+	output: "starphy2.0/samples/pos_sample_{pos_index}.clu"
+	resources: sissi=1
+	#priority: 80
+	shell: "{SISSI} -fs {FREQUENCIES_SINGLE} -fd {FREQUENCIES_DOUBLE} -nn {input.nn} -l401 {input.tree} -oc -d > {output} && sleep 1"
+
+
+# STEP 2 - GENERATING NEG SAMPLE WITH SISSIz V3 
+rule generateNegativeSampleSISSIzV3:
+	input: "starphy2.0/samples/pos_sample_{pos_index}.clu"
+	output: 
+		mono = "starphy2.0/samples/neg_sample_SISSIzV3_monoShuffled_{pos_index}_{neg_index}.clu",
+		di = "starphy2.0/samples/neg_sample_SISSIzV3_diShuffled_{pos_index}_{neg_index}.clu"
+	#priority: 90
+	shell: 
+		"""
+		{SISSIZV3} -s -i {input} > {output.mono}
+		{SISSIZV3} -s {input} > {output.di}
+		"""
+
+# STEP 3 - GENERATING NEG SAMPLE WITH MULTIPERM AND ALN-SHUFFLE
+rule generateNegativeSampleMultipermAndALIFOLDz:
+	input: "starphy2.0/samples/pos_sample_{pos_index}.clu"
+	output: 
+		multiperm = "starphy2.0/samples/neg_sample_multiperm_{pos_index}_{neg_index}.clu",
+		alifoldz  = "starphy2.0/samples/neg_sample_ALIFOLDz_{pos_index}_{neg_index}.clu"
+	resources: negative = 1
+	#priority: 110
+	shell: 
+		"""
+		{MULTIPERM} -w {input} && mv perm_001_pos_sample_*.clu {output.multiperm}
+		{ALIFOLDZ} < {input} > {output.alifoldz} && sleep 1
+		"""
+
+
+# STEP 5 - PREDICTIONS
+rule predictAll:
+	input: "starphy2.0/samples/{sample}_{pos_index}_{neg_index}.clu"
+	output: 
+		sissiz = "starphy2.0/predictions_SISSIz/{sample}_{pos_index}_{neg_index}.txt",
+		#rnaz   = "starphy2.0/predictions_RNAz/{sample}_{pos_index}_{neg_index}.txt",
+		#evofold = "starphy2.0/predictions_EvoFold/{sample}_{pos_index}_{neg_index}.txt"
+	#priority: 100
+	shell: 
+		"""
+		{SISSIZV3} --sci {input} >> {output.sissiz}
+		#{RNAZ} -n {input} >> {output.rnaz}
+		#{CONVERTER} -i {input} -o starphy2.0/samples/{wildcards.sample}_{wildcards.pos_index}_{wildcards.neg_index}.ama
+		{SISSIZV3} -b -s {input} > /dev/null && mv {wildcards.sample}_{wildcards.pos_index}_{wildcards.neg_index}.tree starphy2.0/samples/{wildcards.sample}_{wildcards.pos_index}_{wildcards.neg_index}.tree
+		sed -i 's/-//' starphy2.0/samples/{wildcards.sample}_{wildcards.pos_index}_{wildcards.neg_index}.tree
+		#{EVOFOLD} -f {output.evofold} starphy2.0/samples/{wildcards.sample}_{wildcards.pos_index}_{wildcards.neg_index}.ama starphy2.0/samples/{wildcards.sample}_{wildcards.pos_index}_{wildcards.neg_index}.tree
+		"""

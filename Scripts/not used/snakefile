@@ -1,0 +1,151 @@
+NEIGHBOURHOOD = "neighbourhoods/bsubtilis401.nei"
+TREE = "trees/alina.tree"
+
+# How often the pipeline should run with the given Neighbourhood and Tree files
+ITER_POS = 100
+ITER_PRED = 1000
+
+# Parameters for sequence creation. TODO -> Read in the parameters via a file
+FREQUENCIES_SINGLE = "0.422360 0.105590 0.236025 0.236025"
+FREQUENCIES_DOUBLE = "0.000423 0.004228 0.012685 0.169133 0.004228 0.000423 0.262156 0.000423 0.012685 0.262156 0.000423 0.042283 0.169133 0.000423 0.042283 0.016915"
+
+POS_SAMPLES = ["pos_sample"]
+NEG_SAMPLES = ["neg_sample_SISSIz", "neg_sample_multiperm", "neg_sample_ALIFOLDz"]
+
+# Setting path or command to corresponding tool. Can be adjusted here according to server or environment
+SISSI = "mnt/d/Masterarbeit/tools/sissi/sissi099"
+SISSIZ = "mnt/d/Masterarbeit/tools/sissiz_v3/src/SISSIz"
+ALIFOLDZ = "perl mnt/d/Masterarbeit/tools/shuffle-aln.pl"
+MULTIPERM = "mnt/d/Masterarbeit/tools/multiperm-0.9.4/multiperm"
+RNAZ = "mnt/d/Masterarbeit/tools/RNAz-2.1.1/rnaz/RNAz"
+
+# Safety precautions to ensure all wildcards can only carry numerical values
+wildcard_constraints:
+    prediction_index="\d+",
+    sample_index="\d+"
+
+# Two different expand() commands needed for pos- and neg-samples, as different amount of pos- and neg-samples will be generated.
+# prediction_index of pos-samples has to be hacked to be 0 in order do work with snakemake.
+rule all:
+    input:
+        # Expand for negative samples predicted by SISSIz
+        expand("pos_GV/predictions_SISSIz/{sample}_{sample_index}_{prediction_index}.txt",
+                sample=NEG_SAMPLES, 
+                sample_index = range(0, ITER_POS),
+                prediction_index = range(0, ITER_PRED)),
+        
+        # Expand for positive samples predicted by SISSIz
+        expand("pos_GV/predictions_SISSIz/{sample}_{sample_index}_{prediction_index}.txt",
+                sample=POS_SAMPLES, 
+                sample_index = range(0, ITER_POS),
+                prediction_index = 0),
+
+        # Expand for negative samples predicted by RNAz
+        expand("pos_GV/predictions_RNAz/{sample}_{sample_index}_{prediction_index}.txt", 
+                sample=NEG_SAMPLES,
+                sample_index = range(0, ITER_POS),
+                prediction_index = range(0, ITER_PRED)),
+
+        # Expand for positive samples predicted by RNAz
+        expand("pos_GV/predictions_RNAz/{sample}_{sample_index}_{prediction_index}.txt", 
+                sample=POS_SAMPLES,
+                sample_index = range(0, ITER_POS),
+                prediction_index = 0),
+        
+rule onlyShuffle01:
+    input:
+	# Expand for mononucleotide shuffled samples from SISSIz
+        expand("pos_GV/samples/neg_sample_SISSIz_monoShuffled_{sample_index}_{prediction_index}.clu",
+		sample_index = range(0, ITER_POS),
+		prediction_index = range(0, ITER_PRED))
+
+rule onlyShuffle02:
+    input:
+	# Expand for dinucleotide shuffled samples from SISSIz
+        expand("pos_GV/samples/neg_sample_SISSIz_diShuffled_{sample_index}_{prediction_index}.clu",
+	       sample_index = range(0, ITER_POS),
+	       prediction_index = range(0, ITER_PRED))
+
+rule onlyShuffle03:
+    input:
+	# Expand for mononucleotide shuffled samples from shuffle-aln.pl
+        expand("pos_GV/samples/neg_sample_ALIFOLDz_{sample_index}_{prediction_index}.clu",
+	       sample_index = range(0, ITER_POS),
+	       prediction_index = range(0, ITER_PRED))
+
+rule onlyShuffle04:
+    input:
+	# Expand for dinucleotide shuffled samples from multiperm
+        expand("pos_GV/samples/neg_sample_multiperm_{sample_index}_{prediction_index}.clu",
+	       sample_index = range(0, ITER_POS),
+	       prediction_index = range(0, ITER_PRED))
+
+rule onlyPos:
+    input:
+	# Expand for generation of positive samples
+        expand("pos_GV/samples/pos_sample_{sample_index}_0.clu",
+	       sample_index = range(0, ITER_POS))
+
+rule getDNContent:
+    input:
+	# Expand for generation of positive samples
+        expand("pos_GV/dinucleotide_content/pos_sample_{sample_index}_0.txt",
+	       sample_index = range(0, ITER_POS))
+
+# STEP 1 - GENERATING POS SAMPLE TODO -> Wait two seconds between execution
+rule generatePosSample: 
+    input:
+        nn = NEIGHBOURHOOD,
+        tree = TREE
+    output: "pos_GV/samples/pos_sample_{sample_index}_0.clu"
+    resources: sissi=1
+    shell: "{SISSI} -fs {FREQUENCIES_SINGLE} -fd {FREQUENCIES_DOUBLE} -nn {input.nn} -l401 {input.tree} -oc -d > {output} && sleep 2"
+
+# STEP 2 - GENERATING NEG SAMPLE WITH SISSIz (currently: dinucleotide shuffling -> missing -i)
+rule generateNegativeSampleSISSIz:
+    input: "pos_GV/samples/pos_sample_{sample_index}_0.clu"
+    output: "pos_GV/samples/neg_sample_SISSIz_{sample_index}_{prediction_index}.clu"
+    shell: "{SISSIZ} -s {input} > {output}"
+
+# STEP 2.1 - GENERATING NEG SAMPLES WITH SISSIz (mononucleotide shuffling)
+rule generateNegativeSamplesSISSIz_mononucleotideShuffling:
+    input: "pos_GV/samples/pos_sample_{sample_index}_0.clu"
+    output: "pos_GV/samples/neg_sample_SISSIz_monoShuffled_{sample_index}_{prediction_index}.clu"
+    shell: "{SISSIZ} -s -i {input} > {output}"
+
+# STEP 2.2 - GENERATING NEG SAMPLES WITH SISSIz (dinucleotide shuffling)
+rule generateNegativeSamplesSISSIz_dinucleotideShuffling:
+    input: "pos_GV/samples/pos_sample_{sample_index}_0.clu"
+    output: "pos_GV/samples/neg_sample_SISSIz_diShuffled_{sample_index}_{prediction_index}.clu"
+    shell: "{SISSIZ} -s {input} > {output}"
+
+# STEP 3 - GENERATING NEG SAMPLE WITH MULTIPERM
+rule generateNegativeSampleMultiperm:
+    input: "pos_GV/samples/pos_sample_{sample_index}_0.clu"
+    output: "pos_GV/samples/neg_sample_multiperm_{sample_index}_{prediction_index}.clu"
+    resources: multiperm = 1
+    shell: "{MULTIPERM} -w {input} && mv perm_001_pos_sample_*.clu {output}"
+
+# STEP 4 - GENERATING NEG SAMPLE WITH ALIFOLDz
+rule generateNegativeSampleALIFOLDz:
+    input: "pos_GV/samples/pos_sample_{sample_index}_0.clu"
+    output: "pos_GV/samples/neg_sample_ALIFOLDz_{sample_index}_{prediction_index}.clu"
+    resources: alifoldz = 1
+    shell: "{ALIFOLDZ} < {input} > {output}"
+
+# STEP 5 - PREDICTIONS USING SISSIz
+rule predictUsingSISSIz:
+    input: "pos_GV/samples/{sample}_{sample_index}_{prediction_index}.clu"
+    output: "pos_GV/predictions_SISSIz/{sample}_{sample_index}_{prediction_index}.txt"
+    shell: "{SISSIZ} --sci {input} >> {output}"
+
+# STEP 6 - PREDICTIONS USING RNAz
+rule predictUsingRNAz:
+    input: "pos_GV/samples/{sample}_{sample_index}_{prediction_index}.clu"
+    output: "pos_GV/predictions_RNAz/{sample}_{sample_index}_{prediction_index}.txt"
+    shell: "{RNAZ} -n {input} >> {output}"
+
+rule calcDNContent:
+    input: "pos_GV/samples/pos_sample_{sample_index}_0.clu"
+    output: "pos_GV/dinucleotide_content/pos_sample_{sample_index}_0.txt"
+    shell: "{SISSIZ} -s -v {input} > {output}"
