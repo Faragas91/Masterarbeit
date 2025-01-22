@@ -1,4 +1,3 @@
-SISSIz_mono runtime for iteration 1:  seconds
 SISSIz_mono runtime for iteration 1: 141.110147080 seconds
 SISSIz_di runtime for iteration 1: 197.609135799 seconds
 Multiperm_mono runtime for iteration 1: 12.022661586 seconds
