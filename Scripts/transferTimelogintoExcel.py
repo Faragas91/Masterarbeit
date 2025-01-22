@@ -149,8 +149,8 @@ def plot_scatter(values, name):
 
         # Achsentitel und Beschriftungen
         plt.title(name, fontsize=16)
-        plt.xlabel("Index", fontsize=14)
-        plt.ylabel("Wert", fontsize=14)
+        plt.xlabel("1000 negative Samples for 1 positiv Sample", fontsize=14)
+        plt.ylabel("Time (seconds)", fontsize=14)
 
         # Gitternetz hinzufügen
         plt.grid(True, linestyle='--', alpha=0.7)
