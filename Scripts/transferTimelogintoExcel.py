@@ -25,8 +25,10 @@ for i in file:
     elif i.startswith("AliFoldz"):
         alifoldz.append(float(i.split()[5]))
 
-# Box Plot
+########################################################################
+########################################################################
 
+# Box Plot
 methods = {
     "SISSIz_mono": sissiz_mono,
     "SISSIz_di": sissiz_di,
@@ -49,8 +51,10 @@ for i, (name, data) in enumerate(methods.items(), start=1):
 plt.tight_layout()
 plt.show()
 
+################################################################
+################################################################
 
-# Bar Chart
+# Bar Chart 1
 # Average
 mean_times = [
     np.mean(sissiz_mono),
@@ -60,6 +64,7 @@ mean_times = [
     np.mean(alifoldz),
 ]
 
+# Maximum 
 max_times = [
     np.max(sissiz_mono),
     np.max(sissiz_di),
@@ -68,6 +73,7 @@ max_times = [
     np.max(alifoldz),
 ]
 
+# Minimum
 min_times = [
     np.min(sissiz_mono),
     np.min(sissiz_di),
@@ -94,10 +100,82 @@ plt.xticks(x, labels, fontsize=10)
 plt.legend(fontsize=10)
 plt.grid(True, which="both", linestyle="--", linewidth=0.5, alpha=0.7)
 plt.tight_layout()
+plt.show()
 
+################################################################
+################################################################
+
+# Bar Chart 2
+# Total Time
+total_times = [
+    sum(sissiz_mono),
+    sum(sissiz_di),
+    sum(multiperm_mono),
+    sum(multiperm_di),
+    sum(alifoldz),
+]
+
+labels = ["SISSIz_mono", "SISSIz_di", "Multiperm_mono", "Multiperm_di", "AliFoldz"]
+
+plt.figure(figsize=(10, 6))
+bars = plt.bar(labels, total_times, color=['skyblue', 'lightgreen', 'orange', 'pink', 'violet'])
+
+for bar, total_time in zip(bars, total_times):
+    plt.text(
+        bar.get_x() + bar.get_width() / 2,  
+        bar.get_height(),                 
+        f"{total_time:.1f}",              
+        ha="center", va="bottom",          
+        fontsize=10, color="black"         
+    )
+
+plt.ylabel("Total Time (seconds)", fontsize=12)
+plt.title("Total Time for Generating Negative Samples", fontsize=14)
+plt.grid(axis='y', linestyle="--", linewidth=0.5, alpha=0.7)
+
+plt.tight_layout()
 plt.show()
 
 
+# Scatter Plot
+def plot_scatter(values, name):
+
+        x = np.arange(len(values))
+
+        # Plot erstellen
+        plt.figure(figsize=(14, 8))
+        plt.plot(x, values, marker='o', color='skyblue', label="Value progression")
+        plt.scatter(x, values, color='darkblue', label="Individual values")
+
+        # Achsentitel und Beschriftungen
+        plt.title(name, fontsize=16)
+        plt.xlabel("Index", fontsize=14)
+        plt.ylabel("Wert", fontsize=14)
+
+        # Gitternetz hinzufügen
+        plt.grid(True, linestyle='--', alpha=0.7)
+
+        # Legende anzeigen
+        plt.legend(fontsize=12)
+
+        # Plot anzeigen
+        plt.tight_layout()
+        plt.show()
+
+# Scatter Plot für SISSIz_mono
+plot_scatter(sissiz_mono, "SISSIz_mono",)
+
+# Scatter Plot für SISSIz_di
+plot_scatter(sissiz_di, "SISSIz_di")
+
+# Scatter Plot für Multiperm_mono
+plot_scatter(multiperm_mono, "Multiperm_mono")
+
+# Scatter Plot für Multiperm_di
+plot_scatter(multiperm_di, "Multiperm_di")
+
+# Scatter Plot für AliFoldz
+plot_scatter(alifoldz, "AliFoldz")
 
 
 
