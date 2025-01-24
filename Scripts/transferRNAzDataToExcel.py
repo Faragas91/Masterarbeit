@@ -5,7 +5,6 @@ import pandas as pd
 # Function to parse the RNAz file
 def parse_rnaz_file(file_path):
     data = {}
-    warnings = []
 
     # Read every line in the .txt file
     with open(file_path, 'r') as file:
@@ -26,7 +25,7 @@ def createExcelData(data, count, nameOfFile, excelName):
     for file_name in os.listdir(directory):
         if file_name.startswith(nameOfFile):
             count += 1
-            print(f"Verarbeite Datei {count}: {file_name}")
+            print(f"Process file {count}: {file_name}")
             file_path = os.path.join(directory, file_name)
             file_data = parse_rnaz_file(file_path)
             file_data["File"] = file_name  
