@@ -1,0 +1,2 @@
+sissiz-di	/home/slais/Masterarbeit/SAMPLES/neg_sample_SISSIz_mono_output_51_265.clu	78	401	0.8753	0.8647	0.0044	0.1070	0.5474	-14.45	-10.18	4.22	-1.01
+sissiz-di	/home/slais/Masterarbeit/SAMPLES/neg_sample_SISSIz_mono_output_51_265.clu	78	401	0.8753	0.8647	0.0044	0.1070	0.5474	-14.45	-10.18	4.22	-1.01
