@@ -1,0 +1,13 @@
+1. Model name (either "sissiz-mono" or "sissiz-di")
+2. Name of the input le
+3. Number of sequences in the input alignment
+4. Length of alignment
+5. Mean Pairwise Identity (MPI) of the input alignment
+6. Average MPI of the sampled alignments.
+7. Standard deviation of the MPIs of the sampled alignments
+8. Structural Conservation Index (SCI)
+9. GC-Content
+10. RNAalifold consensus Minimum Free Energy (MFE) of the original alignment.
+11. Average consensus MFE in the sampled alignments
+12. Standard deviation of the consensus MFE in the sampled alignments
+13. z-score calculated from 7. 8. and 9.

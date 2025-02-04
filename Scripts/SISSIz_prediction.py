@@ -2,18 +2,19 @@ import os
 import subprocess
 from concurrent.futures import ProcessPoolExecutor, as_completed
 import time
+import threading
 
 # Define variables
 SISSIz = "/home/slais/Masterarbeit/tools/sissiz_v3/src/SISSIz"
-SAMPLES_CLUSTAL = "/home/slais/Masterarbeit/SAMPLES_CLUSTAL"
+SAMPLES = "/home/slais/Masterarbeit/SAMPLES"
 SISSIz_PRE_OUTPUT = "/home/slais/Masterarbeit/SISSIz_PREDICTION"
-NUM_CORES = 12  # Number of CPU cores to use
+NUM_CORES = 24  # Number of CPU cores to use
 
 # Make sure the executables have the necessary permissions
 os.chmod(SISSIz, 0o755)
 
 # Create the output directories if they don't exist
-os.makedirs(SAMPLES_CLUSTAL, exist_ok=True)
+os.makedirs(SAMPLES, exist_ok=True)
 os.makedirs(SISSIz_PRE_OUTPUT, exist_ok=True)
 
 # Function to run a command and return the output
@@ -33,19 +34,34 @@ def process_file_sissiz(file):
         print(f"{output_file} already exists, skipping...")
     else:
         # Run SISSIz prediction
-        run_command(f"{SISSIz} --sci {os.path.join(SAMPLES_CLUSTAL, file)} >> {output_file}")
+        run_command(f"{SISSIz} --sci {os.path.join(SAMPLES, file)} >> {output_file}")
         print(f"{output_file} finished")
-
+        
 # Start time measurement
 start_time = time.time()
 start_time_str = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(start_time))
 print(f"Script started at: {start_time_str}")
 
-# Run SISSIz predictions for all SAMPLES_CLUSTAL in parallel
+count = 0
+lock = threading.Lock()
+
+def increment_count():
+    global count
+    with lock():
+        count += 1
+        if count % 1000 == 0:
+            elapsed_time = time.time() - start_time
+            print(f"Processed {count} files in {elapsed_time:.2f} seconds")
+
+
+# Run SISSIz predictions for all samples in parallel
 with ProcessPoolExecutor(max_workers=NUM_CORES) as executor:
-   futures = [executor.submit(process_file_sissiz, file) for file in os.listdir(SAMPLES_CLUSTAL) if file.endswith(".clu")]
+   futures = [executor.submit(process_file_sissiz, file) for file in os.listdir(SAMPLES) if file.endswith(".clu")]
    for future in as_completed(futures):
        future.result()
+       increment_count()
+
+print("\nProcessing completed.")
 
 # End time measurement
 end_time = time.time()
