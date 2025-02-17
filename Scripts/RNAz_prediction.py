@@ -58,7 +58,7 @@ with ProcessPoolExecutor(max_workers=NUM_CORES) as executor:
    futures = [executor.submit(process_file_rnaz, file) for file in os.listdir(SAMPLES) if file.endswith(".clu")]
    for future in as_completed(futures):
        future.result()
-       increment_count()  # Zähler erhöhen und ausgeben
+       increment_count()
 
 # End time measurement
 end_time = time.time()

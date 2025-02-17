@@ -28,15 +28,15 @@ def run_command(command):
 def process_file_sissiz(file):
     basename = os.path.splitext(file)[0]
     output_file = os.path.join(SISSIz_PRE_OUTPUT, f"{basename}.txt")
-        
+    
     # Check if output file already exists
     if os.path.isfile(output_file):
-        print(f"{output_file} already exists, skipping...")
+       print(f"{output_file} already exists, skipping...")
     else:
         # Run SISSIz prediction
-        run_command(f"{SISSIz} --sci {os.path.join(SAMPLES, file)} >> {output_file}")
+        run_command(f"{SISSIz} --sci {os.path.join(SAMPLES, file)} > {output_file}")
         print(f"{output_file} finished")
-        
+
 # Start time measurement
 start_time = time.time()
 start_time_str = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(start_time))
@@ -47,21 +47,18 @@ lock = threading.Lock()
 
 def increment_count():
     global count
-    with lock():
+    with lock:
         count += 1
         if count % 1000 == 0:
             elapsed_time = time.time() - start_time
             print(f"Processed {count} files in {elapsed_time:.2f} seconds")
 
-
-# Run SISSIz predictions for all samples in parallel
+# Run SISSIz predictions for all SAMPLES_CLUSTAL in parallel
 with ProcessPoolExecutor(max_workers=NUM_CORES) as executor:
    futures = [executor.submit(process_file_sissiz, file) for file in os.listdir(SAMPLES) if file.endswith(".clu")]
    for future in as_completed(futures):
        future.result()
        increment_count()
-
-print("\nProcessing completed.")
 
 # End time measurement
 end_time = time.time()
