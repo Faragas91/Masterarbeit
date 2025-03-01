@@ -19,7 +19,7 @@ os.makedirs(RNAz_PRE_OUTPUT, exist_ok=True)
 
 # Function to run a command and return the output
 def run_command(command):
-    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, , universal_newlines=True)
+    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
     stdout, stderr = process.communicate()
     if process.returncode != 0:
         print(f"Error running command: {command}\n{stderr}")
@@ -73,6 +73,6 @@ print(f"\nScript finished at: {end_time_str}")
 print(f"Total execution time: {execution_time:.2f} seconds")
 
 # Save final execution time to file
-with open("execution_time.log", "a") as log_file:
+with open("rnaz_execution_time.log", "a") as log_file:
     log_file.write(f"\nScript finished at: {end_time_str}\n")
     log_file.write(f"Total execution time: {execution_time:.2f} seconds\n")

@@ -1,17 +1,17 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-timefile = open("C:/bla/Waste/MA/Data/check.log", "r")
+timefile = open("D:/Masterarbeit_programmieren/Data/execution_time.log", "r")
 file = timefile.readlines()
 
 processedFiles = []
 usedSeconds = []
 
 for line in file:
-    if line.startswith("Verarbeitet"): 
+    if line.startswith("Processed"): 
         newLines = line.split()
         processedFiles.append(newLines[1])
-        usedSeconds.append(float(newLines[6]))
+        usedSeconds.append(float(newLines[4]))
 
 newListUsedSeconds = []
 

@@ -73,6 +73,6 @@ print(f"\nScript finished at: {end_time_str}")
 print(f"Total execution time: {execution_time:.2f} seconds")
 
 # Save final execution time to file
-with open("execution_time.log", "a") as log_file:
+with open("sissiz_execution_time.log", "a") as log_file:
     log_file.write(f"\nScript finished at: {end_time_str}\n")
     log_file.write(f"Total execution time: {execution_time:.2f} seconds\n")
