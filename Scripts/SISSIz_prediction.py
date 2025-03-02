@@ -52,7 +52,7 @@ def increment_count():
         if count % 1000 == 0:
             elapsed_time = time.time() - start_time
             print(f"Processed {count} files in {elapsed_time:.2f} seconds")
-            with open("execution_time.log", "a") as log_file:
+            with open("sissiz_execution_time.log", "a") as log_file:
                 log_file.write(f"Processed {count} files in {elapsed_time:.2f} seconds\n")
 
 # Run SISSIz predictions for all samples in parallel
