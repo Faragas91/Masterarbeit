@@ -28,10 +28,11 @@ function show_progress {
 #################################
 ########## SISSIz_mono ##########
 #################################
+file_step=0
 
     # Loop to generate 100000 SISSIz mononucleotide samples for each SISSI sample
     for z in $(seq 1 $ITER_NEG); do
-        file_step=0
+
         SISSIz_mono_OUTPUT="$NEGATIVE_SAMPLES/neg_sample_SISSIz_mono_output_${z}.clu"
 
         if [ ! -f "$SISSIz_mono_OUTPUT" ]; then
@@ -45,11 +46,11 @@ function show_progress {
         ((file_step++))
         show_progress
 
-        if [ "$file_step" -eq 1000 ]; then
-            timestamp=$(date +"%Y-%m-%d %H:%M:%S")
-            echo "SISSIz_mono for 1000 negativ Samples runtime: $timestamp seconds"
-            file_step=0
-        fi
+    if (( file_step % 1000 == 0 )); then
+        timestamp=$(date +"%H:%M:%S")
+        echo "SISSIz_mono: $file_step negative Samples finished at $timestamp"
+        echo "SISSIz_mono: $file_step negative Samples finished at $timestamp" >> sissiz_mono_process.txt
+    fi
     done
 
     #################################
@@ -58,7 +59,6 @@ function show_progress {
 
     # Loop to generate 100000 SISSIz dinucleotide samples for each SISSI sample
     for v in $(seq 1 $ITER_NEG); do
-        file_step=0
         SISSIz_di_OUTPUT="$NEGATIVE_SAMPLES/neg_sample_SISSIz_di_output_${v}.clu"
 
         if [ ! -f "$SISSIz_di_OUTPUT" ]; then
@@ -72,10 +72,10 @@ function show_progress {
         ((file_step++))
         show_progress
 
-        if [ "$file_step" -eq 1000 ]; then
-            timestamp=$(date +"%Y-%m-%d %H:%M:%S")
-            echo "SISSIz_di for 1000 negativ Samples runtime: $timestamp seconds"
-            file_step=0
+        if (( file_step % 1000 == 0 )); then
+            timestamp=$(date +"%H:%M:%S")
+            echo "SISSIz_di: $file_step negative Samples finished at $timestamp"
+            echo "SISSIz_di: $file_step negative Samples finished at $timestamp" >> sissiz_di_process.txt
         fi
     done
 
@@ -86,12 +86,11 @@ function show_progress {
 
     # Loop to generate Multiperm mononucleotide samples
     for m in $(seq 1 $ITER_NEG); do
-        file_step=0
         MULTIPERM_mono_OUTPUT="$NEGATIVE_SAMPLES/neg_sample_MULTIPERM_mono_output_${m}.clu"
 
         if [ ! -f "$MULTIPERM_mono_OUTPUT" ]; then
             # Run Multiperm command
-            "$MULTIPERM" -w --conservation=none "$POSITIVE_SAMPLES" && mv perm_001_pos_sample_*.clu "$MULTIPERM_mono_OUTPUT"
+            "$MULTIPERM" -w --conservation=none "$POSITIVE_SAMPLES" && mv perm_001_bacillus_subtilis_Rfam*.clu "$MULTIPERM_mono_OUTPUT"
             echo "$MULTIPERM_mono_OUTPUT finished"
         else 
             echo "$MULTIPERM_mono_OUTPUT already exists, skipping..."
@@ -100,10 +99,10 @@ function show_progress {
         ((file_step++))
         show_progress
 
-        if [ "$file_step" -eq 1000 ]; then
-            timestamp=$(date +"%Y-%m-%d %H:%M:%S")
-            echo "Multiperm_mono for 1000 negativ Samples runtime: $timestamp seconds"
-            file_step=0
+        if (( file_step % 1000 == 0 )); then
+            timestamp=$(date +"%H:%M:%S")
+            echo "MULTIPERM_mono: $file_step negative Samples finished at $timestamp"
+            echo "MULTIPERM_mono: $file_step negative Samples finished at $timestamp" >> multiperm_mono_process.txt
         fi
     done
 
@@ -113,12 +112,11 @@ function show_progress {
 
     # Loop to generate Multiperm dinucleotide samples
     for j in $(seq 1 $ITER_NEG); do
-        file_step=0
         MULTIPERM_di_OUTPUT="$NEGATIVE_SAMPLES/neg_sample_MULTIPERM_di_output_${j}.clu"
 
         if [ ! -f "$MULTIPERM_di_OUTPUT" ]; then
             # Run Multiperm command
-            "$MULTIPERM" -w "$POSITIVE_SAMPLES" && mv perm_001_pos_sample_*.clu "$MULTIPERM_di_OUTPUT"
+            "$MULTIPERM" -w "$POSITIVE_SAMPLES" && mv perm_001_bacillus_subtilis_Rfam*.clu "$MULTIPERM_di_OUTPUT"
             echo "$MULTIPERM_di_OUTPUT finished"
         else 
             echo "$MULTIPERM_di_OUTPUT already exists, skipping..."
@@ -127,10 +125,10 @@ function show_progress {
         ((file_step++))
         show_progress
 
-        if [ "$file_step" -eq 1000 ]; then
-            timestamp=$(date +"%Y-%m-%d %H:%M:%S")
-            echo "Multiperm_di for 1000 negativ Samples runtime: $timestamp seconds"
-            file_step=0
+        if (( file_step % 1000 == 0 )); then
+            timestamp=$(date +"%H:%M:%S")
+            echo "MULTIPERM_di: $file_step negative Samples finished at $timestamp"
+            echo "MULTIPERM_di: $file_step negative Samples finished at $timestamp" >> multiperm_di_process.txt
         fi
     done
 
@@ -140,7 +138,6 @@ function show_progress {
 
     # Loop to generate Alifoldz samples
     for k in $(seq 1 $ITER_NEG); do
-        file_step=0
         ALIFOLDz_OUTPUT="$NEGATIVE_SAMPLES/neg_sample_ALIFOLDz_output_${k}.clu"
             
         if [ ! -f "$ALIFOLDz_OUTPUT" ]; then
@@ -154,10 +151,10 @@ function show_progress {
         ((file_step++))
         show_progress
 
-        if [ "$file_step" -eq 1000 ]; then
-            timestamp=$(date +"%Y-%m-%d %H:%M:%S")
-            echo "aln-shuffle for 1000 negativ Samples runtime: $timestamp seconds"
-            file_step=0
+        if (( file_step % 1000 == 0 )); then
+            timestamp=$(date +"%H:%M:%S")
+            echo "aln-shuffle: $file_step negative Samples finished at $timestamp"
+            echo "aln-shuffle: $file_step negative Samples finished at $timestamp" >> aln_shuffle_process.txt
         fi
     done
 echo -ne "\nProcessing completed.\n"
