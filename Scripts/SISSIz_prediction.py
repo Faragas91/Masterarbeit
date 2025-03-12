@@ -6,8 +6,10 @@ import threading
 
 # Define variables
 SISSIz = "/home/sredl/Masterarbeit/tools/sissiz_v3/src/SISSIz"
-SAMPLES = "/home/sredl/Masterarbeit/SAMPLES"
-SISSIz_PRE_OUTPUT = "/home/sredl/Masterarbeit/SISSIz_PREDICTION"
+# SAMPLES = "/home/sredl/Masterarbeit/SAMPLES"
+SAMPLES = "/home/sredl/Masterarbeit/Data/NEGATIVE_SAMPLES"
+SISSIz_PRE_OUTPUT = "/home/sredl/Masterarbeit/Data/SISSIz/Only_Native/SISSIz_PREDICTION"
+# SISSIz_PRE_OUTPUT = "/home/sredl/Masterarbeit/Data/SISSIz/With_SISSI/SISSIz_PREDICTION"
 NUM_CORES = 64  # Number of CPU cores to use
 
 # Make sure the executables have the necessary permissions

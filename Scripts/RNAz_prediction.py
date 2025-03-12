@@ -6,8 +6,10 @@ import threading
 
 # Define variables
 RNAz = "/home/sredl/Masterarbeit/tools/RNAz-2.1.1/rnaz/RNAz"
-SAMPLES = "/home/sredl/Masterarbeit/SAMPLES"
-RNAz_PRE_OUTPUT = "/home/sredl/Masterarbeit/RNAz_PREDICTION"
+# SAMPLES = "/home/sredl/Masterarbeit/SAMPLES"
+SAMPLES = "/home/sredl/Masterarbeit/Data/NEGATIVE_SAMPLES"
+RNAz_PRE_OUTPUT = "/home/sredl/Masterarbeit/Data/RNAz/Only_Native/RNAz_PREDICTION"
+# RNAz_PRE_OUTPUT = "/home/sredl/Masterarbeit/Data/RNAz/With_SISSI/RNAz_PREDICTION"
 NUM_CORES = 64  # Number of CPU cores to use
 
 # Make sure the executables have the necessary permissions
