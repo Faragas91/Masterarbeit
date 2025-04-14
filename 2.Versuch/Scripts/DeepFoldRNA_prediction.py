@@ -2,26 +2,38 @@ import subprocess
 import os
 import shutil
 
-count = 0
-samplePath = 'C:/bla/Waste/MA/2.Versuch/Data/'
-totalSize = len([name for name in os.listdir(samplePath) if os.path.isfile(os.path.join(samplePath, name))])
+# Verzeichnis erstellen, falls es nicht existiert
+output_dir = '/mnt/sdc2/home/c2210542009/Masterarbeit/Data/DeepFoldRNA_SAMPLES'
+os.makedirs(output_dir, exist_ok=True)
+
+samplePath = '/mnt/sdc2/home/c2210542009/Masterarbeit/Data/'
+total_files = [name for name in os.listdir(samplePath) if os.path.isfile(os.path.join(samplePath, name))]
+totalSize = len(total_files)
 print("Total Size", totalSize)
-while count < totalSize:
 
-    for filename in os.listdir(samplePath):
-        count += 1
-        # if os.path.isfile(os.path.join(samplePath, filename)):
-        #     os.rename(f"C:/bla/Waste/MA/2.Versuch/Data/{filename}", "C:/bla/Waste/MA/2.Versuch/Data/seq.fasta")
-        #     shutil.move("C:/bla/Waste/MA/2.Versuch/Data/seq.fasta", "C:/bla/Waste/MA/2.Versuch/test/seq.fasta")
+for count, filename in enumerate(total_files):
+    if os.path.isfile(os.path.join(samplePath, filename)):
+        # Ursprünglichen Dateipfad
+        seq_file_path = os.path.join(samplePath, filename)
+        
+        # Kopiere die Datei in das Zielverzeichnis und benenne sie in seq.fasta um
+        temp_seq_path = os.path.join(output_dir, 'seq.fasta')
+        shutil.copy(seq_file_path, temp_seq_path)
 
-        print(count)
-    # input_dir = "<path to input directory>"
+        # Eingabepfad für die Verarbeitung
+        input_dir = temp_seq_path
 
-    # command = ['python3', 'runDeepFoldRNA.py', '--input_dir', input_dir]
+        command = ['python3', 'runDeepFoldRNA.py', '--input_dir', input_dir]
 
-    # try:
-    #     result = subprocess.run(command, check=True, text=True, capture_output=True)
-    #     print("Output:", result.stdout)  # Ausgabe des Skripts
-    #     print("Error:", result.stderr)    # Fehlerausgabe, falls vorhanden
-    # except subprocess.CalledProcessError as e:
-    #     print("Ein Fehler ist aufgetreten:", e)
+        try:
+            result = subprocess.run(command, check=True, text=True, capture_output=True)
+            if result.stdout:
+                print("Output:", result.stdout)
+            if result.stderr:
+                print("Error:", result.stderr)
+        except subprocess.CalledProcessError as e:
+            print("Ein Fehler ist aufgetreten:", e)
+
+        shutil.move(temp_seq_path, os.path.join(output_dir, filename))
+
+print("Verarbeitung abgeschlossen.")
