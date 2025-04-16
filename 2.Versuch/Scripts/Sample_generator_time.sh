@@ -3,8 +3,7 @@
 # Define variables
 NEIGHBOURHOOD="/home/sredl/Masterarbeit/neighbourhoods/bsubtilis401.nei"
 TREE="/home/sredl/Masterarbeit/trees/alina.tree"
-ITER=500
-# ITER_NEG=1
+ITER=100000
 TOTAL_FILES=$(($ITER * 6))  # Total number of files to be processed
 FREQUENCIES_SINGLE="0.422360 0.105590 0.236025 0.236025"
 FREQUENCIES_DOUBLE="0.000423 0.004228 0.012685 0.169133 0.004228 0.000423 0.262156 0.000423 0.012685 0.262156 0.000423 0.042283 0.169133 0.000423 0.042283 0.016915"
@@ -36,6 +35,7 @@ function show_progress {
     echo -ne "Progress: $percentage% ($current_file/$TOTAL_FILES) completed\r"
 }
 
+
 # Loop to generate samples
 for i in $(seq 1 $ITER); do
     SISSI_OUTPUT="$SAMPLES/pos_sample_output_$i.clu"
@@ -52,6 +52,9 @@ for i in $(seq 1 $ITER); do
     show_progress
 done
 
+# Started to generate SISSIz mononucleotide samples for each SISSI sample
+start_sissiz_mono=`date +%s.%N`
+
 for z in $(seq 1 $ITER); do
     SISSIz_mono_OUTPUT="$SAMPLES/neg_sample_SISSIz_mono_output_${z}.clu"
 
@@ -66,6 +69,16 @@ for z in $(seq 1 $ITER); do
     ((current_file++))
     show_progress
 done
+
+end_sissiz_mono=`date +%s.%N`
+runtime=$( echo "$end_sissiz_mono - $start_sissiz_mono" | bc -l )
+start_sissiz_mono=0
+end_sissiz_mono=0
+echo "SISSIz_mono runtime: $runtime seconds"
+
+
+# Started to generate SISSIz dinucleotide samples for each SISSI sample
+start_sissiz_di=`date +%s.%N`
 
 # Inner loop to generate 10 SISSIz dinucleotide samples 
 for v in $(seq 1 $ITER); do
@@ -82,6 +95,16 @@ for v in $(seq 1 $ITER); do
     show_progress
 done
 
+end_sissiz_di=`date +%s.%N`
+runtime=$( echo "$end_sissiz_di - $start_sissiz_di" | bc -l )
+start_sissiz_di=0
+end_sissiz_di=0
+echo "SISSIz_di runtime: $runtime seconds"
+
+
+# Started to generate Multiperm mononucleotide samples for each SISSI sample
+start_multiperm_mono=`date +%s.%N`
+
 for m in $(seq 1 $ITER); do
     MULTIPERM_mono_OUTPUT="$SAMPLES/neg_sample_MULTIPERM_mono_output_${m}.clu"
 
@@ -95,7 +118,17 @@ for m in $(seq 1 $ITER); do
     ((current_file++))
     show_progress
 done
-    
+
+end_multiperm_mono=`date +%s.%N`
+runtime=$( echo "$end_multiperm_mono - $start_multiperm_mono" | bc -l )
+start_multiperm_mono=0
+end_multiperm_mono=0
+echo "Mulitperm_mono runtime: $runtime seconds"
+
+
+# Started to generate Multiperm dinucleotide samples for each SISSI sample
+start_multiperm_di=`date +%s.%N`
+
 for j in $(seq 1 $ITER); do
     MULTIPERM_di_OUTPUT="$SAMPLES/neg_sample_MULTIPERM_di_output_${j}.clu"
 
@@ -110,6 +143,16 @@ for j in $(seq 1 $ITER); do
     show_progress
 done
 
+end_multiperm_di=`date +%s.%N`
+runtime=$( echo "$end_multiperm_di - $start_multiperm_di" | bc -l )
+start_multiperm_di=0
+end_multiperm_di=0
+echo "Mulitperm_di runtime: $runtime seconds"
+
+
+# Started to generate 1000 Alifoldz mononucleotide samples for each SISSI sample
+start_alifoldz=`date +%s.%N`
+
 for k in $(seq 1 $ITER); do
     ALIFOLDz_OUTPUT="$SAMPLES/neg_sample_ALIFOLDz_output_${k}.clu"
         
@@ -123,5 +166,11 @@ for k in $(seq 1 $ITER); do
     ((current_file++))
     show_progress
 done
+
+end_alifoldz=`date +%s.%N`
+runtime=$( echo "$end_alifoldz - $start_alifoldz" | bc -l )
+start_alifoldz=0
+end_alifoldz=0
+echo "AliFoldz for 1000 negativ Samples runtime: $runtime seconds"
 
 echo -ne "\nProcessing completed.\n"
