@@ -1,8 +1,10 @@
 import os
 from Bio import SeqIO
 
-SAMPLES_CLUSTAL = "D:/Masterarbeit_programmieren/2.Versuch/Data/SAMPLES/"
-SAMPLES_FASTA = "D:/Masterarbeit_programmieren/2.Versuch/Data/SAMPLES_FASTA/"
+# SAMPLES_CLUSTAL = "D:/Masterarbeit_programmieren/2.Versuch/Data/SAMPLES_CLUSTAL/"
+SAMPLES_CLUSTAL = "/home/sredl/Masterarbeit/2.Versuch/Data/SAMPLES_CLUSTAL/"
+#SAMPLES_FASTA = "D:/Masterarbeit_programmieren/2.Versuch/Data/SAMPLES_FASTA/"
+SAMPLES_FASTA = "/home/sredl/Masterarbeit/2.Versuch/Data/SAMPLES_FASTA/"
 
 def convertClustalToFasta(inputDir):
     for file in os.listdir(inputDir):
