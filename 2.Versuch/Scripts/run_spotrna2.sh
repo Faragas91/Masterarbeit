@@ -10,7 +10,7 @@ program_dir=$(dirname $(readlink -f $0))
 path_blastn=$program_dir/ncbi-blast-*+/bin       				# set path to the folder contains executable binary files of Blast package
 path_blastn_database=$program_dir/nt_database/prok_database/nt_prok      				# set path to the formatted NCBI's database file without extension 
 path_infernal=$program_dir/infernal-*-linux-intel-gcc/binaries  # set path to the folder contains executable binary files Infernal package
-path_infernal_database=$program_dir/nt_database/prok_database/nt_prok					# set path to the NCBI's database database file
+path_infernal_database=$program_dir/nt_database/prok_database/nt_prok.fa					# set path to the NCBI's database database file
 
 mkdir -p $input_dir/${seq_id}_features && mkdir -p $input_dir/${seq_id}_outputs
 echo ">"$seq_id > $input_dir/${seq_id}_features/$seq_id.fasta
