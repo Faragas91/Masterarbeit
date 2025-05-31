@@ -216,7 +216,6 @@ else
     echo "       Predicting Consensus Secondary Structure (CSS) of query sequence $feature_dir/$seq_id.fasta using SPOT-RNA predictor.   "
     echo "==============================================================================================================================="
     echo ""
-	source $program_dir/venv/bin/activate || conda activate venv
 	cd $program_dir/SPOT-RNA
 	python3 SPOT-RNA.py --inputs $feature_dir/$seq_id.fasta --outputs $feature_dir	
 	cd -
@@ -225,8 +224,6 @@ else
 	perl $program_dir/utils/FreeKnot/remove_pseudoknot.pl -i bpseq -s bp $feature_dir/$seq_id.bpseq > $feature_dir/$seq_id.bpseq.unknotted
 	python3 $program_dir/utils/bpseq2dbn.py --inputs $feature_dir --outputs $feature_dir --rna_id $seq_id
 	tail -n +3 $feature_dir/$seq_id.dbn > $feature_dir/$seq_id.db
-
-	deactivate || conda deactivate
 
 	################ reformat ss with according to gaps in reference sequence of .sto file from blastn ################
 	for i in `awk '{print $2}' $feature_dir/$seq_id.sto | head -n5 | tail -n1 | grep -b -o - | sed 's/..$//'`; do sed -i "s/./&-/$i" $feature_dir/$seq_id.db; done
@@ -309,7 +306,7 @@ else
     echo "                 May take 15 mins to few hours for this step.                                                         "
     echo "======================================================================================================================"
     echo ""
-	$path_infernal/cmsearch -o $feature_dir/$seq_id.out -A $feature_dir/$seq_id.msa --cpu 24 --incE 10.0 $feature_dir/$seq_id.cm $path_infernal_database
+	$path_infernal/cmsearch -o $feature_dir/$seq_id.out -A $feature_dir/$seq_id.msa --cpu 48 --incE 10.0 $feature_dir/$seq_id.cm $path_infernal_database
 
 	if [ $? -eq 0 ]; then
 	    echo ""
@@ -490,15 +487,13 @@ else
 	fi
 fi
 
-
 echo ""
 echo "============================================================================"
 echo "          Running SPOT-RNA2 for RNA secondary structure prediction.                                 "
 echo "============================================================================"
 echo ""
-source $program_dir/venv/bin/activate || conda activate venv
+
 python3 $program_dir/utils/SPOT-RNA2.py --inputs $feature_dir/$seq_id.fasta --outputs $output_dir --motifs True
-deactivate || conda deactivate
 
 end=`date +%s`
 
