@@ -269,7 +269,8 @@ def model_eval_all_test(contact_net,test_generator):
     '''
 
 def main():
-    torch.multiprocessing.set_sharing_strategy('file_system')
+    #torch.multiprocessing.set_sharing_strategy('file_system')
+    torch.multiprocessing.set_start_method("spawn", force=True)
     torch.cuda.set_device(0)
 
     print('Welcome using UFold prediction tool!!!')
