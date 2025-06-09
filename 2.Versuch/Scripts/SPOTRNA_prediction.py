@@ -20,8 +20,8 @@ def run_spotrna(file):
     os.makedirs(output_path, exist_ok=True)
 
     if len(os.listdir(output_path)) == 0:
+        print(f"🔄 Running: {file}")
         cmd = f"python3 /mnt/sdc2/home/c2210542009/Masterarbeit/SPOT-RNA/SPOT-RNA.py --inputs {input_path} --outputs {output_path} --gpu 0"
-        print(f"⚙️ Running: {cmd}") 
         result = subprocess.run(cmd, shell=True)
     else:
         print(f"✅ Was already predicted: {file}")
