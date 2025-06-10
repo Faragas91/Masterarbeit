@@ -1,9 +1,8 @@
 import os
 import shutil
 
-SAMPLES_FASTA = "C:/bla/Waste/MA/2.Versuch/Data/SAMPLES_FASTA/"
-SAMPLES_UFOLD = "C:/bla/Waste/MA/2.Versuch/Data/SAMPLES_UFOLD/"
-INPUT_FILE = "C:/bla/Waste/MA/2.Versuch/Data/input.txt"
+SAMPLES_FASTA = "/mnt/sdc2/home/c2210542009/Masterarbeit/Data/TEST_SAMPLES/SAMPLES_FASTA/"
+SAMPLES_UFOLD = "/mnt/sdc2/home/c2210542009/Masterarbeit/Data/TEST_SAMPLES/SAMPLES_UFOLD/"
 
 if not os.path.exists(SAMPLES_UFOLD):
     os.makedirs(SAMPLES_UFOLD)
@@ -18,7 +17,7 @@ def convertFastaToUfoldStructure(inputDir):
                 if line.startswith(">"):
                     if current_sequence:
                         with open(os.path.join(SAMPLES_UFOLD, f'seq{sequenceCount}_{file}'), 'w') as output_file:
-                            output_file.write(''.join(current_sequence))
+                            output_file.write("".join(current_sequence).replace("T", "U"))
                         sequenceCount += 1
                         current_sequence = [] 
                     current_sequence.append(line.strip() + '\n')
@@ -29,3 +28,6 @@ def convertFastaToUfoldStructure(inputDir):
                     output_file.write(''.join(current_sequence))
 
 convertFastaToUfoldStructure(SAMPLES_FASTA)
+
+
+                            

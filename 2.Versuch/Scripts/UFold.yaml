@@ -163,5 +163,5 @@ dependencies:
     - yapf==0.40.2
     - yarg==0.1.9
     - zipp==3.17.0
-prefix: /home/c2210542009/miniconda3/envs/UFold
+prefix: /home/c2210542009/miniconda3/envs/UFolds
 

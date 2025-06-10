@@ -20,9 +20,8 @@ def convertFastaToRNAformerStructure(inputDir):
                     if current_sequence:
                         output_path = os.path.join(SAMPLES_RNAFORMER, f"seq{sequenceCount}_{file}")
                         with open(output_path, 'w') as out_f:
-                            out_f.write("".join(current_sequence))
+                            out_f.write("".join(current_sequence).replace("T", "U"))
                         current_sequence = []
-
                     sequenceCount += 1 
                 else:
                     current_sequence.append(line)
