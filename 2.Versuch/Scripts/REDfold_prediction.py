@@ -1,38 +1,25 @@
-from concurrent.futures import ThreadPoolExecutor, as_completed
-import os
 import subprocess
+from multiprocessing import Pool
+import os
 import time
 
 SAMPLES = "/mnt/sdc2/home/c2210542009/Masterarbeit/Data/SAMPLES_FASTA"
-MXFOLD2_PRE_OUTPUT = "/mnt/sdc2/home/c2210542009/Masterarbeit/Data/MXfold2_PREDICTION"
-NUM_THREADS = 6 
+REDFOLD_PRE_OUTPUT = "/mnt/sdc2/home/c2210542009/Masterarbeit/Data/REDFOLD_PREDICTION"
 
-os.makedirs(MXFOLD2_PRE_OUTPUT, exist_ok=True)
+os.makedirs(REDFOLD_PRE_OUTPUT, exist_ok=True)
+samples = ['/TEST_SAMPLES1', '/TEST_SAMPLES2', '/TEST_SAMPLES3', '/TEST_SAMPLES4']
 
 start_time = time.time()
 print(f"Started at {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(start_time))}")
 
-def run_mxfold2(file):
-    basename = os.path.splitext(file)[0]
-    input_path = os.path.join(SAMPLES, file)
-    output_file = os.path.join(MXFOLD2_PRE_OUTPUT, f"{basename}.txt")
+def run_redfold(sample):
+    log_file_path = os.path.join(REDFOLD_PRE_OUTPUT, f"{os.path.basename(sample)}.log")
+    with open(log_file_path, 'w') as log_file:
+        subprocess.run(['redfold', sample], stdout=log_file, stderr=subprocess.STDOUT)
 
-    if os.path.isfile(output_file):
-        print(f"{output_file} already exists. Skipping.")
-        return
-
-    cmd = f"mxfold2 predict --param model.pth --model MixC --gpu 0 {input_path} > {output_file} 2>&1"
-    process = subprocess.run(cmd, shell=True)
-    
-    if process.returncode != 0:
-        print(f"⚠️ Error processing: {file}")
-    else:
-        print(f"✅ Finished: {file}")
-
-with ThreadPoolExecutor(max_workers=NUM_THREADS) as executor:
-    futures = [executor.submit(run_mxfold2, file) for file in sorted(os.listdir(SAMPLES)) if file.endswith(".fasta")]
-    for future in as_completed(futures):
-        pass
+if __name__ == '__main__':
+    with Pool(processes=len(samples)) as pool:
+        pool.map(run_redfold, samples)
 
 end_time = time.time()
 print(f"Finished at {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(end_time))}")
