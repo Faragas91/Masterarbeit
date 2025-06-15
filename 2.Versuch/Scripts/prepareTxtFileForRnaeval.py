@@ -4,9 +4,9 @@ import subprocess
 from tqdm import tqdm
 
 # Pfade
-SAMPLES_REDFOLD = Path("/mnt/sdc2/home/c2210542009/Masterarbeit/Data/SAMPLES_REDFOLD/")
-REDFOLD_RESULTS = Path("/mnt/sdc2/home/c2210542009/Masterarbeit/Data/REDFOLD_RESULTS/")
-RNAEVAL_RESULTS = Path("/mnt/sdc2/home/c2210542009/Masterarbeit/Data/RNAeval_RESULTS/")
+SAMPLES_REDFOLD = Path("/mnt/sdc2/home/c2210542009/Masterarbeit/Data/TEST_SAMPLES/REDFOLD_PREDICTION/")
+REDFOLD_RESULTS = Path("/mnt/sdc2/home/c2210542009/Masterarbeit/Data/TEST_SAMPLES/REDFOLD_RESULTS/")
+RNAEVAL_RESULTS = Path("/mnt/sdc2/home/c2210542009/Masterarbeit/Data/TEST_SAMPLES/RNAeval_RESULTS/")
 METHODE = ["ALIFOLDz", "MULTIPERM_MONO", "MULTIPERM_DI", "SISSIz_MONO", "SISSIz_DI", "POS_SAMPLES"]
 
 REDFOLD_RESULTS.mkdir(parents=True, exist_ok=True)
