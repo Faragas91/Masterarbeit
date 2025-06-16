@@ -38,10 +38,26 @@ def getSizeSubfolder(file_name):
     try:
         num_part = file_name.split("_output_")[-1].split(".")[0]
         num = int(num_part)
-        if num < 50000:
-            return "smaller_50000"
-        elif num >= 50000:
-            return "bigger_50000"
+        if num < 10000:
+            return "10000"
+        elif num >= 10000 and num < 20000:
+            return "20000"
+        elif num >= 20000 and num < 30000:
+            return "30000"
+        elif num >= 30000 and num < 40000:
+            return "40000"
+        elif num >= 40000 and num < 50000:
+            return "50000"
+        elif num >= 50000 and num < 60000:
+            return "60000"
+        elif num >= 60000 and num < 70000:
+            return "70000"
+        elif num >= 70000 and num < 80000:
+            return "80000"
+        elif num >= 80000 and num < 90000:
+            return "90000"
+        elif num >= 90000 and num <= 100000:
+            return "100000"
     except:
         return "unbekannt"
 
