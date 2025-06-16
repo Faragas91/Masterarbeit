@@ -7,9 +7,9 @@ SAMPLES_REDFOLD = "/mnt/sdc2/home/c2210542009/Masterarbeit/Data/SAMPLES_REDFOLD"
 REDFOLD_PRE_OUTPUT = "/mnt/sdc2/home/c2210542009/Masterarbeit/Data/REDFOLD_PREDICTION"
 CLEAN_REDFOLD = "/mnt/sdc2/home/c2210542009/Masterarbeit/Data/REDFOLD_PREDICTION/"
 
-def run_redfold():
+def run_redfold(subfolder):
     for folder_name in tqdm(['ALIFOLDz', 'MULTIPERM_MONO', 'MULTIPERM_DI', 'SISSIz_MONO', 'SISSIz_DI', 'POS_SAMPLES'], desc="REDfold"):
-        sample_path = os.path.join(SAMPLES_REDFOLD, folder_name)
+        sample_path = os.path.join(SAMPLES_REDFOLD, folder_name, subfolder)
         log_path = os.path.join(REDFOLD_PRE_OUTPUT, f"{folder_name}.txt")
         
         with open(log_path, 'w') as log_file:
@@ -40,10 +40,14 @@ def extractRedFoldOutput():
 
 os.makedirs(REDFOLD_PRE_OUTPUT, exist_ok=True)
 
+first_half = "smaller_50000"
+second_half = "bigger_50000"
+
 start_time = time.time()
 print(f"Started at {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(start_time))}")
 
-run_redfold()
+run_redfold(first_half)
+run_redfold(second_half)
 
 end_time = time.time()
 print(f"Finished at {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(end_time))}")
