@@ -40,14 +40,12 @@ def extractRedFoldOutput(subfolder):
 
 os.makedirs(REDFOLD_PRE_OUTPUT, exist_ok=True)
 
-sample_sizes = [10000, 20000, 30000, 40000, 50000, 60000, 70000, 80000, 90000, 100000]
+sample_sizes = [55000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 95000, 100000]
 
 start_time = time.time()
 print(f"Started at {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(start_time))}")
 
-for size in sample_sizes:
-    run_redfold(str(size))
-
+run_redfold(str())
 
 end_time = time.time()
 print(f"Finished at {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(end_time))}")
