@@ -4,58 +4,62 @@ import pandas as pd
 import statistics
 
 # Function to parse the RNAz file
-def parse_redfold_file(file_path):
-    number = []
-    with open(file_path, 'r') as file:
-        for line in file:
-            line_row = line.strip().split()
-            if len(line_row) > 1:
-                value = float(line_row[1].replace("(", "").replace(")", ""))
-                number.append(value)
-        print(number)
-        result_number = statistics.median(number)
-        return result_number
+# def parse_redfold_file(file_path):
+#     number = []
+#     with open(file_path, 'r') as file:
+#         for line in file:
+#             line_row = line.strip().split()
+#             if len(line_row) > 1:
+#                 value = float(line_row[1].replace("(", "").replace(")", ""))
+#                 number.append(value)
+#         print(number)
+#         result_number = statistics.median(number)
+#         return result_number
 
 # All data
-def createExcelData(data, count, nameOfFile, excelName):
-    for file_name in os.listdir(directory):
-        if file_name.startswith(nameOfFile):
-            count += 1
-            print(f"Process file {count}: {file_name}")
-            file_path = os.path.join(directory, file_name)
-            file_data = parse_redfold_file(file_path)  
-            data.append({"Score": file_data, "File": file_name})
+# def createExcelData(data, count, nameOfFile, excelName):
+#     for file_name in os.listdir(directory):
+#         if file_name.startswith(nameOfFile):
+#             count += 1
+#             print(f"Process file {count}: {file_name}")
+#             file_path = os.path.join(directory, file_name)
+#             file_data = parse_redfold_file(file_path)  
+#             data.append({"Score": file_data, "File": file_name})
 
-    df = pd.DataFrame(data)
-    df.to_excel(f"{excelName}.xlsx", index=False)
+#     df = pd.DataFrame(data)
+#     df.to_excel(f"{excelName}.xlsx", index=False)
 
-    print(f"Your data was succsessfully transfered to {excelName}.xlsx.")
-    shutil.move(f"/mnt/sdc2/home/c2210542009/Masterarbeit/Scripts/{excelName}.xlsx", f"/mnt/sdc2/home/c2210542009/Masterarbeit/Data/MXfold2_Excel/{excelName}.xlsx") #f"C:/bla/Waste/MA/{excelName}.xlsx", f"C:/bla/Waste/MA/2.Versuch/Data/MXfold2_Excel/{excelName}.xlsx")
-    return count
+#     print(f"Your data was succsessfully transfered to {excelName}.xlsx.")
+#     shutil.move(f"/mnt/sdc2/home/c2210542009/Masterarbeit/Scripts/{excelName}.xlsx", f"/mnt/sdc2/home/c2210542009/Masterarbeit/Data/MXfold2_Excel/{excelName}.xlsx") #f"C:/bla/Waste/MA/{excelName}.xlsx", f"C:/bla/Waste/MA/2.Versuch/Data/MXfold2_Excel/{excelName}.xlsx")
+#     return count
 
-directory = f"/mnt/sdc2/home/c2210542009/Masterarbeit/Data/REDFOLD_PREDICTION/{method}/{size}"
-#directory = "C:/bla/Waste/MA/2.Versuch/Data/MXfold2_SAMPLES"
+method = ["ALIFOLDz", "MULTIPERM_MONO", "MULTIPERM_DI", "SISSIz_MONO", "SISSIz_DI", "POS_SAMPLES"]
+directory = f"D:/Masterarbeit/2.Versuch/Data/RNAeval_REDfold/"
 
-count = 0
-sissi_pos_data = []
-count = createExcelData(sissi_pos_data, count, "pos_sample", "sissi")
 
-count = 0
-alifoldz_data = []
-count = createExcelData(alifoldz_data, count, "neg_sample_ALIFOLDz", "alifoldz")
+def createExcelData():
 
-count = 0
-multiperm_mono_data = []
-count = createExcelData(multiperm_mono_data, count, "neg_sample_MULTIPERM_mono", "multiperm_mono")
+    for method_name in method:
+        sample_directory = os.path.join(directory, method_name)
+        data = []
 
-count = 0
-multiperm_di_data = []
-count = createExcelData(multiperm_di_data, count, "neg_sample_MULTIPERM_di", "multiperm_di")
+        for filename in os.listdir(sample_directory):
+            file_path = os.path.join(sample_directory, filename)
 
-count = 0
-sissiz_mono_data = []
-count = createExcelData(sissiz_mono_data, count, "neg_sample_SISSIz_mono", "sissiz_mono")
+            with open(file_path, 'r') as file:
+                lines = file.readlines() 
+                third_line = lines[2].strip()  
+                line_row = third_line.split()
+                if len(line_row) > 1:
+                    print(line_row)
+                    print(line_row[-1].replace("(", "").replace(")", ""))
+                    value = float(line_row[-1].replace("(", "").replace(")", ""))
+                    data.append({"Score": value, "File": filename})
 
-count = 0
-sissiz_di_data = []
-count = createExcelData(sissiz_di_data, count, "neg_sample_SISSIz_di", "sissiz_di")
+        df = pd.DataFrame(data)
+        df.to_excel(f"{method_name}.xlsx", index=False)
+
+        print(f"Your data was succsessfully transfered to {method_name}.xlsx.")
+        shutil.move(f"D:/Masterarbeit/{method_name}.xlsx", f"D:/Masterarbeit/2.Versuch/Data/RNAeval_REDfold/{method_name}.xlsx")
+    
+createExcelData()
