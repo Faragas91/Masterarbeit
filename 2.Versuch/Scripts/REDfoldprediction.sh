@@ -3,8 +3,8 @@
 SAMPLE_REDFOLD=/mnt/sdc2/home/c2210542009/Masterarbeit/Data/SAMPLES_REDFOLD
 REDFOLD_PRE_OUTPUT=/mnt/sdc2/home/c2210542009/Masterarbeit/Data/REDFOLD_PREDICTION
 METHODS=("ALIFOLDz" "MULTIPERM_MONO" "MULTIPERM_DI" "SISSIz_MONO" "SISSIz_DI" "POS_SAMPLES")
-sample_sizes=(0 1000 1500 2000 2500 3000 3500 4000 4500 5000 
-5500 6000 6500 7000 7500 8000 8500 9000 9500 10000 
+sample_sizes=(500 1000 1500 2000 2500 3000 3500 4000 4500 
+5000 5500 6000 6500 7000 7500 8000 8500 9000 9500 10000 
 10500 11000 11500 12000 12500 13000 13500 14000 14500 
 15000 15500 16000 16500 17000 17500 18000 18500 19000 
 19500 20000 20500 21000 21500 22000 22500 23000 23500 
@@ -34,14 +34,18 @@ for method in "${METHODS[@]}"; do
         if [[ -d "$fasta_dir" ]]; then
             echo "Running REDfold on directory $fasta_dir"
             output_file="$REDFOLD_PRE_OUTPUT/${method}_${size}.txt"
-            if [[ -f "$output_file" ]]; then
-                echo "File ${method}_${size}.txt already exists"
+            lockfile="$output_file.lock"
+            if ( set -o noclobber; echo "$$" > "$lockfile" ) 2> /dev/null; then
+                if [[ -f "$output_file" ]]; then
+                    echo "File ${method}_${size}.txt already exists"
+                else
+                    echo "Generate ${method}_${size}.txt"
+                    redfold "$fasta_dir" > "$output_file"
+                fi
+                rm -f "$lockfile"
             else
-                echo "Generate ${method}_${size}.txt"
-                redfold "$fasta_dir" > "$output_file"
-            fi  # ← dieses fehlte
-        else
-            echo "Directory $fasta_dir does not exist, skipping"
+                echo "Skipping ${method}_${size} – another process is working on it."
+            fi
         fi
     done
 done
