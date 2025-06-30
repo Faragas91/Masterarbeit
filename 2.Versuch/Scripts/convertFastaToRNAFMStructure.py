@@ -1,7 +1,7 @@
 import os
 
-SAMPLES_FASTA="/mnt/sdc2/home/c2210542009/Masterarbeit/Data/TEST_SAMPLES/SAMPLES_FASTA/"
-SAMPLES_RNAFM="/mnt/sdc2/home/c2210542009/Masterarbeit/Data/TEST_SAMPLES/SAMPLES_RNAFM/"
+SAMPLES_FASTA="/mnt/sdc2/home/c2210542009/Masterarbeit/Data/SAMPLES_FASTA/"
+SAMPLES_RNAFM="/mnt/sdc2/home/c2210542009/Masterarbeit/Data/SAMPLES_RNAFM/"
 
 # SAMPLES_FASTA = "D:/Masterarbeit/2.Versuch/Data/SAMPLES_FASTA/"
 # SAMPLES_RNAFM = "D:/Masterarbeit/2.Versuch/Data/SAMPLES_RNAFM/"

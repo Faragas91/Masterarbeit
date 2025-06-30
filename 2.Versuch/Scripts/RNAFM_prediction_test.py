@@ -3,7 +3,7 @@ import os
 import subprocess
 import time
 
-SAMPLES_PATH = "/mnt/sdc2/home/c2210542009/Masterarbeit/Data/TEST_SAMPLES"
+SAMPLES_PATH = "/mnt/sdc2/home/c2210542009/Masterarbeit/Data/"
 SAMPLES_FASTA = os.path.join(SAMPLES_PATH, "SAMPLES_FASTA")
 RNAFM_PRE_OUTPUT = os.path.join(SAMPLES_PATH, "RNAFM_PRE_OUTPUT")
 NUM_THREADS = 15
