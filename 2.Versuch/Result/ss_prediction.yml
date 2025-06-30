@@ -77,6 +77,6 @@ SOLVER:
 # -----------------------------------------------------------------------------
 # -----------------------------------------------------------------------------
 EVAL:
- WEIGHT_PATH: "pretrained/RNA-FM_pretrained.pth"
+ WEIGHT_PATH: "pretrained/Models/SS/RNA-FM-ResNet_PDB-All.pth"
  DATALOADER:
   BATCH_SIZE: -1

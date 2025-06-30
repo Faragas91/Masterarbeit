@@ -1,0 +1,8 @@
+2025-06-30 19:19:57,227 prediction INFO: Using 1 GPUS, GPU ID: 0
+2025-06-30 19:19:57,227 prediction INFO: Loaded configuration file pretrained/ss_prediction.yml
+2025-06-30 19:19:57,227 prediction INFO: Model File:pretrained/Models/SS/RNA-FM-ResNet_PDB-All.pth
+2025-06-30 19:19:57,227 prediction INFO: Batch Size:1
+2025-06-30 19:19:57,227 prediction INFO: Threshold:0.33993712
+2025-06-30 19:19:57,227 prediction INFO: Prediction Dataset: /mnt/sdc2/home/c2210542009/Masterarbeit/Data/TEST_SAMPLES/SAMPLES_FASTA/neg_sample_ALIFOLDz_output_102.fasta
+2025-06-30 19:20:37,255 prediction.inference INFO: Enter inferencing for Custom set
+2025-06-30 19:21:43,796 prediction.inference INFO: Finish Prediction
