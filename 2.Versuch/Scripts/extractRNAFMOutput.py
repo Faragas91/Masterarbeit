@@ -1,23 +1,37 @@
 import os
 import shutil
+import subprocess
 
-inputDir = "C:/bla/Waste/MA/2.Versuch/Result/RNA-FM/"
-outputDir = "C:/bla/Waste/MA/2.Versuch/Result/RNA-FM_CT/"
+# samplesInputDir = "D:/Masterarbeit/2.Versuch/Result/RNA-FM/"
+# outputCtFiles = "D:/Masterarbeit/2.Versuch/Result/RNA-FM_DOT_NOTATION/"
 
-if not os.path.exists(outputDir):
-    os.makedirs(outputDir)
+samplesInputDir = "/mnt/sdc2/home/c2210542009/Masterarbeit/Data/TEST_SAMPLES/RNAFM_PRE_OUTPUT/"
+outputCtFiles = "/mnt/sdc2/home/c2210542009/Masterarbeit/Data/TEST_SAMPLES/RNA-FM_DOT_NOTATION/"
 
-def extractCtFiles(inputDir, outputDir):
-    for files in os.listdir(inputDir):
-        ctFolder = os.path.join(outputDir, files)
+if not os.path.exists(outputCtFiles):
+    os.makedirs(outputCtFiles)
+
+def extractCtFiles(samplesInputDir, outputCtFiles):
+    for files in os.listdir(samplesInputDir):
+        ctFolder = os.path.join(outputCtFiles, files)
         if not os.path.exists(ctFolder):
             os.makedirs(ctFolder)
-        folders = os.path.join(inputDir, files)
+        folders = os.path.join(samplesInputDir, files)
         for folder in os.listdir(folders):
             if folder == "pred_ct":
                 predCt = os.path.join(folders, folder)
                 for ct in os.listdir(predCt):
                     if ct.endswith(".ct"):
-                        shutil.copy(os.path.join(predCt, ct), ctFolder)
+                        ctFilePath = os.path.join(predCt, ct)
+                        dotFilePath = os.path.join(ctFolder, ct.replace('.ct', '.txt'))
+                        evalFilePath = os.path.join(ctFolder, ct.replace('.ct', '.rnaeval.txt'))
 
-extractCtFiles(inputDir, outputDir)
+                        cmd = f"ct2db {ctFilePath} > {dotFilePath}"
+                        subprocess.run(cmd, shell=True)
+
+                        cmd = f"RNAeval < {dotFilePath} > {evalFilePath}"
+                        subprocess.run(cmd, shell=True)
+
+                        print(f"Converted {ct} to dot notation and evaluated free energy.")
+                            
+extractCtFiles(samplesInputDir, outputCtFiles)
