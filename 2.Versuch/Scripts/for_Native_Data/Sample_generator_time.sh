@@ -17,11 +17,8 @@ mkdir -p "$SAMPLES_CLUSTAL"
 # Started to generate SISSIz mononucleotide samples
 start_sissiz_mono=`date +%s.%N`
 
-for z in ${SAMPLES_CLUSTAL}; do
-    echo "$z"
-    name=$(basename "$z" .clu)
-    echo $name
-    SISSIz_mono_OUTPUT="$SAMPLES_CLUSTAL/neg_sample_SISSIz_mono_${name}.clu"
+for z in "$SAMPLES_CLUSTAL"/*; do
+    SISSIz_mono_OUTPUT="$SAMPLES_CLUSTAL/neg_sample_SISSIz_mono_${z}"
 
     if [ ! -f "$SISSIz_mono_OUTPUT" ]; then
         # Run the SISSIz_mono command
@@ -43,9 +40,8 @@ echo "SISSIz_mono runtime: $runtime seconds"
 start_sissiz_di=`date +%s.%N`
 
 # Inner loop to generate 10 SISSIz dinucleotide samples 
-for v in ${SAMPLES_CLUSTAL}; do
-    name=$(basename "$v" .clu)
-    SISSIz_di_OUTPUT="$SAMPLES/neg_sample_SISSIz_di_${basename}.clu"
+for v in "$SAMPLES_CLUSTAL"/*; do
+    SISSIz_di_OUTPUT="$SAMPLES/neg_sample_SISSIz_di_${v}"
 
     if [ ! -f "$SISSIz_di_OUTPUT" ]; then
         # Run the SISSIz_di command
@@ -66,9 +62,8 @@ echo "SISSIz_di runtime: $runtime seconds"
 # Started to generate Multiperm mononucleotide samples for each SISSI sample
 start_multiperm_mono=`date +%s.%N`
 
-for m in ${SAMPLES_CLUSTAL}; do
-    name=$(basename "$m" .clu)
-    MULTIPERM_mono_OUTPUT="$SAMPLES/neg_sample_MULTIPERM_mono_${name}.clu"
+for m in "$SAMPLES_CLUSTAL"/*; do
+    MULTIPERM_mono_OUTPUT="$SAMPLES/neg_sample_MULTIPERM_mono_${m}"
 
     if [ ! -f "$MULTIPERM_mono_OUTPUT" ]; then
         # Run Multiperm command
@@ -89,9 +84,8 @@ echo "Mulitperm_mono runtime: $runtime seconds"
 # Started to generate Multiperm dinucleotide samples for each SISSI sample
 start_multiperm_di=`date +%s.%N`
 
-for j in ${SAMPLES_CLUSTAL}; do
-    name=$(basename "$j" .clu)
-    MULTIPERM_di_OUTPUT="$SAMPLES/neg_sample_MULTIPERM_di_${name}.clu"
+for j in "$SAMPLES_CLUSTAL"/*; do
+    MULTIPERM_di_OUTPUT="$SAMPLES/neg_sample_MULTIPERM_di_${j}"
 
     if [ ! -f "$MULTIPERM_di_OUTPUT" ]; then
         # Run Multiperm command
@@ -112,9 +106,8 @@ echo "Mulitperm_di runtime: $runtime seconds"
 # Started to generate 1000 Alifoldz mononucleotide samples for each SISSI sample
 start_alifoldz=`date +%s.%N`
 
-for k in ${SAMPLES_CLUSTAL}; do
-    name=$(basename "$k" .clu)
-    ALIFOLDz_OUTPUT="$SAMPLES/neg_sample_ALIFOLDz_${name}.clu"
+for k in "$SAMPLES_CLUSTAL"/*; do
+    ALIFOLDz_OUTPUT="$SAMPLES/neg_sample_ALIFOLDz_${k}"
         
     if [ ! -f "$ALIFOLDz_OUTPUT" ]; then
         # Run Alifoldz command
