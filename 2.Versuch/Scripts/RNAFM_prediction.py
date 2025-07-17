@@ -4,7 +4,7 @@ import subprocess
 import time
 
 SAMPLES_PATH = "/mnt/sdc2/home/c2210542009/Masterarbeit/Data/"
-SAMPLES_FASTA = os.path.join(SAMPLES_PATH, "SAMPLES_FASTA")
+SAMPLES_RNAFM = os.path.join(SAMPLES_PATH, "SAMPLES_RNAFM")
 RNAFM_PRE_OUTPUT = os.path.join(SAMPLES_PATH, "RNAFM_PRE_OUTPUT")
 NUM_THREADS = 15
 
@@ -15,7 +15,7 @@ print(f"Started at {time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(start_time
 
 def runRNAFM(file):
     basename = os.path.splitext(file)[0]
-    input_path = os.path.join(SAMPLES_FASTA, file)
+    input_path = os.path.join(SAMPLES_RNAFM, file)
     output_path = os.path.join(RNAFM_PRE_OUTPUT, basename)
 
     if os.path.exists(output_path):
@@ -34,7 +34,7 @@ def runRNAFM(file):
 with ThreadPoolExecutor(max_workers=NUM_THREADS) as executor:
     futures = [
         executor.submit(runRNAFM, file)
-        for file in sorted(os.listdir(SAMPLES_FASTA))
+        for file in sorted(os.listdir(SAMPLES_RNAFM))
         if file.endswith(".fasta")
     ]
     for future in as_completed(futures):
