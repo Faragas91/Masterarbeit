@@ -34,12 +34,20 @@ def createExcelData(data, count, nameOfFile, excelName):
     df = pd.DataFrame(data)
     df.to_excel(f"{excelName}.xlsx", index=False)
 
+<<<<<<< HEAD
     output_dir = "D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAz_Excel"
+=======
+    output_dir = "/mnt/hdd/Masterarbeit/2.Versuch/Native_Data/RNAz_Excel"
+>>>>>>> 3e299e8a3582ae2fe36abc74c406ce7795042ba1
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
     print(f"Your data was succsessfully transfered to {excelName}.xlsx.")
+<<<<<<< HEAD
     shutil.move(f"D:/Masterarbeit/{excelName}.xlsx", f"D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAz_Excel/{excelName}.xlsx")
+=======
+    shutil.move(f"/mnt/hdd/Masterarbeit/{excelName}.xlsx", f"/mnt/hdd/Masterarbeit/2.Versuch/Native_Data/RNAz_Excel/{excelName}.xlsx")
+>>>>>>> 3e299e8a3582ae2fe36abc74c406ce7795042ba1
     return count
 
 
@@ -56,15 +64,26 @@ def createNativeExcelData(data, count, excelName):
     df = pd.DataFrame(data)
     df.to_excel(f"{excelName}.xlsx", index=False)
 
+<<<<<<< HEAD
     output_dir = "D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAz_Excel"
+=======
+    output_dir = "/mnt/hdd/Masterarbeit/2.Versuch/Native_Data/RNAz_Excel"
+>>>>>>> 3e299e8a3582ae2fe36abc74c406ce7795042ba1
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
     print(f"Your data was succsessfully transfered to {excelName}.xlsx.")
+<<<<<<< HEAD
     shutil.move(f"D:/Masterarbeit/{excelName}.xlsx", f"D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAz_Excel/{excelName}.xlsx")
     return count 
 
 directory = "D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAz_PREDICTION/"
+=======
+    shutil.move(f"/mnt/hdd/Masterarbeit/{excelName}.xlsx", f"/mnt/hdd/Masterarbeit/2.Versuch/Native_Data/RNAz_Excel/{excelName}.xlsx")
+    return count 
+
+directory = "/mnt/hdd/Masterarbeit/2.Versuch/Native_Data/RNAz_PREDICTION/"
+>>>>>>> 3e299e8a3582ae2fe36abc74c406ce7795042ba1
 
 count = 0
 pos_data = []

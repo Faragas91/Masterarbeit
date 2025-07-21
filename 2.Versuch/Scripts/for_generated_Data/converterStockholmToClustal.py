@@ -1,23 +1,27 @@
 import os
-from Bio import SeqIO
+from Bio import AlignIO
 
-# SAMPLES_STOCKHOLM = "D:/Masterarbeit_programmieren/2.Versuch/Data/SAMPLES_STOCKHOLM/"
-SAMPLES_STOCKHOLM = "run/media/stefanre/CA6415EC6415DC4F/Masterarbeit/2.Versuch/Data/alignments/"
-#SAMPLES_CLUSTAL = "D:/Masterarbeit_programmieren/2.Versuch/Data/SAMPLES_CLUSTAL/"
-SAMPLES_CLUSTAL = "/home/sredl/Masterarbeit/2.Versuch/Data/SAMPLES_CLUSTAL/"
+# INPUT: Verzeichnis mit Stockholm-Dateien
+SAMPLES_STOCKHOLM = "/run/media/stefanre/CA6415EC6415DC4F/Masterarbeit/2.Versuch/Data/alignments/"
 
-def convertStockholmToClustal(inputDir):
-    for file in os.listdir(inputDir):
-        if file.endswith(".clu"):
-            input_file_path = os.path.join(inputDir, file)
-            output_file_path = os.path.join(SAMPLES_CLUSTAL, os.path.splitext(file)[0] + ".fasta")
-            
+# OUTPUT: Verzeichnis für Clustal-Dateien
+SAMPLES_CLUSTAL = "/run/media/stefanre/CA6415EC6415DC4F/Masterarbeit/2.Versuch/Native_Data/SAMPLES_CLUSTAL/"
+
+if not os.path.exists(SAMPLES_CLUSTAL):
+    os.makedirs(SAMPLES_CLUSTAL)
+
+def convert_stockholm_to_clustal(input_dir, output_dir):
+    for file in os.listdir(input_dir):
+        if file.endswith(".sto"):
+            input_path = os.path.join(input_dir, file)
+            output_filename = os.path.splitext(file)[0] + ".clu"
+            output_path = os.path.join(output_dir, output_filename)
+
             try:
-                with open(input_file_path, "r") as input_file:
-                    records = SeqIO.parse(input_file, "clustal")
-                    count = SeqIO.write(records, output_file_path, "fasta")
-                    print(f"Converted {count} records from {file} to {output_file_path}")
+                alignment = AlignIO.read(input_path, "stockholm")
+                AlignIO.write(alignment, output_path, "clustal")
+                print(f"Converted {file} → {output_filename}")
             except Exception as e:
-                print(f"Error processing file {file}: {e}")
+                print(f"❌ Fehler bei {file}: {e}")
 
-convertStockholmToClustal(SAMPLES_STOCKHOLM)
+convert_stockholm_to_clustal(SAMPLES_STOCKHOLM, SAMPLES_CLUSTAL)
