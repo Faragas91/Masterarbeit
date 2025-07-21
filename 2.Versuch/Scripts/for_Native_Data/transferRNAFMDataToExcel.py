@@ -1,47 +1,50 @@
 import os
 import shutil
 import pandas as pd
+import statistics
 
-# Function to parse the RNAz file
-def parse_rnaz_file(file_path):
-    data = {}
+def parseRnafmFile(file_path, parent_folder):
+    results = []
+    for fileName in os.listdir(file_path):
+        if fileName.endswith(".rnaeval.txt"):
+            fileRnaeval = os.path.join(file_path, fileName)
+            mfe_value = None
+            with open(fileRnaeval, 'r') as file:
+                for line in file:
+                    line_row = line.strip().split()
+                    if len(line_row) > 1:
+                        try:
+                            mfe_value = float(line_row[-1].replace("(", "").replace(")", ""))
+                            break
+                        except ValueError:
+                            continue
+            if mfe_value is not None:
+                results.append({
+                    "File": fileName,
+                    "ParentFolder": parent_folder,
+                    "Score": mfe_value
+                })
+    return results
 
-    # Read every line in the .txt file
-    with open(file_path, 'r') as file:
-        for line in file:
-            line = line.strip()  # disable spaces
-            if line.startswith("Prediction"):
-                break
-            if ": " in line:  # see keys and values
-                key, value = line.split(": ", 1)
-                if any(i.isdigit() for i in value):
-                    data[key] = value
-                else:
-                    continue
-    return data
-
-# All data
 def createExcelData(data, count, nameOfFile, excelName):
     for file_name in os.listdir(directory):
         if file_name.startswith(nameOfFile):
             count += 1
             print(f"Process file {count}: {file_name}")
             file_path = os.path.join(directory, file_name)
-            file_data = parse_rnaz_file(file_path)
-            file_data["File"] = file_name  
-            data.append(file_data)
+            file_data = parseRnafmFile(file_path, file_name)
+            data.extend(file_data)
 
     df = pd.DataFrame(data)
     df.to_excel(f"{excelName}.xlsx", index=False)
 
-    output_dir = "D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAz_Excel"
+    output_dir = "D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAFM_Excel"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
     print(f"Your data was succsessfully transfered to {excelName}.xlsx.")
-    shutil.move(f"D:/Masterarbeit/{excelName}.xlsx", f"D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAz_Excel/{excelName}.xlsx")
+    shutil.move(f"D:/Masterarbeit/{excelName}.xlsx", f"D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAFM_Excel/{excelName}.xlsx") 
     return count
-
 
 def createNativeExcelData(data, count, excelName):
     for file_name in os.listdir(directory):
@@ -49,22 +52,21 @@ def createNativeExcelData(data, count, excelName):
             count += 1
             print(f"Process native file {count}: {file_name}")
             file_path = os.path.join(directory, file_name)
-            file_data = parse_rnaz_file(file_path)
-            file_data["File"] = file_name
-            data.append(file_data)
+            file_data = parseRnafmFile(file_path, file_name)
+            data.extend(file_data)
 
     df = pd.DataFrame(data)
     df.to_excel(f"{excelName}.xlsx", index=False)
 
-    output_dir = "D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAz_Excel"
+    output_dir = "D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAFM_Excel"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
     print(f"Your data was succsessfully transfered to {excelName}.xlsx.")
-    shutil.move(f"D:/Masterarbeit/{excelName}.xlsx", f"D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAz_Excel/{excelName}.xlsx")
+    shutil.move(f"D:/Masterarbeit/{excelName}.xlsx", f"D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAFM_Excel/{excelName}.xlsx")
     return count 
 
-directory = "D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAz_PREDICTION/"
+directory = "D:/Masterarbeit/2.Versuch/Result/Native_Results/RNA-FM_DOT_NOTATION/"
 
 count = 0
 pos_data = []
