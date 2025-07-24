@@ -5,20 +5,54 @@ Summary KW2
 \usepackage{hyperref}
 \usepackage{setspace}
 \usepackage{listings}
+\usepackage{float}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{xcolor} 
+\usepackage{caption}
+\usepackage{subcaption}
+
 \lstset{
+    language=Python,
     basicstyle=\ttfamily\small,
+    keywordstyle=\bfseries\color{blue},
+    commentstyle=\itshape\color{gray},
+    stringstyle=\color{orange},
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny,
     breaklines=true,
     frame=single
+    aboveskip=1em,
+    belowskip=1em
 }
 
-\setlength{\parindent}{0pt}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+}
+\onehalfspacing
 
-\title{KW2 Summary}
+\setlength{\parindent}{0pt}
+\setlength{\textfloatsep}{0pt}
+
+\title{}
 \author{Stefan Redl}
 
 \begin{document}
 
 \maketitle
+
+\tableofcontents
+\chapter{Kapitel1}
+\section{Kapitel1.1}
+\subsection{Kapitel1.1.1}
+\subsubsection{Kapitel1.1.1.1}
+
+\end{document}
+
+\begin{document}
 
 \section{SISSIz Prediction}
 
@@ -91,25 +125,6 @@ I'm just about to install it and try it out soon.
 
 Summary KW4
 
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
-\usepackage{hyperref}
-\usepackage{setspace}
-\usepackage{listings}
-\usepackage{float}
-\usepackage[font=small,labelfont=bf]{caption}
-\usepackage[a4paper, margin=1in]{geometry}
-
-
-% Einstellungen für Code Listings
-\lstset{
-basicstyle=\ttfamily\small,
-breaklines=true,
-frame=single
-}
-
-\setlength{\parindent}{0pt}
-\setlength{\textfloatsep}{0pt}
 
 \title{KW4 Summary}
 \author{Stefan Redl}
@@ -125,7 +140,6 @@ This section presents the results of the randomization of the individual tools a
     \centering
     \includegraphics[scale=0.5]{Randomisation/Bar Chart.png}
     \caption{Display of the maximum, average and minimum time per 1000 samples}
-    \label{fig:bar_chart}
 \end{figure}
 
 
@@ -251,33 +265,7 @@ The z-scores confirm the previous results and show that SISSIz has almost comple
 
 Summary KW5 
 
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
-\usepackage{hyperref}
-\usepackage{setspace}
-\usepackage{listings}
-\usepackage{float}
-\usepackage[font=small,labelfont=bf]{caption}
-\usepackage[a4paper, margin=1in]{geometry}
-\usepackage{setspace}  
-\onehalfspacing
-\usepackage{hyperref}
-\usepackage{xcolor}
-\hypersetup{
-    colorlinks=true, 
-    linkcolor=blue, 
-    urlcolor=blue,  
-}
 
-% Einstellungen für Code Listings
-\lstset{
-basicstyle=\ttfamily\small,
-breaklines=true,
-frame=single
-}
-
-\setlength{\parindent}{0pt}
-\setlength{\textfloatsep}{0pt}
 
 \title{KW5 Summary}
 \author{Stefan Redl}
@@ -313,7 +301,6 @@ After completion of the first run, an RNA sequence of Bacillus subtilis is extra
     \centering
     \includegraphics[scale=0.7]{Pipeline Diagramm.png}
     \caption{Pipeline}
-    \label{fig:bar_chart}
 \end{figure}
 
 \section{Time capture from RNAz and SISSIz}
@@ -369,34 +356,6 @@ Because the FH get a new Server on Monday the 3th, i started to copy all necessa
 
 
 Summary KW6 and KW7
-
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
-\usepackage{hyperref}
-\usepackage{setspace}
-\usepackage{listings}
-\usepackage{float}
-\usepackage[font=small,labelfont=bf]{caption}
-\usepackage[a4paper, margin=1in]{geometry}
-\usepackage{setspace}  
-\onehalfspacing
-\usepackage{hyperref}
-\usepackage{xcolor}
-\hypersetup{
-    colorlinks=true, 
-    linkcolor=blue, 
-    urlcolor=blue,  
-}
-
-% Einstellungen für Code Listings
-\lstset{
-basicstyle=\ttfamily\small,
-breaklines=true,
-frame=single
-}
-
-\setlength{\parindent}{0pt}
-\setlength{\textfloatsep}{0pt}
 
 \title{KW6 and KW7 Summary}
 \author{Stefan Redl}
@@ -664,34 +623,6 @@ sincFold represents a significant advancement in RNA secondary structure predict
 
 Summary KW8 and KW9
 
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
-\usepackage{hyperref}
-\usepackage{setspace}
-\usepackage{listings}
-\usepackage{float}
-\usepackage[font=small,labelfont=bf]{caption}
-\usepackage[a4paper, margin=1in]{geometry}
-\usepackage{setspace}  
-\onehalfspacing
-\usepackage{hyperref}
-\usepackage{xcolor}
-\hypersetup{
-    colorlinks=true, 
-    linkcolor=blue, 
-    urlcolor=blue,  
-}
-
-% Einstellungen für Code Listings
-\lstset{
-basicstyle=\ttfamily\small,
-breaklines=true,
-frame=single
-}
-
-\setlength{\parindent}{0pt}
-\setlength{\textfloatsep}{0pt}
-
 \title{KW8 and KW9 Summary}
 \author{Stefan Redl}
 \begin{document}
@@ -787,52 +718,6 @@ Rfam now provides a publicly accessible, read-only MySQL database that is update
 
 Summary KW13 - KW16
 
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
-\usepackage{hyperref}
-\usepackage{setspace}
-\usepackage{listings}
-\usepackage{float}
-\usepackage[font=small,labelfont=bf]{caption}
-\usepackage[a4paper, margin=1in]{geometry}
-\usepackage{setspace}  
-\onehalfspacing
-\usepackage{hyperref}
-\usepackage{xcolor}
-\hypersetup{
-    colorlinks=true, 
-    linkcolor=blue, 
-    urlcolor=blue,  
-}
-
-\usepackage{listings}
-\usepackage{xcolor}
-
-\lstset{
-    language=Python,
-    basicstyle=\ttfamily\small,
-    keywordstyle=\bfseries\color{blue},
-    commentstyle=\itshape\color{gray},
-    stringstyle=\color{orange},
-    showstringspaces=false,
-    numbers=left,
-    numberstyle=\tiny,
-    breaklines=true,
-    frame=single
-    aboveskip=1em,
-    belowskip=1em
-}
-
-
-% Einstellungen für Code Listings
-\lstset{
-basicstyle=\ttfamily\small,
-breaklines=true,
-frame=single
-}
-
-\setlength{\parindent}{0pt}
-\setlength{\textfloatsep}{0pt}
 
 \title{KW13 - KW16 Summary}
 \author{Stefan Redl}
@@ -1002,14 +887,12 @@ weighted avg       0.98      0.98      0.98      1000
     \centering
     \includegraphics{Histogram SISSI vs SISSIz_mono.png}
     \caption{Histogram SISSI vs SISSIz-mono}
-    \label{fig:bar_chart}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics{ROC-CURVE SISSI vs SISSIz_mono.png}
     \caption{ROC-CURVE SISSI vs SISSIz-mono}
-    \label{fig:bar_chart}
 \end{figure}
 
 \clearpage
@@ -1039,14 +922,12 @@ weighted avg       0.97      0.97      0.97      1000
     \centering
     \includegraphics{Histogram SISSI vs SISSIz_di.png}
     \caption{Histogram SISSI vs SISSIz-di}
-    \label{fig:bar_chart}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics{ROC-CURVE SISSI vs SISSIz_di.png}
     \caption{ROC-CURVE SISSI vs SISSIz-di}
-    \label{fig:bar_chart}
 \end{figure}
 
 \clearpage
@@ -1076,14 +957,12 @@ weighted avg       0.94      0.94      0.93      1000
     \centering
     \includegraphics{Histogram SISSI vs MULTIPERM_mono.png}
     \caption{Histogram SISSI vs MULTIPERM-mono}
-    \label{fig:bar_chart}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics{ROC-CURVE SISSI vs MULTIPERM_mono.png}
     \caption{ROC-CURVE SISSI vs MULTIPERM-mono}
-    \label{fig:bar_chart}
 \end{figure}
 
 \clearpage
@@ -1114,14 +993,12 @@ weighted avg       0.94      0.94      0.94      1000
     \centering
     \includegraphics{Histogram SISSI vs MULTIPERM_di.png}
     \caption{Histogram SISSI vs MULTIPERM-di}
-    \label{fig:bar_chart}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics{ROC-CURVE SISSI vs MULTIPERM_di.png}
     \caption{ROC-CURVE SISSI vs MULTIPERM-di}
-    \label{fig:bar_chart}
 \end{figure}
 
 \clearpage
@@ -1151,14 +1028,12 @@ weighted avg       0.80      0.80      0.80      1000
     \centering
     \includegraphics{Histogram SISSI vs ALN-SHUFFLE.png}
     \caption{Histogram SISSI vs ALN-SHUFFLE}
-    \label{fig:bar_chart}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics{ROC-CURVE SISSI vs ALN-SHUFFLE.png}
     \caption{ROC-CURVE SISSI vs ALN-SHUFFLE}
-    \label{fig:bar_chart}
 \end{figure}
 
 \clearpage
@@ -1231,55 +1106,6 @@ MXfold2 represents a significant step forward in RNA bioinformatics. By combinin
 
 Summary KW18 - KW22
 
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
-\usepackage{hyperref}
-\usepackage{setspace}
-\usepackage{listings}
-\usepackage{float}
-\usepackage[font=small,labelfont=bf]{caption}
-\usepackage[a4paper, margin=1in]{geometry}
-\usepackage{setspace}  
-\onehalfspacing
-\usepackage{hyperref}
-\usepackage{xcolor}
-\usepackage{graphicx}
-\usepackage{caption}
-\usepackage{subcaption}
-\hypersetup{
-    colorlinks=true, 
-    linkcolor=blue, 
-    urlcolor=blue,  
-}
-
-\usepackage{listings}
-\usepackage{xcolor}
-
-\lstset{
-    language=Python,
-    basicstyle=\ttfamily\small,
-    keywordstyle=\bfseries\color{blue},
-    commentstyle=\itshape\color{gray},
-    stringstyle=\color{orange},
-    showstringspaces=false,
-    numbers=left,
-    numberstyle=\tiny,
-    breaklines=true,
-    frame=single
-    aboveskip=1em,
-    belowskip=1em
-}
-
-
-% Einstellungen für Code Listings
-\lstset{
-basicstyle=\ttfamily\small,
-breaklines=true,
-frame=single
-}
-
-\setlength{\parindent}{0pt}
-\setlength{\textfloatsep}{0pt}
 
 \title{KW18 - KW22 Summary}
 \author{Stefan Redl}
@@ -1295,7 +1121,6 @@ frame=single
     \centering
     \includegraphics[scale=0.7]{Boxplot SISSIz z-score.png}
     \caption{Boxplot SISSIz z-score}
-    \label{fig:bar_chart}
 \end{figure}
 
 The boxplots clearly show the selectivity of the different models. In particular, SISSIz-mono and SISSIz-di stand out as the most effective in destroying the RNA secondary structure. In contrast, the other models showed little to no destructive effect. The worst result was achieved by ALN-Shuffle, which could hardly affect the structure of the RNA.
@@ -1307,37 +1132,31 @@ The boxplots clearly show the selectivity of the different models. In particular
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{SISSIz_Histogram_SISSI_vs_SISSIz_MONO.png}
         \caption{SISSI vs SISSIz-mono}
-        \label{fig:hist_sissiz_mono}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{SISSIz_Histogram_SISSI_vs_SISSIZ_DI.png}
         \caption{SISSI vs SISSIz-di}
-        \label{fig:hist_sissiz_di}
     \end{subfigure}
     \vspace{1em}
     
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{SISSIz_Histogram_SISSI_vs_MULTIPERM_MONO.png}
         \caption{SISSI vs MULTIPERM-mono}
-        \label{fig:hist_multiperm_mono}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{SISSIz_Histogram_SISSI_vs_MULTIPERM_DI.png}
         \caption{SISSI vs MULTIPERM-di}
-        \label{fig:hist_multiperm_di}
     \end{subfigure}
     \vspace{1em}
     
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{SISSIz_Histogram_SISSI_vs_ALN-SHUFFLE.png}
         \caption{SISSI vs ALN-SHUFFLE}
-        \label{fig:hist_aln_shuffle}
     \end{subfigure}
 
     \caption{Histograms from SISSIz prediction}
-    \label{fig:all_histograms}
 \end{figure}
 
 The histograms also confirm the results from the boxplots: The separability of the models is easily recognizable, and again \textit{SISSIz-mono} and \textit{SISSIz-di} show the best performance. \vspace{1em}
@@ -1349,37 +1168,31 @@ The histograms also confirm the results from the boxplots: The separability of t
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{SISSIz_Confusion_Matrix_SISSI_vs_SISSIz_MONO.png}
         \caption{SISSI vs SISSIz-mono}
-        \label{fig:confusion_sissiz_mono}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{SISSIz_Confusion_Matrix_SISSI_vs_SISSIZ_DI.png}
         \caption{SISSI vs SISSIz-di}
-        \label{fig:confusion_sissiz_di}
     \end{subfigure}
     \vspace{1em}
     
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{SISSIz_Confusion_Matrix_SISSI_vs_MULTIPERM_MONO.png}
         \caption{SISSI vs MULTIPERM-mono}
-        \label{fig:confusion_multiperm_mono}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{SISSIz_Confusion_Matrix_SISSI_vs_MULTIPERM_DI.png}
         \caption{SISSI vs MULTIPERM-di}
-        \label{fig:confusion_multiperm_di}
     \end{subfigure}
     \vspace{1em}
     
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{SISSIz_Confusion_Matrix_SISSI_vs_ALN-SHUFFLE.png}
         \caption{SISSI vs ALN-SHUFFLE}
-        \label{fig:confusion_aln_shuffle}
     \end{subfigure}
 
     \caption{Confusion Matrix from SISSIz prediction}
-    \label{fig:all_confusionograms}
 \end{figure}
 
 The evaluation of the confusion matrices illustrates the concrete separation performance of the respective models.\vspace{1em}
@@ -1402,37 +1215,31 @@ The worst separability was found in the Aln-Shuffle Figure 3 (e) scenario, with 
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{SISSIz_ROC_Curve_SISSI_vs_SISSIz_MONO.png}
         \caption{SISSI vs SISSIz-mono}
-        \label{fig:roc_sissiz_mono}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{SISSIz_ROC_Curve_SISSI_vs_SISSIZ_DI.png}
         \caption{SISSI vs SISSIz-di}
-        \label{fig:roc_sissiz_di}
     \end{subfigure}
     \vspace{1em}
 
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{SISSIz_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png}
         \caption{SISSI vs MULTIPERM-mono}
-        \label{fig:roc_multiperm_mono}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{SISSIz_ROC_Curve_SISSI_vs_MULTIPERM_DI.png}
         \caption{SISSI vs MULTIPERM-di}
-        \label{fig:roc_multiperm_di}
     \end{subfigure}
     \vspace{1em}
 
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{SISSIz_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png}
         \caption{SISSI vs ALN-SHUFFLE}
-        \label{fig:roc_aln_shuffle}
     \end{subfigure}
 
     \caption{ROC-curves from SISSIz prediction}
-    \label{fig:all_roc_curves}
 \end{figure}
 
 The ROC curve compares the true-positive rate with the false-positive rate for various threshold values. The AUC value (Area Under the Curve) measures the quality of the separation between the classes.\vspace{1em}
@@ -1452,7 +1259,6 @@ SISSIz-mono and SISSIz-di also showed very high AUC values, confirming their str
     \centering
     \includegraphics[scale=0.7]{Boxplot Mxfold2 Score.png}
     \caption{Boxplot MXfold2 Score}
-    \label{fig:bar_chart}
 \end{figure}
 
 The boxplot of MXfold2 clearly shows that the RNA secondary structure was successfully destroyed. However, MXfold2 shows difficulties in handling the simulated data from SISSI, which leads to an inaccurate prediction of whether the secondary structure was actually destroyed or not. This observation could also explain why the Multiperm-mono and Multiperm-di methods achieve almost equivalent results to SISSIz-mono and SISSIz-di, although the evaluations of RNAz and SISSIz consistently show that the SISSIz-mono and SISSIz-di methods generally perform better than the other approaches.
@@ -1464,37 +1270,31 @@ The boxplot of MXfold2 clearly shows that the RNA secondary structure was succes
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{MXfold2_Histogram_SISSI_vs_SISSIz_MONO.png}
         \caption{SISSI vs SISSIz-mono}
-        \label{fig:hist_sissiz_mono}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{MXfold2_Histogram_SISSI_vs_SISSIz_DI.png}
         \caption{SISSI vs SISSIz-di}
-        \label{fig:hist_sissiz_di}
     \end{subfigure}
     \vspace{1em}
     
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{MXfold2_Histogram_SISSI_vs_MULTIPERM_MONO.png}
         \caption{SISSI vs MULTIPERM-mono}
-        \label{fig:hist_multiperm_mono}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{MXfold2_Histogram_SISSI_vs_MULTIPERM_DI.png}
         \caption{SISSI vs MULTIPERM-di}
-        \label{fig:hist_multiperm_di}
     \end{subfigure}
     \vspace{1em}
     
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{MXfold2_Histogram_SISSI_vs_ALN-SHUFFLE.png}
         \caption{SISSI vs ALN-SHUFFLE}
-        \label{fig:hist_aln_shuffle}
     \end{subfigure}
 
     \caption{Histograms from MXfold2 prediction}
-    \label{fig:all_histograms}
 \end{figure}
 
 When analyzing the histograms of the individual models, it becomes apparent that the positive and negative data are strongly intertwined. This indicates that the predictive accuracy of the random forest model may be limited. One possible explanation for this could be that all five histograms show almost identical results, which indicates that the MXfold2 model has difficulties in dealing with simulated data.
@@ -1506,37 +1306,31 @@ When analyzing the histograms of the individual models, it becomes apparent that
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{MXfold2_Confusion_Matrix_SISSI_vs_SISSIz_MONO.png}
         \caption{SISSI vs SISSIz-mono}
-        \label{fig:confusion_sissiz_mono}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{MXfold2_Confusion_Matrix_SISSI_vs_SISSIZ_DI.png}
         \caption{SISSI vs SISSIz-di}
-        \label{fig:confusion_sissiz_di}
     \end{subfigure}
     \vspace{1em}
     
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{MXfold2_Confusion_Matrix_SISSI_vs_MULTIPERM_MONO.png}
         \caption{SISSI vs MULTIPERM-mono}
-        \label{fig:confusion_multiperm_mono}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{MXfold2_Confusion_Matrix_SISSI_vs_MULTIPERM_DI.png}
         \caption{SISSI vs MULTIPERM-di}
-        \label{fig:confusion_multiperm_di}
     \end{subfigure}
     \vspace{1em}
     
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{MXfold2_Confusion_Matrix_SISSI_vs_ALN-SHUFFLE.png}
         \caption{SISSI vs ALN-SHUFFLE}
-        \label{fig:confusion_aln_shuffle}
     \end{subfigure}
 
     \caption{Confusion Matrix from MXfold2 prediction}
-    \label{fig:all_confusionograms}
 \end{figure}
 
 The trends observed in the boxplot and histogram are further underpinned by the analysis of the confusion matrix. The separability of the models proves to be suboptimal. For the SISSIz-mono model (Figure a), 15,535 false-positive and 28,569 false-negative results were determined. The SISSIz-di model (Figure b) showed 17,546 false-positive and 34,018 false-negative results. \vspace{1em}    
@@ -1550,37 +1344,31 @@ The Multiperm-mono model (Figure c) yielded 9,834 false-positive and 32,476 fals
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{MXfold2_ROC_Curve_SISSI_vs_SISSIz_MONO.png}
         \caption{SISSI vs SISSIz-mono}
-        \label{fig:roc_sissiz_mono}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{MXfold2_ROC_Curve_SISSI_vs_SISSIz_DI.png}
         \caption{SISSI vs SISSIz-di}
-        \label{fig:roc_sissiz_di}
     \end{subfigure}
     \vspace{1em}
 
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{MXfold2_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png}
         \caption{SISSI vs MULTIPERM-mono}
-        \label{fig:roc_multiperm_mono}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{MXfold2_ROC_Curve_SISSI_vs_MULTIPERM_DI.png}
         \caption{SISSI vs MULTIPERM-di}
-        \label{fig:roc_multiperm_di}
     \end{subfigure}
     \vspace{1em}
 
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{MXfold2_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png}
         \caption{SISSI vs ALN-SHUFFLE}
-        \label{fig:roc_aln_shuffle}
     \end{subfigure}
 
     \caption{ROC-curves from MXfold2 prediction}
-    \label{fig:all_roc_curves}
 \end{figure}
 
 The evaluation of the ROC curves for the MXfold2 models shows that none of the tested models provides satisfactory results. This could indicate that MXfold2 has difficulties in dealing with the simulated data generated by SISSI, leading to inaccurate prediction of RNA structural integrity.\vspace{1em}
@@ -1599,7 +1387,6 @@ In view of these results, it would be of great interest to evaluate the models w
     \centering
     \includegraphics[scale=0.7]{Boxplot RNAz SVM RNA-class probability.png}
     \caption{Boxplot MXfold2 Score}
-    \label{fig:bar_chart}
 \end{figure}
 
 The boxplot illustrates the ability of different methods to destroy the RNA secondary structure. While the positive SISSI samples show very high RNAz probabilities as expected, the SISSIz-mono and SISSIz-di methods show significantly lower values and greater scatter. This indicates a successful destruction of the structure. In contrast, the RNAz values of the shuffling methods remain high, indicating insufficient structure destruction. Particularly striking is the Aln shuffling method, whose values are almost identical to the positive controls.
@@ -1611,37 +1398,31 @@ The boxplot illustrates the ability of different methods to destroy the RNA seco
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{RNAz_Histogram_SISSI_vs_SISSIz_MONO.png}
         \caption{SISSI vs SISSIz-mono}
-        \label{fig:hist_sissiz_mono}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{RNAz_Histogram_SISSI_vs_SISSIZ_DI.png}
         \caption{SISSI vs SISSIz-di}
-        \label{fig:hist_sissiz_di}
     \end{subfigure}
     \vspace{1em}
     
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{RNAz_Histogram_SISSI_vs_MULTIPERM_MONO.png}
         \caption{SISSI vs MULTIPERM-mono}
-        \label{fig:hist_multiperm_mono}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{RNAz_Histogram_SISSI_vs_MULTIPERM_DI.png}
         \caption{SISSI vs MULTIPERM-di}
-        \label{fig:hist_multiperm_di}
     \end{subfigure}
     \vspace{1em}
     
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{RNAz_Histogram_SISSI_vs_ALN-SHUFFLE.png}
         \caption{SISSI vs ALN-SHUFFLE}
-        \label{fig:hist_aln_shuffle}
     \end{subfigure}
 
     \caption{Histograms from RNAz prediction}
-    \label{fig:all_histograms}
 \end{figure}
 
 The histograms also confirm the results of the boxplot analysis: the SISSIz-mono and SISSIz-di methods lead to a significant shift in the probability distribution towards low RNAz values, indicating effective destruction of the RNA secondary structure. In contrast, the shuffling methods show hardly any change in the distribution compared to the positive control, indicating insufficient impairment of the structure.
@@ -1653,37 +1434,31 @@ The histograms also confirm the results of the boxplot analysis: the SISSIz-mono
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{RNAz_Confusion_Matrix_SISSI_vs_SISSIz_MONO.png}
         \caption{SISSI vs SISSIz-mono}
-        \label{fig:confusion_sissiz_mono}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{RNAz_Confusion_Matrix_SISSI_vs_SISSIZ_DI.png}
         \caption{SISSI vs SISSIz-di}
-        \label{fig:confusion_sissiz_di}
     \end{subfigure}
     \vspace{1em}
     
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{RNAz_Confusion_Matrix_SISSI_vs_MULTIPERM_MONO.png}
         \caption{SISSI vs MULTIPERM-mono}
-        \label{fig:confusion_multiperm_mono}
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{RNAz_Confusion_Matrix_SISSI_vs_MULTIPERM_DI.png}
         \caption{SISSI vs MULTIPERM-di}
-        \label{fig:confusion_multiperm_di}
     \end{subfigure}
     \vspace{1em}
     
     \begin{subfigure}[b]{0.48\textwidth}
         \includegraphics[width=\textwidth]{RNAz_Confusion_Matrix_SISSI_vs_ALN-SHUFFLE.png}
         \caption{SISSI vs ALN-SHUFFLE}
-        \label{fig:confusion_aln_shuffle}
     \end{subfigure}
 
     \caption{Confusion Matrix from RNAz prediction}
-    \label{fig:all_confusionograms}
 \end{figure}
 
 An interesting result can be seen when analyzing the confusion matrices: The shuffle methods have lower overall values for false-positive (FP) and false-negative (FN) classifications. The best values are achieved by Multiperm-di with 70 FP and 717 FN, followed by Multiperm-mono with 83 FP and 706 FN. ALN-shuffle also achieves lower error rates than the SISSIz-based methods with 144 FP and 2052 FN.\vspace{1em}
@@ -1772,56 +1547,6 @@ If no solution is found for SPOT-RNA2 then I will look around for alternatives. 
 \end{document}
 
 Summary KW23 - KW24
-
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
-\usepackage{hyperref}
-\usepackage{setspace}
-\usepackage{listings}
-\usepackage{float}
-\usepackage[font=small,labelfont=bf]{caption}
-\usepackage[a4paper, margin=1in]{geometry}
-\usepackage{setspace}  
-\onehalfspacing
-\usepackage{hyperref}
-\usepackage{xcolor}
-\usepackage{graphicx}
-\usepackage{caption}
-\usepackage{subcaption}
-\hypersetup{
-    colorlinks=true, 
-    linkcolor=blue, 
-    urlcolor=blue,  
-}
-
-\usepackage{listings}
-\usepackage{xcolor}
-
-\lstset{
-    language=Python,
-    basicstyle=\ttfamily\small,
-    keywordstyle=\bfseries\color{blue},
-    commentstyle=\itshape\color{gray},
-    stringstyle=\color{orange},
-    showstringspaces=false,
-    numbers=left,
-    numberstyle=\tiny,
-    breaklines=true,
-    frame=single
-    aboveskip=1em,
-    belowskip=1em
-}
-
-
-% Einstellungen für Code Listings
-\lstset{
-basicstyle=\ttfamily\small,
-breaklines=true,
-frame=single
-}
-
-\setlength{\parindent}{0pt}
-\setlength{\textfloatsep}{0pt}
 
 \title{KW23 - KW24 Summary}
 \author{Stefan Redl}
