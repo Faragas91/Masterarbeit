@@ -1,6 +1,5 @@
-Summary KW2
-
 \documentclass{article}
+\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{setspace}
@@ -9,7 +8,6 @@ Summary KW2
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage[a4paper, margin=1in]{geometry}
 \usepackage{xcolor} 
-\usepackage{caption}
 \usepackage{subcaption}
 
 \lstset{
@@ -22,7 +20,7 @@ Summary KW2
     numbers=left,
     numberstyle=\tiny,
     breaklines=true,
-    frame=single
+    frame=single,
     aboveskip=1em,
     belowskip=1em
 }
@@ -32,6 +30,7 @@ Summary KW2
     linkcolor=blue,
     urlcolor=blue,
 }
+
 \onehalfspacing
 
 \setlength{\parindent}{0pt}
@@ -41,18 +40,52 @@ Summary KW2
 \author{Stefan Redl}
 
 \begin{document}
+\begin{large}
 
 \maketitle
-
 \tableofcontents
-\chapter{Kapitel1}
-\section{Kapitel1.1}
-\subsection{Kapitel1.1.1}
-\subsubsection{Kapitel1.1.1.1}
 
-\end{document}
+\section{Abstract}
+\section{Introduction}
+\subsection{Background}
+\subsection{Problem Statement}
+\section{Methods}
+\subsection{SISSI}
+\subsection{SISSIz}
+\subsection{RNAz}
+\subsection{ECSFinder}
+\subsection{Svhip}
+\section{Results}
+\section{Discussion}
 
-\begin{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{SISSIz Prediction}
 
@@ -66,50 +99,46 @@ The pipeline is finished and has no false files.
 
 \section{Samples from SISSIz, Multiperm and aln-Shuffle}
 
-Checked the Data from the Samples and they are fine. 
-I make a script to convert the CLUSTAL Files into FASTA Files because the Method SPOT-RNA needs a FASTA file to predict the RNA Structure. 
-I installed Biopython on my PC and also on the Server. 
-\singlespacing
-Biopython with version 1.84.
+Checked the data from the samples and they are fine. 
+I made a script to convert the CLUSTAL files into FASTA files because the method SPOT-RNA needs a FASTA file to predict the RNA structure. 
+I installed Biopython on my PC and also on the server. 
 
-\singlespacing
+Biopython version: 1.84
+
 \begin{lstlisting}
 pip install biopython
 \end{lstlisting}
-\singlespacing
-Tested the script (convertCluFasta.py) on my PC and it works fine. 
-\singlespacing
+
+Tested the script (convertCluToFasta.py) on my PC and it works fine.
+
 \begin{lstlisting}
 python3 convertCluToFasta.py 
 \end{lstlisting}
-\singlespacing
+
 The script is attached.
 
 \section{SPOT-RNA2}
 
-Try to install SPOT-RNA2 as described in the following. 
-\singlespacing
-\url{https://github.com/jaswindersingh2/SPOT-RNA2}.
-\singlespacing
-I was able to install SPOT-RNA2 on my PC, but was unable to run the program due to the requirement of the entire NCBI database (~400GB), which caused issues as there is insufficient memory available on the server (only 15-30GB in my virtual environment).
-Therefore this method will probably not work. 
+Tried to install SPOT-RNA2 as described at:  
+\url{https://github.com/jaswindersingh2/SPOT-RNA2}
 
-\subsubsection{Idea}
-To create a link between the database and SPOT-RNA2 and simulate that the database is on the system. 
+I was able to install SPOT-RNA2 on my PC, but was unable to run the program due to the requirement of the entire NCBI database (~400GB), which caused issues as there is insufficient memory available on the server (only 15–30GB in my virtual environment).  
+Therefore, this method will probably not work. 
+
+To create a link between the database and SPOT-RNA2 and simulate that the database is on the system.
 
 \section{SPOT-RNA}
 
-Since the SPOT-RNA2 could not be used, I tried to install the previous version SPOT-RNA as described in the description:
-\singlespacing
+Since SPOT-RNA2 could not be used, I tried to install the previous version SPOT-RNA as described here:  
 \url{https://github.com/jaswindersingh2/SPOT-RNA}
-\singlespacing
 
 I was able to install it on my PC and it works perfectly. 
 
 \section{RNA-MSM}
 
+Repository:  
 \url{https://github.com/yikunpku/RNA-MSM?tab=readme-ov-file}
-\singlespacing
+
 I'm just about to install it and try it out soon.
 
 \section{Questions}
@@ -119,17 +148,8 @@ I'm just about to install it and try it out soon.
     \item Should I use SPOT-RNA instead of SPOT-RNA2 or should I look for an alternative?
 \end{itemize}
 
-\end{document}
-
-
 
 Summary KW4
-
-
-\title{KW4 Summary}
-\author{Stefan Redl}
-\begin{document}
-\maketitle
 
 \section{Benchmark of the Tools}
 
@@ -138,7 +158,7 @@ This section presents the results of the randomization of the individual tools a
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{Randomisation/Bar Chart.png}
+    \includegraphics[scale=0.5]{D:/Masterarbeit/2.Versuch/Result/Bar Chart.png}
     \caption{Display of the maximum, average and minimum time per 1000 samples}
 \end{figure}
 
@@ -148,7 +168,7 @@ The SISSIz method requires significantly more time to simulate the randomized al
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{Randomisation/Bar Chart Total Times.png}
+    \includegraphics[scale=0.5]{D:/Masterarbeit/2.Versuch/Result/Bar Chart Total Times.png}
     \caption{Gesamtzeiten für jedes Werkzeug}
     \label{fig:bar_chart_total}
 \end{figure}
@@ -159,7 +179,7 @@ In terms of the total time for the simulation and shuffling of 100,000 alignment
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{Randomisation/Boxplot.png}
+    \includegraphics[scale=0.5]{D:/Masterarbeit/2.Versuch/Result/Boxplot.png}
     \caption{Boxplot of the runtimes of the methods}
     \label{fig:boxplot_randomisation}
 \end{figure}
@@ -170,36 +190,9 @@ In terms of the total time for the simulation and shuffling of 100,000 alignment
 
 Started the pipeline again to time how long RNAz takes to predict and then compare it to SISSIz and the other AI tools.
 
-
-This section presents the results of the RNAz data analysis.
-
-
-
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{RNAz_prediction/Boxplot Consensus MFE.png}
-    \caption{Consens Minimum Free Energy (MFE)}
-    \label{fig:boxplot_mfe}
-\end{figure}
-
-
-The boxplot for the consensus MFE shows that the two SISSIz methods are above the threshold value of -20 kcal/mol, which indicates that the RNA structure was almost completely destroyed. In contrast, the shuffle methods show values below -20 kcal/mol. Alifoldz hardly managed to destroy the RNA structure, apart from a few alignments.
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.5]{RNAz_prediction/Boxplot Structure conservatlion index.png}
-    \caption{Structure preservation index (SCI)}
-    \label{fig:boxplot_sci}
-\end{figure}
-
-
-The boxplot for the structure conservation index (SCI) also shows that all methods affected the RNA structure, with SISSIz achieving the best results. Alifoldz performed the worst here and was almost unable to destroy the structure in some alignments.
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.5]{RNAz_prediction/Boxplot SVM RNA-class probability.png}
+    \includegraphics[scale=0.5]{D:/Masterarbeit/2.Versuch/Result/RNAz/RNAz_Boxplot_pvalue.png}
     \caption{SVM RNA-class probability}
     \label{fig:boxplot_svm}
 \end{figure}
@@ -215,32 +208,9 @@ Additionally, I wanted to create a plot with the z-score, but the mean z-score p
 
 This section presents the results of the SISSIz data analysis.
 
-
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.5]{SISSIz_prediction/Consensus Minimum Free Energy (MFE).png}
-    \caption{Consens Minimum Free Energy (MFE)}
-    \label{fig:sissiz_mfe}
-\end{figure}
-
-
-The boxplot for the consensus MFE shows that the two SISSIz methods are above the threshold value of -20 kcal/mol, which indicates that the RNA structure was almost completely destroyed. In contrast, the shuffle methods show values below -20 kcal/mol. Alifoldz hardly managed to destroy the RNA structure, apart from a few alignments.
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.5]{SISSIz_prediction/Structural Conservation Index (SCI).png}
-    \caption{Structure preservation index (SCI)}
-    \label{fig:sissiz_sci}
-\end{figure}
-
-
-The boxplot for the structure conservation index (SCI) shows that all methods affected the RNA structure, with SISSIz achieving the best results. Alifoldz performed the worst and was almost unable to destroy the alignments.
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.5]{SISSIz_prediction/z-score.png}
+    \includegraphics[scale=0.5]{D:/Masterarbeit/2.Versuch/Result/SISSIz/Boxplot z-score.png}
     \caption{Z-Scores}
     \label{fig:sissiz_zscore}
 \end{figure}
@@ -260,17 +230,7 @@ The z-scores confirm the previous results and show that SISSIz has almost comple
     \item Consider which Ai tools I use for the evaluation of the alignments
 \end{itemize}
 
-
-\end{document}
-
 Summary KW5 
-
-
-
-\title{KW5 Summary}
-\author{Stefan Redl}
-\begin{document}
-\maketitle
 
 \section{Pipeline}
 
@@ -299,7 +259,7 @@ After completion of the first run, an RNA sequence of Bacillus subtilis is extra
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.7]{Pipeline Diagramm.png}
+    \includegraphics[scale=0.7]{D:/Masterarbeit/2.Versuch/Data/Pipeline Diagramm.png}
     \caption{Pipeline}
 \end{figure}
 
@@ -351,16 +311,7 @@ Because the FH get a new Server on Monday the 3th, i started to copy all necessa
     \item[\textbf{[6]}] \url{https://github.com/yikunpku/RNA-MSM}
 \end{itemize}
 
-\end{large}
-\end{document}
-
-
 Summary KW6 and KW7
-
-\title{KW6 and KW7 Summary}
-\author{Stefan Redl}
-\begin{document}
-\maketitle
 
 \begin{large}
 
@@ -617,18 +568,7 @@ sincFold represents a significant advancement in RNA secondary structure predict
     \item[\textbf{[7]}] \url{https://github.com/sinc-lab/sincFold} \par
 \end{itemize}
 
-
-\end{large}
-\end{document}
-
 Summary KW8 and KW9
-
-\title{KW8 and KW9 Summary}
-\author{Stefan Redl}
-\begin{document}
-\maketitle
-
-\begin{large}
 
 \section{Installation of the required software on the new server}
 
@@ -712,19 +652,7 @@ Rfam now provides a publicly accessible, read-only MySQL database that is update
     \item[\textbf{[3]}] \url{https://pubmed.ncbi.nlm.nih.gov/39526405/} \par
 \end{itemize}
 
-\end{large}
-\end{document}
-
-
 Summary KW13 - KW16
-
-
-\title{KW13 - KW16 Summary}
-\author{Stefan Redl}
-\begin{document}
-\maketitle
-
-\begin{large}
 
 \section{Introduction to the ROC Curve Code}
 
@@ -1100,19 +1028,7 @@ MXfold2 represents a significant step forward in RNA bioinformatics. By combinin
     \item[\textbf{[2]}] \url{https://github.com/mxfold/mxfold2?tab=readme-ov-file} \par
 \end{itemize}
 
-\end{large}
-\end{document}
-
-
 Summary KW18 - KW22
-
-
-\title{KW18 - KW22 Summary}
-\author{Stefan Redl}
-\begin{document}
-\maketitle
-
-\begin{large}
 
 \section{Results of SISSIz Prediction}
 
@@ -1543,17 +1459,7 @@ If no solution is found for SPOT-RNA2 then I will look around for alternatives. 
     \item[\textbf{[2]}] \url{https://github.com/mxfold/mxfold2?tab=readme-ov-file} \par
 \end{itemize}
 
-\end{large}
-\end{document}
-
 Summary KW23 - KW24
-
-\title{KW23 - KW24 Summary}
-\author{Stefan Redl}
-\begin{document}
-\maketitle
-
-\begin{large}
 
 \section{Methods that i try to used}
 
@@ -1608,6 +1514,50 @@ Finally, REDFold was tested. Although it only accepts single sequences as input,
     \item[\textbf{[13]}] \url{https://doi.org/10.1186/s12859-023-05238-8} \par
     \item[\textbf{[14]}] \url{https://github.com/aky3100/REDfold} \par
 \end{itemize}
+
+\section{ECSFinder}
+
+Zusammenfassung 1
+In dieser Studie wurde die Leistungsfähigkeit zweier etablierter Programme zur Vorhersage evolutionär konservierter RNA-Sekundärstrukturen – SISSIz und R-scape – systematisch verglichen. Beide Werkzeuge verfolgen unterschiedliche Ansätze: Während SISSIz auf thermodynamischer Modellierung und der Bewertung globaler Strukturstabilität basiert, konzentriert sich R-scape auf das Erkennen signifikanter Basenpaar-Covariation, also kompensatorischer Mutationen in evolutionär konservierten Helices. Um die Stärken und Schwächen beider Methoden zu bewerten, wurden zunächst mitochondriale Genome analysiert, da diese gut charakterisierte RNA-Strukturen enthalten. Hierbei zeigte sich, dass SISSIz eine hohe Sensitivität aufweist und breit gefächerte konservierte Strukturen erkennt – insbesondere in tRNAs –, jedoch auch eine erhöhte Rate an falsch-positiven Vorhersagen erzeugt. R-scape hingegen erzielte eine höhere Spezifität, übersah jedoch mitunter konservierte Strukturen, die keine ausgeprägten Covariationssignale zeigten. Die zusätzliche Nutzung des Helix-Scores in R-scape konnte diesen Nachteil teilweise ausgleichen.
+
+Um die Vorhersageleistung beider Tools weiter zu testen, wurden experimentell validierte Rfam-RNA-Strukturen in simulierte, zufällig generierte Genomalignments eingebettet. Diese Benchmarking-Strategie ermöglichte eine kontrollierte Leistungsbewertung unter variierenden Sequenzähnlichkeiten (Multiple Sequence Identity, MPI). Dabei zeigte sich, dass SISSIz insbesondere im Bereich mittlerer Ähnlichkeiten (60–80 % MPI) überlegen war, während R-scape bei sehr hoher Ähnlichkeit (80–95 %) etwas besser abschnitt. Beide Tools wiesen jedoch Limitationen auf, weshalb ein neues, integrierendes Vorhersagewerkzeug entwickelt wurde: ECSfinder.
+
+ECSfinder kombiniert die Vorzüge von SISSIz und R-scape mithilfe maschinellen Lernens. Hierzu wurden verschiedene Merkmale – darunter thermodynamische Stabilitätswerte und Z-Scores aus SISSIz, signifikante Basenpaare und Helix-E-Werte aus R-scape sowie Pseudoenergie- und MFE-Werte aus RNALalifold – extrahiert und zur Merkmalsauswahl genutzt. Zwei Klassifizierungsmodelle, ein Generalisiertes Lineares Modell (GLM) und ein Random-Forest-Classifier (RF), wurden trainiert. In der unstrandspezifischen Analyse zeigte sich die Pseudoenergie von RNALalifold als besonders aussagekräftig, während die stranded Modelle vor allem vom Z-Score aus SISSIz profitierten. Zusätzlich gewann bei stranded Vorhersagen auch die Standardabweichung des simulierten MFE an Bedeutung, was auf die Relevanz konsistenter Hintergrundmodellierung hinweist.
+
+Der Random Forest erwies sich im Vergleich zum GLM als überlegen und übertraf in Benchmarks sowohl SISSIz als auch R-scape hinsichtlich Genauigkeit, Sensitivität und Spezifität deutlich. Dies zeigte sich auch in der robusten Performance über verschiedene MPI-Bereiche hinweg sowie bei unterschiedlichen Anzahlen an verglichenen Spezies. Die Feature-Analyse verdeutlichte zudem, dass zwar Covariationsmerkmale besonders stark gewichtet wurden, thermodynamische Eigenschaften wie MFE oder die Standardabweichung des simulierten MFE jedoch ebenfalls essenzielle Prädiktoren darstellen – besonders bei stranded Vorhersagen.
+
+Insgesamt zeigt ECSfinder, dass durch die Kombination komplementärer Vorhersagemethoden und den Einsatz interpretierbarer maschineller Lernverfahren eine präzisere Identifikation evolutionär konservierter RNA-Strukturen möglich ist. Die Ergebnisse legen nahe, dass weder rein thermodynamische noch ausschließlich covariationsbasierte Methoden ausreichen, um die volle Bandbreite funktioneller RNA-Strukturen zu erfassen. ECSfinder stellt damit ein robustes, skalierbares Werkzeug für vergleichende Genomik dar und kann künftig erweitert werden – etwa durch Einbezug experimenteller Daten wie SHAPE-MaP oder zusätzlicher Sequenzmerkmale. Damit leistet ECSfinder einen wichtigen Beitrag zur funktionellen Charakterisierung nicht-kodierender RNAs, insbesondere von regulatorisch aktiven lncRNAs, und eröffnet neue Möglichkeiten in der RNA-Biologie und genomweiten Strukturvorhersage.
+
+Zusammenfassung 2
+In dieser Studie wurde die Leistungsfähigkeit zweier etablierter Werkzeuge zur Vorhersage evolutionär konservierter RNA-Sekundärstrukturen – SISSIz und R-scape – untersucht und mit einem neu entwickelten Tool namens ECSfinder verglichen. Ziel war es, die Erkennungsgenauigkeit funktioneller RNA-Strukturen zu verbessern, indem die komplementären Stärken der bestehenden Methoden durch maschinelles Lernen kombiniert werden.
+
+SISSIz basiert auf thermodynamischer Modellierung und simuliert Zufallsverteilungen zur Ermittlung signifikanter Strukturmerkmale, insbesondere durch die Berechnung eines Z-Scores. Dieses Verfahren zeigte eine hohe Sensitivität, insbesondere bei mitochondrialen Genomen, indem es eine Vielzahl bekannter Strukturen wie tRNAs und rRNAs korrekt identifizierte. Allerdings ging diese Empfindlichkeit mit einer erhöhten Rate falsch-positiver Vorhersagen einher, insbesondere in Regionen, die möglicherweise funktionelle, aber nicht annotierte Strukturen enthalten. R-scape hingegen setzt auf die Erkennung signifikanter Basenpaar-Covariation und liefert damit eine höhere Spezifität. Dieses Werkzeug identifizierte konservierte Strukturen mit starker statistischer Evidenz, verpasste jedoch manchmal solche, bei denen die Covariationssignale weniger ausgeprägt waren – ein Nachteil, der durch den Einsatz des R-scape-internen Helix-Scores teilweise kompensiert werden konnte.
+
+Um die individuellen Stärken beider Werkzeuge auszunutzen, wurde ECSfinder entwickelt. Dieses neue Verfahren integriert Merkmale aus SISSIz, R-scape und RNALalifold in ein Machine-Learning-Modell, wobei sowohl ein generalisiertes lineares Modell (GLM) als auch ein Random Forest (RF) zum Einsatz kamen. Die Trainingsdaten basierten auf simulierten genomischen Alignments mit eingebetteten Rfam-Strukturen. Besonders effektiv war die Random-Forest-Methode, die alle anderen getesteten Verfahren hinsichtlich Klassifikationsgenauigkeit übertraf – sowohl in strand-unspezifischer als auch strand-spezifischer Vorhersage. Die Analyse der Merkmalsgewichte zeigte, dass der SISSIz-Z-Score und die RNALalifold-Pseudoenergie zentrale Prädiktoren für korrekt konservierte Strukturen sind. Bei strand-spezifischen Vorhersagen war außerdem die Standardabweichung der Hintergrund-MFE aus SISSIz ein besonders aussagekräftiges Merkmal.
+
+Die Ergebnisse belegen, dass ECSfinder durch die Kombination thermodynamischer Stabilitätsmerkmale, statistischer Covariation und physikalischer RNA-Eigenschaften eine deutlich robustere und genauere Vorhersage evolutionär konservierter RNA-Strukturen ermöglicht. Während GLM eine gleichmäßigere Merkmalsverteilung aufweist, zeigt das Random-Forest-Modell insgesamt die höchste Klassifikationsleistung. Damit stellt ECSfinder eine effektive Erweiterung bisheriger Methoden dar und bietet neue Möglichkeiten zur funktionellen Annotation nicht-kodierender RNAs, insbesondere in groß angelegten vergleichenden Genomstudien. In Zukunft könnte ECSfinder um experimentelle Daten wie SHAPE-MaP erweitert werden, um die Genauigkeit weiter zu steigern und das Verständnis der Rolle konservierter RNA-Strukturen in Genregulation, Entwicklung und Krankheit zu vertiefen.
+
+\section{Svhip}
+
+Zusammenfassung 1
+
+Die Erkennung funktionaler RNA-Strukturen auf genomweiter Ebene ist ein zentrales Ziel der RNA-Bioinformatik, insbesondere im Kontext von nicht-kodierenden RNAs (ncRNAs), deren funktionale Bedeutung zunehmend erkannt wird. In ihrer Arbeit präsentieren Klapproth et al. ein flexibel einsetzbares, modular aufgebautes Machine-Learning-Framework, das es ermöglicht, maßgeschneiderte Klassifikatoren für die Detektion konservierter RNA-Strukturen aus genomischen Alignments zu trainieren. Dieses System wurde entwickelt, um die Einschränkungen klassischer Tools wie RNAz zu überwinden, die mit festen Modellen arbeiten und keine Anpassung an spezifische biologische Kontexte oder neue Trainingsdaten erlauben.
+
+Das vorgestellte Framework — als Open-Source-Tool unter dem Namen Svhip verfügbar — ist vollständig in Python 3 implementiert und unterstützt Multiple-Sequence-Alignments im MAF-Format. Es erlaubt sowohl die Erkennung konservierter sekundärstrukturierter ncRNA-Regionen als auch die Identifikation protein-kodierender Sequenzen. Eine zentrale Stärke von Svhip liegt in der Möglichkeit, das zugrunde liegende Klassifikationsmodell mit benutzerdefinierten Daten neu zu trainieren. Anwender können ihre eigenen positiven und negativen Trainingsbeispiele bereitstellen, typischerweise als ClustalW-Alignments, um Modelle an bestimmte Arten, evolutionäre Distanzen oder Datenqualitäten anzupassen.
+
+In der Methodik wurden verschiedene Features berücksichtigt, die zuvor bereits in Tools wie RNAz Anwendung fanden – z. B. Z-Score, Minimum Free Energy (MFE), Strukturkonservierung und Sequenzähnlichkeit. Neu ist jedoch die Möglichkeit, diese Features durch zusätzliche, frei wählbare Merkmale zu ergänzen, wie etwa Position-Specific Scoring Matrices oder kontextbezogene Sequenzdaten. Das Framework unterstützt unterschiedliche Machine-Learning-Verfahren, darunter generalisierte lineare Modelle (GLM) und Random Forests (RF). Die Modelle lassen sich exportieren und eigenständig oder integriert in andere Pipelines nutzen.
+
+Ein besonderes Augenmerk lag auf der Vergleichbarkeit und Reproduzierbarkeit der Ergebnisse. Die Autoren betonen, dass Svhip bewusst nicht versucht, ein universell bestes Modell bereitzustellen, sondern stattdessen die Erstellung biologisch relevanter, anpassbarer Modelle fördert. Das ist vor allem für Anwendungen in Organismengruppen wichtig, deren genomische Eigenschaften (z. B. Basenkomposition oder Strukturmotive) stark von Modellorganismen abweichen.
+
+In Benchmarks auf dem Drosophila-Genom zeigte sich, dass Svhip-Modelle ähnlich leistungsfähig wie RNAz sind, mit vergleichbarer Sensitivität und Spezifität. Beim Test auf protein-kodierende Regionen erreichten die Modelle, abhängig von der Bewertungsmethode, einen Recall von bis zu 74 Prozent. Im nicht-kodierenden Bereich identifizierte Svhip eine Vielzahl bekannter konservierter RNA-Strukturen, wobei durch das flexible Modelltraining auch bislang nicht annotierte funktionale Regionen entdeckt wurden. Besonders hervorzuheben ist dabei die Fähigkeit, falsch-positive Vorhersagen zu reduzieren, indem auf strand-spezifische Merkmale und konsistente thermodynamische Profile geachtet wird.
+
+Zusätzlich diskutieren die Autoren die Kombination von Svhip mit bestehenden Programmen wie SISSIz, RNAalifold und R-scape. In einem kombinierten Ansatz (wie z. B. in ECSfinder gezeigt), lässt sich die Vorhersagekraft weiter steigern, indem thermodynamische Stabilität (aus SISSIz) mit Kovariationsanalysen (aus R-scape) und strukturorientierten Features (aus RNAalifold) kombiniert werden. Solche kombinierten Modelle, wie sie Svhip unterstützt, können je nach Anwendungsszenario individuell trainiert werden und übertreffen in den meisten Tests die isolierte Nutzung der Einzeltools.
+
+Insgesamt bietet Svhip eine leistungsstarke und zukunftsweisende Plattform für die genomweite Identifikation funktionaler RNA-Strukturen, mit besonderem Fokus auf Erweiterbarkeit, Nachvollziehbarkeit und biologische Anpassbarkeit. Die Arbeit unterstreicht damit, wie maschinelles Lernen — wenn es gezielt und modular eingesetzt wird — helfen kann, die strukturelle RNA-Funktionalität im Genom besser zu verstehen und neue funktionale Elemente zu entdecken.
+
+
+
+
 
 \end{large}
 \end{document}

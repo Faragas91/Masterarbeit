@@ -130,6 +130,11 @@ unset __conda_setup
 export PATH=$HOME/programs/SISSIz/bin:$PATH
 export PATH=$HOME/programs/multiperm/bin:$PATH
 export PATH=$HOME/programs/RNAz/bin:$PATH
+export PATH=$HOME/Masterarbeit/tools/rscape_v2.0.4.a/bin:$PATH
+export PATH=$HOME/Masterarbeit/tools/ECSFinder/src/main/java:$PATH
+export PATH=$HOME/local/ViennaRNA/bin:$PATH
+export LD_LIBRARY_PATH=$HOME/local/ViennaRNA/lib:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=$HOME/local/ViennaRNA/lib/pkgconfig:$PKG_CONFIG_PATH
 
 # <<< pyenv initialize <<<
 export PYENV_ROOT="$HOME/.pyenv"
@@ -137,3 +142,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

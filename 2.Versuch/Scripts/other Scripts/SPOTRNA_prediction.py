@@ -3,8 +3,8 @@ import os
 import subprocess
 import time
 
-SAMPLES = "/mnt/sdc2/home/c2210542009/Masterarbeit/Data/TEST_SAMPLES/SAMPLES_FASTA"
-SPOTRNA_PRE_OUTPUT = "/mnt/sdc2/home/c2210542009/Masterarbeit/Data/TEST_SAMPLES/SPOTRNA_PREDICTION"
+SAMPLES = "/mnt/sdc2/home/c2210542009/Masterarbeit/NativeData/SAMPLES_FASTA"
+SPOTRNA_PRE_OUTPUT = "/mnt/sdc2/home/c2210542009/Masterarbeit/NativeData/SPOTRNA_PREDICTION"
 NUM_PROCESSES = 5 
 
 os.makedirs(SPOTRNA_PRE_OUTPUT, exist_ok=True)
