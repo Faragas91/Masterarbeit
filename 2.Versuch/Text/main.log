@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.6)  27 JUL 2025 11:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.6)  27 JUL 2025 22:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -354,12 +354,12 @@ No file main.toc.
 <D:/Masterarbeit/2.Versuch/Result/Bar Chart.png, id=48, 867.24pt x 433.62pt>
 File: D:/Masterarbeit/2.Versuch/Result/Bar Chart.png Graphic file (type png)
 <use D:/Masterarbeit/2.Versuch/Result/Bar Chart.png>
-Package pdftex.def Info: D:/Masterarbeit/2.Versuch/Result/Bar Chart.png  used on input line 132.
+Package pdftex.def Info: D:/Masterarbeit/2.Versuch/Result/Bar Chart.png  used on input line 161.
 (pdftex.def)             Requested size: 433.61894pt x 216.80946pt.
 <D:/Masterarbeit/2.Versuch/Result/Bar Chart Total Times.png, id=50, 722.7pt x 433.62pt>
 File: D:/Masterarbeit/2.Versuch/Result/Bar Chart Total Times.png Graphic file (type png)
 <use D:/Masterarbeit/2.Versuch/Result/Bar Chart Total Times.png>
-Package pdftex.def Info: D:/Masterarbeit/2.Versuch/Result/Bar Chart Total Times.png  used on input line 142.
+Package pdftex.def Info: D:/Masterarbeit/2.Versuch/Result/Bar Chart Total Times.png  used on input line 171.
 (pdftex.def)             Requested size: 361.3491pt x 216.80946pt.
 
 
@@ -367,22 +367,22 @@ Package pdftex.def Info: D:/Masterarbeit/2.Versuch/Result/Bar Chart Total Times.
 <D:/Masterarbeit/2.Versuch/Result/Boxplot.png, id=62, 867.24pt x 578.16pt>
 File: D:/Masterarbeit/2.Versuch/Result/Boxplot.png Graphic file (type png)
 <use D:/Masterarbeit/2.Versuch/Result/Boxplot.png>
-Package pdftex.def Info: D:/Masterarbeit/2.Versuch/Result/Boxplot.png  used on input line 153.
+Package pdftex.def Info: D:/Masterarbeit/2.Versuch/Result/Boxplot.png  used on input line 182.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
 
 [4 <d:/Masterarbeit/2.Versuch/Result/Boxplot.png>]
 
-LaTeX Warning: File `D:/Masterarbeit/2.Versuch/Result/RNAz/RNAz_Boxplot_pvalue.png' not found on input line 166.
+LaTeX Warning: File `D:/Masterarbeit/2.Versuch/Result/RNAz/RNAz_Boxplot_pvalue.png' not found on input line 195.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:166: Package pdftex.def Error: File `D:/Masterarbeit/2.Versuch/Result/RNAz/RNAz_Boxplot_pvalue.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:195: Package pdftex.def Error: File `D:/Masterarbeit/2.Versuch/Result/RNAz/RNAz_Boxplot_pvalue.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.166 ...such/Result/RNAz/RNAz_Boxplot_pvalue.png}
+l.195 ...such/Result/RNAz/RNAz_Boxplot_pvalue.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -393,16 +393,16 @@ If that doesn't work, type  X <return>  to quit.
 
 ]
 
-LaTeX Warning: File `D:/Masterarbeit/2.Versuch/Result/SISSIz/Boxplot z-score.png' not found on input line 184.
+LaTeX Warning: File `D:/Masterarbeit/2.Versuch/Result/SISSIz/Boxplot z-score.png' not found on input line 213.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:184: Package pdftex.def Error: File `D:/Masterarbeit/2.Versuch/Result/SISSIz/Boxplot z-score.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:213: Package pdftex.def Error: File `D:/Masterarbeit/2.Versuch/Result/SISSIz/Boxplot z-score.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.184 ...ersuch/Result/SISSIz/Boxplot z-score.png}
+l.213 ...ersuch/Result/SISSIz/Boxplot z-score.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -413,16 +413,16 @@ If that doesn't work, type  X <return>  to quit.
 
 ]
 
-LaTeX Warning: File `D:/Masterarbeit/2.Versuch/Data/Pipeline Diagramm.png' not found on input line 233.
+LaTeX Warning: File `D:/Masterarbeit/2.Versuch/Data/Pipeline Diagramm.png' not found on input line 262.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:233: Package pdftex.def Error: File `D:/Masterarbeit/2.Versuch/Data/Pipeline Diagramm.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:262: Package pdftex.def Error: File `D:/Masterarbeit/2.Versuch/Data/Pipeline Diagramm.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.233 ...eit/2.Versuch/Data/Pipeline Diagramm.png}
+l.262 ...eit/2.Versuch/Data/Pipeline Diagramm.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -436,32 +436,32 @@ If that doesn't work, type  X <return>  to quit.
 [8]
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 306--307
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 313--316
+Underfull \hbox (badness 10000) in paragraph at lines 342--345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--321
+Underfull \hbox (badness 10000) in paragraph at lines 348--350
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 335--338
+Underfull \hbox (badness 10000) in paragraph at lines 364--367
 
  []
 
@@ -470,74 +470,74 @@ Underfull \hbox (badness 10000) in paragraph at lines 335--338
 [10
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 341--343
+Underfull \hbox (badness 10000) in paragraph at lines 370--372
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 346--348
+Underfull \hbox (badness 10000) in paragraph at lines 375--377
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--353
+Underfull \hbox (badness 10000) in paragraph at lines 380--382
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--358
+Underfull \hbox (badness 10000) in paragraph at lines 385--387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--363
+Underfull \hbox (badness 10000) in paragraph at lines 390--392
 
  []
 
 
-Overfull \hbox (23.25494pt too wide) in paragraph at lines 366--368
+Overfull \hbox (23.25494pt too wide) in paragraph at lines 395--397
 []\OT1/cmr/m/n/12 Jaswinder Singh: jaswinder.singh3@griffithuni.edu.au Yaoqi Zhou: yaoqi.zhou@griffith.edu.au 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 366--368
+Underfull \hbox (badness 10000) in paragraph at lines 395--397
 
  []
 
 
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 374--375
+Underfull \hbox (badness 10000) in paragraph at lines 403--404
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--378
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 381--384
+Underfull \hbox (badness 10000) in paragraph at lines 410--413
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 387--389
+Underfull \hbox (badness 10000) in paragraph at lines 416--418
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--398
+Underfull \hbox (badness 10000) in paragraph at lines 421--427
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--404
+Underfull \hbox (badness 10000) in paragraph at lines 430--433
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--409
+Underfull \hbox (badness 10000) in paragraph at lines 436--438
 
  []
 
@@ -548,41 +548,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 407--409
 ]
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 415--416
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 418--419
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 422--425
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 428--430
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 433--436
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 439--440
-
- []
-
-
-
-[14
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 445--446
+Underfull \hbox (badness 10000) in paragraph at lines 444--445
 
  []
 
@@ -592,41 +558,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 447--448
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 449--450
+Underfull \hbox (badness 10000) in paragraph at lines 451--454
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 451--452
+Underfull \hbox (badness 10000) in paragraph at lines 457--459
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 453--454
-
- []
-
-
-
-[15
-
-]
-Overfull \hbox (0.56656pt too wide) in paragraph at lines 457--457
-[]\OT1/cmr/bx/n/14.4 Evolutionary con-ser-va-tion of RNA se-quence and struc-ture[][][5][][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 459--460
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 462--463
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 465--466
+Underfull \hbox (badness 10000) in paragraph at lines 462--465
 
  []
 
@@ -636,13 +578,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 468--469
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 471--472
 
- []
-
-
-
-[16
+[14
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 474--475
@@ -650,20 +587,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 474--475
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 476--477
 
-[17]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 480--481
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 484--485
+Underfull \hbox (badness 10000) in paragraph at lines 482--483
 
  []
 
 
-Overfull \hbox (13.92448pt too wide) in paragraph at lines 488--489
-[]\OT1/cmr/m/n/12 sincFold em-ploys a two-stage deep learn-ing ar-chi-tec-ture that in-te-grates both one-dimensional
+
+[15
+
+]
+Overfull \hbox (0.56656pt too wide) in paragraph at lines 486--486
+[]\OT1/cmr/bx/n/14.4 Evolutionary con-ser-va-tion of RNA se-quence and struc-ture[][][5][][] 
  []
 
 
@@ -672,17 +621,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 488--489
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 495--497
+Underfull \hbox (badness 10000) in paragraph at lines 491--492
 
  []
 
 
-Overfull \hbox (2.39267pt too wide) in paragraph at lines 501--502
+Underfull \hbox (badness 10000) in paragraph at lines 494--495
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 497--498
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--501
+
+ []
+
+
+
+[16
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 503--504
+
+ []
+
+
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 509--510
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 513--514
+
+ []
+
+
+Overfull \hbox (13.92448pt too wide) in paragraph at lines 517--518
+[]\OT1/cmr/m/n/12 sincFold em-ploys a two-stage deep learn-ing ar-chi-tec-ture that in-te-grates both one-dimensional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 517--518
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 524--526
+
+ []
+
+
+Overfull \hbox (2.39267pt too wide) in paragraph at lines 530--531
 []\OT1/cmr/m/n/12 Extensive ex-per-i-ments were con-ducted us-ing sev-eral bench-mark datasets, in-clud-ing RNAs-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 501--502
+Underfull \hbox (badness 10000) in paragraph at lines 530--531
 
  []
 
@@ -691,19 +691,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 501--502
 [18
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 505--506
+Underfull \hbox (badness 10000) in paragraph at lines 534--535
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 509--510
+Underfull \hbox (badness 10000) in paragraph at lines 538--539
 
  []
 
 
 
 [19]
-Overfull \hbox (87.55739pt too wide) in paragraph at lines 536--537
+Overfull \hbox (87.55739pt too wide) in paragraph at lines 565--566
 [][][]$\OT1/cmtt/m/n/12 https : / / www . mcb . harvard . edu / department / news / mcb-[]welcomes-[]sean-[]eddy-[]and-[]elena-[]rivas/$[][] 
  []
 
@@ -714,64 +714,21 @@ Overfull \hbox (87.55739pt too wide) in paragraph at lines 536--537
 ]
 
 [21]
-Overfull \hbox (12.34827pt too wide) in paragraph at lines 562--562
+Overfull \hbox (12.34827pt too wide) in paragraph at lines 591--591
 []\OT1/cmr/bx/n/14.4 Comparative ge-nomics iden-ti-fies thou-sands of can-di-date struc-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 565--566
+Underfull \hbox (badness 10000) in paragraph at lines 594--595
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 568--569
+Underfull \hbox (badness 10000) in paragraph at lines 597--598
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 571--572
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 574--575
-
- []
-
-
-
-[22
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 581--582
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 584--585
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 587--588
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 590--591
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 593--594
-
- []
-
-
-
-[23
-
-]
 Underfull \hbox (badness 10000) in paragraph at lines 600--601
 
  []
@@ -782,12 +739,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 603--604
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 606--607
+
+[22
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 610--611
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 609--610
+Underfull \hbox (badness 10000) in paragraph at lines 613--614
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 616--617
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 619--620
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 622--623
+
+ []
+
+
+
+[23
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 629--630
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 632--633
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--636
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 638--639
 
  []
 
@@ -797,44 +797,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 609--610
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <9> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 633.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 662.
 
 
 [25]
-d:/Masterarbeit/2.Versuch/Text/main.tex:686: Missing $ inserted.
+d:/Masterarbeit/2.Versuch/Text/main.tex:715: Missing $ inserted.
 <inserted text> 
                 $
-l.686 ...0 decision trees is then created. random_
+l.715 ...0 decision trees is then created. random_
                                                   state=42 ensures reproduci...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:687: Missing $ inserted.
+d:/Masterarbeit/2.Versuch/Text/main.tex:716: Missing $ inserted.
 <inserted text> 
                 $
-l.687 
+l.716 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:695: Missing $ inserted.
+d:/Masterarbeit/2.Versuch/Text/main.tex:724: Missing $ inserted.
 <inserted text> 
                 $
-l.695 ...erfitting. Both the predicted classes (y_
+l.724 ...erfitting. Both the predicted classes (y_
                                                   pred) and the probabilitie...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:696: Missing $ inserted.
+d:/Masterarbeit/2.Versuch/Text/main.tex:725: Missing $ inserted.
 <inserted text> 
                 $
-l.696 
+l.725 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 710--711
+Underfull \hbox (badness 10000) in paragraph at lines 739--740
 
  []
 
@@ -846,31 +846,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 710--711
 
 [28]
 
-LaTeX Warning: File `Histogram SISSI vs SISSIz_mono.png' not found on input line 787.
+LaTeX Warning: File `Histogram SISSI vs SISSIz_mono.png' not found on input line 816.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:787: Package pdftex.def Error: File `Histogram SISSI vs SISSIz_mono.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:816: Package pdftex.def Error: File `Histogram SISSI vs SISSIz_mono.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.787 ...phics{Histogram SISSI vs SISSIz_mono.png}
+l.816 ...phics{Histogram SISSI vs SISSIz_mono.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `ROC-CURVE SISSI vs SISSIz_mono.png' not found on input line 793.
+LaTeX Warning: File `ROC-CURVE SISSI vs SISSIz_mono.png' not found on input line 822.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:793: Package pdftex.def Error: File `ROC-CURVE SISSI vs SISSIz_mono.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:822: Package pdftex.def Error: File `ROC-CURVE SISSI vs SISSIz_mono.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.793 ...phics{ROC-CURVE SISSI vs SISSIz_mono.png}
+l.822 ...phics{ROC-CURVE SISSI vs SISSIz_mono.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -881,31 +881,31 @@ If that doesn't work, type  X <return>  to quit.
 
 ]
 
-LaTeX Warning: File `Histogram SISSI vs SISSIz_di.png' not found on input line 822.
+LaTeX Warning: File `Histogram SISSI vs SISSIz_di.png' not found on input line 851.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:822: Package pdftex.def Error: File `Histogram SISSI vs SISSIz_di.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:851: Package pdftex.def Error: File `Histogram SISSI vs SISSIz_di.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.822 ...raphics{Histogram SISSI vs SISSIz_di.png}
+l.851 ...raphics{Histogram SISSI vs SISSIz_di.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `ROC-CURVE SISSI vs SISSIz_di.png' not found on input line 828.
+LaTeX Warning: File `ROC-CURVE SISSI vs SISSIz_di.png' not found on input line 857.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:828: Package pdftex.def Error: File `ROC-CURVE SISSI vs SISSIz_di.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:857: Package pdftex.def Error: File `ROC-CURVE SISSI vs SISSIz_di.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.828 ...raphics{ROC-CURVE SISSI vs SISSIz_di.png}
+l.857 ...raphics{ROC-CURVE SISSI vs SISSIz_di.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -916,31 +916,31 @@ If that doesn't work, type  X <return>  to quit.
 
 ]
 
-LaTeX Warning: File `Histogram SISSI vs MULTIPERM_mono.png' not found on input line 857.
+LaTeX Warning: File `Histogram SISSI vs MULTIPERM_mono.png' not found on input line 886.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:857: Package pdftex.def Error: File `Histogram SISSI vs MULTIPERM_mono.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:886: Package pdftex.def Error: File `Histogram SISSI vs MULTIPERM_mono.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.857 ...cs{Histogram SISSI vs MULTIPERM_mono.png}
+l.886 ...cs{Histogram SISSI vs MULTIPERM_mono.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `ROC-CURVE SISSI vs MULTIPERM_mono.png' not found on input line 863.
+LaTeX Warning: File `ROC-CURVE SISSI vs MULTIPERM_mono.png' not found on input line 892.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:863: Package pdftex.def Error: File `ROC-CURVE SISSI vs MULTIPERM_mono.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:892: Package pdftex.def Error: File `ROC-CURVE SISSI vs MULTIPERM_mono.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.863 ...cs{ROC-CURVE SISSI vs MULTIPERM_mono.png}
+l.892 ...cs{ROC-CURVE SISSI vs MULTIPERM_mono.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -951,31 +951,31 @@ If that doesn't work, type  X <return>  to quit.
 
 ]
 
-LaTeX Warning: File `Histogram SISSI vs MULTIPERM_di.png' not found on input line 893.
+LaTeX Warning: File `Histogram SISSI vs MULTIPERM_di.png' not found on input line 922.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:893: Package pdftex.def Error: File `Histogram SISSI vs MULTIPERM_di.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:922: Package pdftex.def Error: File `Histogram SISSI vs MULTIPERM_di.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.893 ...hics{Histogram SISSI vs MULTIPERM_di.png}
+l.922 ...hics{Histogram SISSI vs MULTIPERM_di.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `ROC-CURVE SISSI vs MULTIPERM_di.png' not found on input line 899.
+LaTeX Warning: File `ROC-CURVE SISSI vs MULTIPERM_di.png' not found on input line 928.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:899: Package pdftex.def Error: File `ROC-CURVE SISSI vs MULTIPERM_di.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:928: Package pdftex.def Error: File `ROC-CURVE SISSI vs MULTIPERM_di.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.899 ...hics{ROC-CURVE SISSI vs MULTIPERM_di.png}
+l.928 ...hics{ROC-CURVE SISSI vs MULTIPERM_di.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -986,31 +986,31 @@ If that doesn't work, type  X <return>  to quit.
 
 ]
 
-LaTeX Warning: File `Histogram SISSI vs ALN-SHUFFLE.png' not found on input line 928.
+LaTeX Warning: File `Histogram SISSI vs ALN-SHUFFLE.png' not found on input line 957.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:928: Package pdftex.def Error: File `Histogram SISSI vs ALN-SHUFFLE.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:957: Package pdftex.def Error: File `Histogram SISSI vs ALN-SHUFFLE.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.928 ...phics{Histogram SISSI vs ALN-SHUFFLE.png}
+l.957 ...phics{Histogram SISSI vs ALN-SHUFFLE.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `ROC-CURVE SISSI vs ALN-SHUFFLE.png' not found on input line 934.
+LaTeX Warning: File `ROC-CURVE SISSI vs ALN-SHUFFLE.png' not found on input line 963.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:934: Package pdftex.def Error: File `ROC-CURVE SISSI vs ALN-SHUFFLE.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:963: Package pdftex.def Error: File `ROC-CURVE SISSI vs ALN-SHUFFLE.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.934 ...phics{ROC-CURVE SISSI vs ALN-SHUFFLE.png}
+l.963 ...phics{ROC-CURVE SISSI vs ALN-SHUFFLE.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1024,7 +1024,7 @@ If that doesn't work, type  X <return>  to quit.
 [34
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 976--977
+Underfull \hbox (badness 10000) in paragraph at lines 1005--1006
 
  []
 
@@ -1033,96 +1033,96 @@ Underfull \hbox (badness 10000) in paragraph at lines 976--977
 [35
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 986--987
+Underfull \hbox (badness 10000) in paragraph at lines 1015--1016
 
  []
 
 
-LaTeX Warning: File `Boxplot SISSIz z-score.png' not found on input line 1009.
+LaTeX Warning: File `Boxplot SISSIz z-score.png' not found on input line 1038.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1009: Package pdftex.def Error: File `Boxplot SISSIz z-score.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1038: Package pdftex.def Error: File `Boxplot SISSIz z-score.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1009 ...s[scale=0.7]{Boxplot SISSIz z-score.png}
+l.1038 ...s[scale=0.7]{Boxplot SISSIz z-score.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `SISSIz_Histogram_SISSI_vs_SISSIz_MONO.png' not found on input line 1020.
+LaTeX Warning: File `SISSIz_Histogram_SISSI_vs_SISSIz_MONO.png' not found on input line 1049.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1020: Package pdftex.def Error: File `SISSIz_Histogram_SISSI_vs_SISSIz_MONO.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1049: Package pdftex.def Error: File `SISSIz_Histogram_SISSI_vs_SISSIz_MONO.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1020 ...SSIz_Histogram_SISSI_vs_SISSIz_MONO.png}
+l.1049 ...SSIz_Histogram_SISSI_vs_SISSIz_MONO.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `SISSIz_Histogram_SISSI_vs_SISSIZ_DI.png' not found on input line 1025.
+LaTeX Warning: File `SISSIz_Histogram_SISSI_vs_SISSIZ_DI.png' not found on input line 1054.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1025: Package pdftex.def Error: File `SISSIz_Histogram_SISSI_vs_SISSIZ_DI.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1054: Package pdftex.def Error: File `SISSIz_Histogram_SISSI_vs_SISSIZ_DI.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1025 ...SISSIz_Histogram_SISSI_vs_SISSIZ_DI.png}
+l.1054 ...SISSIz_Histogram_SISSI_vs_SISSIZ_DI.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `SISSIz_Histogram_SISSI_vs_MULTIPERM_MONO.png' not found on input line 1031.
+LaTeX Warning: File `SISSIz_Histogram_SISSI_vs_MULTIPERM_MONO.png' not found on input line 1060.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1031: Package pdftex.def Error: File `SISSIz_Histogram_SISSI_vs_MULTIPERM_MONO.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1060: Package pdftex.def Error: File `SISSIz_Histogram_SISSI_vs_MULTIPERM_MONO.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1031 ...z_Histogram_SISSI_vs_MULTIPERM_MONO.png}
+l.1060 ...z_Histogram_SISSI_vs_MULTIPERM_MONO.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `SISSIz_Histogram_SISSI_vs_MULTIPERM_DI.png' not found on input line 1036.
+LaTeX Warning: File `SISSIz_Histogram_SISSI_vs_MULTIPERM_DI.png' not found on input line 1065.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1036: Package pdftex.def Error: File `SISSIz_Histogram_SISSI_vs_MULTIPERM_DI.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1065: Package pdftex.def Error: File `SISSIz_Histogram_SISSI_vs_MULTIPERM_DI.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1036 ...SIz_Histogram_SISSI_vs_MULTIPERM_DI.png}
+l.1065 ...SIz_Histogram_SISSI_vs_MULTIPERM_DI.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `SISSIz_Histogram_SISSI_vs_ALN-SHUFFLE.png' not found on input line 1042.
+LaTeX Warning: File `SISSIz_Histogram_SISSI_vs_ALN-SHUFFLE.png' not found on input line 1071.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1042: Package pdftex.def Error: File `SISSIz_Histogram_SISSI_vs_ALN-SHUFFLE.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1071: Package pdftex.def Error: File `SISSIz_Histogram_SISSI_vs_ALN-SHUFFLE.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1042 ...SSIz_Histogram_SISSI_vs_ALN-SHUFFLE.png}
+l.1071 ...SSIz_Histogram_SISSI_vs_ALN-SHUFFLE.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1138,76 +1138,76 @@ Overfull \vbox (72.38211pt too high) has occurred while \output is active []
 
 [38]
 
-LaTeX Warning: File `SISSIz_Confusion_Matrix_SISSI_vs_SISSIz_MONO.png' not found on input line 1056.
+LaTeX Warning: File `SISSIz_Confusion_Matrix_SISSI_vs_SISSIz_MONO.png' not found on input line 1085.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1056: Package pdftex.def Error: File `SISSIz_Confusion_Matrix_SISSI_vs_SISSIz_MONO.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1085: Package pdftex.def Error: File `SISSIz_Confusion_Matrix_SISSI_vs_SISSIz_MONO.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1056 ...nfusion_Matrix_SISSI_vs_SISSIz_MONO.png}
+l.1085 ...nfusion_Matrix_SISSI_vs_SISSIz_MONO.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `SISSIz_Confusion_Matrix_SISSI_vs_SISSIZ_DI.png' not found on input line 1061.
+LaTeX Warning: File `SISSIz_Confusion_Matrix_SISSI_vs_SISSIZ_DI.png' not found on input line 1090.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1061: Package pdftex.def Error: File `SISSIz_Confusion_Matrix_SISSI_vs_SISSIZ_DI.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1090: Package pdftex.def Error: File `SISSIz_Confusion_Matrix_SISSI_vs_SISSIZ_DI.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1061 ...Confusion_Matrix_SISSI_vs_SISSIZ_DI.png}
+l.1090 ...Confusion_Matrix_SISSI_vs_SISSIZ_DI.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `SISSIz_Confusion_Matrix_SISSI_vs_MULTIPERM_MONO.png' not found on input line 1067.
+LaTeX Warning: File `SISSIz_Confusion_Matrix_SISSI_vs_MULTIPERM_MONO.png' not found on input line 1096.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1067: Package pdftex.def Error: File `SISSIz_Confusion_Matrix_SISSI_vs_MULTIPERM_MONO.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1096: Package pdftex.def Error: File `SISSIz_Confusion_Matrix_SISSI_vs_MULTIPERM_MONO.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1067 ...sion_Matrix_SISSI_vs_MULTIPERM_MONO.png}
+l.1096 ...sion_Matrix_SISSI_vs_MULTIPERM_MONO.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `SISSIz_Confusion_Matrix_SISSI_vs_MULTIPERM_DI.png' not found on input line 1072.
+LaTeX Warning: File `SISSIz_Confusion_Matrix_SISSI_vs_MULTIPERM_DI.png' not found on input line 1101.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1072: Package pdftex.def Error: File `SISSIz_Confusion_Matrix_SISSI_vs_MULTIPERM_DI.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1101: Package pdftex.def Error: File `SISSIz_Confusion_Matrix_SISSI_vs_MULTIPERM_DI.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1072 ...fusion_Matrix_SISSI_vs_MULTIPERM_DI.png}
+l.1101 ...fusion_Matrix_SISSI_vs_MULTIPERM_DI.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `SISSIz_Confusion_Matrix_SISSI_vs_ALN-SHUFFLE.png' not found on input line 1078.
+LaTeX Warning: File `SISSIz_Confusion_Matrix_SISSI_vs_ALN-SHUFFLE.png' not found on input line 1107.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1078: Package pdftex.def Error: File `SISSIz_Confusion_Matrix_SISSI_vs_ALN-SHUFFLE.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1107: Package pdftex.def Error: File `SISSIz_Confusion_Matrix_SISSI_vs_ALN-SHUFFLE.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1078 ...nfusion_Matrix_SISSI_vs_ALN-SHUFFLE.png}
+l.1107 ...nfusion_Matrix_SISSI_vs_ALN-SHUFFLE.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1223,76 +1223,76 @@ Overfull \vbox (70.0488pt too high) has occurred while \output is active []
 
 [41]
 
-LaTeX Warning: File `SISSIz_ROC_Curve_SISSI_vs_SISSIz_MONO.png' not found on input line 1103.
+LaTeX Warning: File `SISSIz_ROC_Curve_SISSI_vs_SISSIz_MONO.png' not found on input line 1132.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1103: Package pdftex.def Error: File `SISSIz_ROC_Curve_SISSI_vs_SISSIz_MONO.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1132: Package pdftex.def Error: File `SISSIz_ROC_Curve_SISSI_vs_SISSIz_MONO.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1103 ...SSIz_ROC_Curve_SISSI_vs_SISSIz_MONO.png}
+l.1132 ...SSIz_ROC_Curve_SISSI_vs_SISSIz_MONO.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `SISSIz_ROC_Curve_SISSI_vs_SISSIZ_DI.png' not found on input line 1108.
+LaTeX Warning: File `SISSIz_ROC_Curve_SISSI_vs_SISSIZ_DI.png' not found on input line 1137.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1108: Package pdftex.def Error: File `SISSIz_ROC_Curve_SISSI_vs_SISSIZ_DI.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1137: Package pdftex.def Error: File `SISSIz_ROC_Curve_SISSI_vs_SISSIZ_DI.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1108 ...SISSIz_ROC_Curve_SISSI_vs_SISSIZ_DI.png}
+l.1137 ...SISSIz_ROC_Curve_SISSI_vs_SISSIZ_DI.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `SISSIz_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png' not found on input line 1114.
+LaTeX Warning: File `SISSIz_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png' not found on input line 1143.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1114: Package pdftex.def Error: File `SISSIz_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1143: Package pdftex.def Error: File `SISSIz_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1114 ...z_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png}
+l.1143 ...z_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `SISSIz_ROC_Curve_SISSI_vs_MULTIPERM_DI.png' not found on input line 1119.
+LaTeX Warning: File `SISSIz_ROC_Curve_SISSI_vs_MULTIPERM_DI.png' not found on input line 1148.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1119: Package pdftex.def Error: File `SISSIz_ROC_Curve_SISSI_vs_MULTIPERM_DI.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1148: Package pdftex.def Error: File `SISSIz_ROC_Curve_SISSI_vs_MULTIPERM_DI.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1119 ...SIz_ROC_Curve_SISSI_vs_MULTIPERM_DI.png}
+l.1148 ...SIz_ROC_Curve_SISSI_vs_MULTIPERM_DI.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `SISSIz_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png' not found on input line 1125.
+LaTeX Warning: File `SISSIz_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png' not found on input line 1154.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1125: Package pdftex.def Error: File `SISSIz_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1154: Package pdftex.def Error: File `SISSIz_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1125 ...SSIz_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png}
+l.1154 ...SSIz_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1310,91 +1310,91 @@ Overfull \vbox (70.0488pt too high) has occurred while \output is active []
 
 [45]
 
-LaTeX Warning: File `Boxplot Mxfold2 Score.png' not found on input line 1147.
+LaTeX Warning: File `Boxplot Mxfold2 Score.png' not found on input line 1176.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1147: Package pdftex.def Error: File `Boxplot Mxfold2 Score.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1176: Package pdftex.def Error: File `Boxplot Mxfold2 Score.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1147 ...cs[scale=0.7]{Boxplot Mxfold2 Score.png}
+l.1176 ...cs[scale=0.7]{Boxplot Mxfold2 Score.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `MXfold2_Histogram_SISSI_vs_SISSIz_MONO.png' not found on input line 1158.
+LaTeX Warning: File `MXfold2_Histogram_SISSI_vs_SISSIz_MONO.png' not found on input line 1187.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1158: Package pdftex.def Error: File `MXfold2_Histogram_SISSI_vs_SISSIz_MONO.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1187: Package pdftex.def Error: File `MXfold2_Histogram_SISSI_vs_SISSIz_MONO.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1158 ...old2_Histogram_SISSI_vs_SISSIz_MONO.png}
+l.1187 ...old2_Histogram_SISSI_vs_SISSIz_MONO.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `MXfold2_Histogram_SISSI_vs_SISSIz_DI.png' not found on input line 1163.
+LaTeX Warning: File `MXfold2_Histogram_SISSI_vs_SISSIz_DI.png' not found on input line 1192.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1163: Package pdftex.def Error: File `MXfold2_Histogram_SISSI_vs_SISSIz_DI.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1192: Package pdftex.def Error: File `MXfold2_Histogram_SISSI_vs_SISSIz_DI.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1163 ...Xfold2_Histogram_SISSI_vs_SISSIz_DI.png}
+l.1192 ...Xfold2_Histogram_SISSI_vs_SISSIz_DI.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `MXfold2_Histogram_SISSI_vs_MULTIPERM_MONO.png' not found on input line 1169.
+LaTeX Warning: File `MXfold2_Histogram_SISSI_vs_MULTIPERM_MONO.png' not found on input line 1198.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1169: Package pdftex.def Error: File `MXfold2_Histogram_SISSI_vs_MULTIPERM_MONO.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1198: Package pdftex.def Error: File `MXfold2_Histogram_SISSI_vs_MULTIPERM_MONO.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1169 ...2_Histogram_SISSI_vs_MULTIPERM_MONO.png}
+l.1198 ...2_Histogram_SISSI_vs_MULTIPERM_MONO.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `MXfold2_Histogram_SISSI_vs_MULTIPERM_DI.png' not found on input line 1174.
+LaTeX Warning: File `MXfold2_Histogram_SISSI_vs_MULTIPERM_DI.png' not found on input line 1203.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1174: Package pdftex.def Error: File `MXfold2_Histogram_SISSI_vs_MULTIPERM_DI.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1203: Package pdftex.def Error: File `MXfold2_Histogram_SISSI_vs_MULTIPERM_DI.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1174 ...ld2_Histogram_SISSI_vs_MULTIPERM_DI.png}
+l.1203 ...ld2_Histogram_SISSI_vs_MULTIPERM_DI.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `MXfold2_Histogram_SISSI_vs_ALN-SHUFFLE.png' not found on input line 1180.
+LaTeX Warning: File `MXfold2_Histogram_SISSI_vs_ALN-SHUFFLE.png' not found on input line 1209.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1180: Package pdftex.def Error: File `MXfold2_Histogram_SISSI_vs_ALN-SHUFFLE.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1209: Package pdftex.def Error: File `MXfold2_Histogram_SISSI_vs_ALN-SHUFFLE.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1180 ...old2_Histogram_SISSI_vs_ALN-SHUFFLE.png}
+l.1209 ...old2_Histogram_SISSI_vs_ALN-SHUFFLE.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1412,76 +1412,76 @@ Overfull \vbox (72.38211pt too high) has occurred while \output is active []
 
 [48]
 
-LaTeX Warning: File `MXfold2_Confusion_Matrix_SISSI_vs_SISSIz_MONO.png' not found on input line 1194.
+LaTeX Warning: File `MXfold2_Confusion_Matrix_SISSI_vs_SISSIz_MONO.png' not found on input line 1223.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1194: Package pdftex.def Error: File `MXfold2_Confusion_Matrix_SISSI_vs_SISSIz_MONO.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1223: Package pdftex.def Error: File `MXfold2_Confusion_Matrix_SISSI_vs_SISSIz_MONO.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1194 ...nfusion_Matrix_SISSI_vs_SISSIz_MONO.png}
+l.1223 ...nfusion_Matrix_SISSI_vs_SISSIz_MONO.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `MXfold2_Confusion_Matrix_SISSI_vs_SISSIZ_DI.png' not found on input line 1199.
+LaTeX Warning: File `MXfold2_Confusion_Matrix_SISSI_vs_SISSIZ_DI.png' not found on input line 1228.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1199: Package pdftex.def Error: File `MXfold2_Confusion_Matrix_SISSI_vs_SISSIZ_DI.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1228: Package pdftex.def Error: File `MXfold2_Confusion_Matrix_SISSI_vs_SISSIZ_DI.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1199 ...Confusion_Matrix_SISSI_vs_SISSIZ_DI.png}
+l.1228 ...Confusion_Matrix_SISSI_vs_SISSIZ_DI.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `MXfold2_Confusion_Matrix_SISSI_vs_MULTIPERM_MONO.png' not found on input line 1205.
+LaTeX Warning: File `MXfold2_Confusion_Matrix_SISSI_vs_MULTIPERM_MONO.png' not found on input line 1234.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1205: Package pdftex.def Error: File `MXfold2_Confusion_Matrix_SISSI_vs_MULTIPERM_MONO.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1234: Package pdftex.def Error: File `MXfold2_Confusion_Matrix_SISSI_vs_MULTIPERM_MONO.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1205 ...sion_Matrix_SISSI_vs_MULTIPERM_MONO.png}
+l.1234 ...sion_Matrix_SISSI_vs_MULTIPERM_MONO.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `MXfold2_Confusion_Matrix_SISSI_vs_MULTIPERM_DI.png' not found on input line 1210.
+LaTeX Warning: File `MXfold2_Confusion_Matrix_SISSI_vs_MULTIPERM_DI.png' not found on input line 1239.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1210: Package pdftex.def Error: File `MXfold2_Confusion_Matrix_SISSI_vs_MULTIPERM_DI.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1239: Package pdftex.def Error: File `MXfold2_Confusion_Matrix_SISSI_vs_MULTIPERM_DI.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1210 ...fusion_Matrix_SISSI_vs_MULTIPERM_DI.png}
+l.1239 ...fusion_Matrix_SISSI_vs_MULTIPERM_DI.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `MXfold2_Confusion_Matrix_SISSI_vs_ALN-SHUFFLE.png' not found on input line 1216.
+LaTeX Warning: File `MXfold2_Confusion_Matrix_SISSI_vs_ALN-SHUFFLE.png' not found on input line 1245.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1216: Package pdftex.def Error: File `MXfold2_Confusion_Matrix_SISSI_vs_ALN-SHUFFLE.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1245: Package pdftex.def Error: File `MXfold2_Confusion_Matrix_SISSI_vs_ALN-SHUFFLE.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1216 ...nfusion_Matrix_SISSI_vs_ALN-SHUFFLE.png}
+l.1245 ...nfusion_Matrix_SISSI_vs_ALN-SHUFFLE.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1497,76 +1497,76 @@ Overfull \vbox (70.0488pt too high) has occurred while \output is active []
 
 [51]
 
-LaTeX Warning: File `MXfold2_ROC_Curve_SISSI_vs_SISSIz_MONO.png' not found on input line 1232.
+LaTeX Warning: File `MXfold2_ROC_Curve_SISSI_vs_SISSIz_MONO.png' not found on input line 1261.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1232: Package pdftex.def Error: File `MXfold2_ROC_Curve_SISSI_vs_SISSIz_MONO.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1261: Package pdftex.def Error: File `MXfold2_ROC_Curve_SISSI_vs_SISSIz_MONO.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1232 ...old2_ROC_Curve_SISSI_vs_SISSIz_MONO.png}
+l.1261 ...old2_ROC_Curve_SISSI_vs_SISSIz_MONO.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `MXfold2_ROC_Curve_SISSI_vs_SISSIz_DI.png' not found on input line 1237.
+LaTeX Warning: File `MXfold2_ROC_Curve_SISSI_vs_SISSIz_DI.png' not found on input line 1266.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1237: Package pdftex.def Error: File `MXfold2_ROC_Curve_SISSI_vs_SISSIz_DI.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1266: Package pdftex.def Error: File `MXfold2_ROC_Curve_SISSI_vs_SISSIz_DI.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1237 ...Xfold2_ROC_Curve_SISSI_vs_SISSIz_DI.png}
+l.1266 ...Xfold2_ROC_Curve_SISSI_vs_SISSIz_DI.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `MXfold2_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png' not found on input line 1243.
+LaTeX Warning: File `MXfold2_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png' not found on input line 1272.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1243: Package pdftex.def Error: File `MXfold2_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1272: Package pdftex.def Error: File `MXfold2_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1243 ...2_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png}
+l.1272 ...2_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `MXfold2_ROC_Curve_SISSI_vs_MULTIPERM_DI.png' not found on input line 1248.
+LaTeX Warning: File `MXfold2_ROC_Curve_SISSI_vs_MULTIPERM_DI.png' not found on input line 1277.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1248: Package pdftex.def Error: File `MXfold2_ROC_Curve_SISSI_vs_MULTIPERM_DI.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1277: Package pdftex.def Error: File `MXfold2_ROC_Curve_SISSI_vs_MULTIPERM_DI.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1248 ...ld2_ROC_Curve_SISSI_vs_MULTIPERM_DI.png}
+l.1277 ...ld2_ROC_Curve_SISSI_vs_MULTIPERM_DI.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `MXfold2_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png' not found on input line 1254.
+LaTeX Warning: File `MXfold2_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png' not found on input line 1283.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1254: Package pdftex.def Error: File `MXfold2_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1283: Package pdftex.def Error: File `MXfold2_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1254 ...old2_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png}
+l.1283 ...old2_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1584,91 +1584,91 @@ Overfull \vbox (70.0488pt too high) has occurred while \output is active []
 
 [55]
 
-LaTeX Warning: File `Boxplot RNAz SVM RNA-class probability.png' not found on input line 1275.
+LaTeX Warning: File `Boxplot RNAz SVM RNA-class probability.png' not found on input line 1304.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1275: Package pdftex.def Error: File `Boxplot RNAz SVM RNA-class probability.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1304: Package pdftex.def Error: File `Boxplot RNAz SVM RNA-class probability.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1275 ...plot RNAz SVM RNA-class probability.png}
+l.1304 ...plot RNAz SVM RNA-class probability.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `RNAz_Histogram_SISSI_vs_SISSIz_MONO.png' not found on input line 1286.
+LaTeX Warning: File `RNAz_Histogram_SISSI_vs_SISSIz_MONO.png' not found on input line 1315.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1286: Package pdftex.def Error: File `RNAz_Histogram_SISSI_vs_SISSIz_MONO.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1315: Package pdftex.def Error: File `RNAz_Histogram_SISSI_vs_SISSIz_MONO.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1286 ...RNAz_Histogram_SISSI_vs_SISSIz_MONO.png}
+l.1315 ...RNAz_Histogram_SISSI_vs_SISSIz_MONO.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `RNAz_Histogram_SISSI_vs_SISSIZ_DI.png' not found on input line 1291.
+LaTeX Warning: File `RNAz_Histogram_SISSI_vs_SISSIZ_DI.png' not found on input line 1320.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1291: Package pdftex.def Error: File `RNAz_Histogram_SISSI_vs_SISSIZ_DI.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1320: Package pdftex.def Error: File `RNAz_Histogram_SISSI_vs_SISSIZ_DI.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1291 ...]{RNAz_Histogram_SISSI_vs_SISSIZ_DI.png}
+l.1320 ...]{RNAz_Histogram_SISSI_vs_SISSIZ_DI.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `RNAz_Histogram_SISSI_vs_MULTIPERM_MONO.png' not found on input line 1297.
+LaTeX Warning: File `RNAz_Histogram_SISSI_vs_MULTIPERM_MONO.png' not found on input line 1326.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1297: Package pdftex.def Error: File `RNAz_Histogram_SISSI_vs_MULTIPERM_MONO.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1326: Package pdftex.def Error: File `RNAz_Histogram_SISSI_vs_MULTIPERM_MONO.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1297 ...z_Histogram_SISSI_vs_MULTIPERM_MONO.png}
+l.1326 ...z_Histogram_SISSI_vs_MULTIPERM_MONO.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `RNAz_Histogram_SISSI_vs_MULTIPERM_DI.png' not found on input line 1302.
+LaTeX Warning: File `RNAz_Histogram_SISSI_vs_MULTIPERM_DI.png' not found on input line 1331.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1302: Package pdftex.def Error: File `RNAz_Histogram_SISSI_vs_MULTIPERM_DI.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1331: Package pdftex.def Error: File `RNAz_Histogram_SISSI_vs_MULTIPERM_DI.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1302 ...NAz_Histogram_SISSI_vs_MULTIPERM_DI.png}
+l.1331 ...NAz_Histogram_SISSI_vs_MULTIPERM_DI.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `RNAz_Histogram_SISSI_vs_ALN-SHUFFLE.png' not found on input line 1308.
+LaTeX Warning: File `RNAz_Histogram_SISSI_vs_ALN-SHUFFLE.png' not found on input line 1337.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1308: Package pdftex.def Error: File `RNAz_Histogram_SISSI_vs_ALN-SHUFFLE.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1337: Package pdftex.def Error: File `RNAz_Histogram_SISSI_vs_ALN-SHUFFLE.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1308 ...RNAz_Histogram_SISSI_vs_ALN-SHUFFLE.png}
+l.1337 ...RNAz_Histogram_SISSI_vs_ALN-SHUFFLE.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1686,76 +1686,76 @@ Overfull \vbox (72.38211pt too high) has occurred while \output is active []
 
 [58]
 
-LaTeX Warning: File `RNAz_Confusion_Matrix_SISSI_vs_SISSIz_MONO.png' not found on input line 1322.
+LaTeX Warning: File `RNAz_Confusion_Matrix_SISSI_vs_SISSIz_MONO.png' not found on input line 1351.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1322: Package pdftex.def Error: File `RNAz_Confusion_Matrix_SISSI_vs_SISSIz_MONO.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1351: Package pdftex.def Error: File `RNAz_Confusion_Matrix_SISSI_vs_SISSIz_MONO.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1322 ...nfusion_Matrix_SISSI_vs_SISSIz_MONO.png}
+l.1351 ...nfusion_Matrix_SISSI_vs_SISSIz_MONO.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `RNAz_Confusion_Matrix_SISSI_vs_SISSIZ_DI.png' not found on input line 1327.
+LaTeX Warning: File `RNAz_Confusion_Matrix_SISSI_vs_SISSIZ_DI.png' not found on input line 1356.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1327: Package pdftex.def Error: File `RNAz_Confusion_Matrix_SISSI_vs_SISSIZ_DI.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1356: Package pdftex.def Error: File `RNAz_Confusion_Matrix_SISSI_vs_SISSIZ_DI.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1327 ...Confusion_Matrix_SISSI_vs_SISSIZ_DI.png}
+l.1356 ...Confusion_Matrix_SISSI_vs_SISSIZ_DI.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `RNAz_Confusion_Matrix_SISSI_vs_MULTIPERM_MONO.png' not found on input line 1333.
+LaTeX Warning: File `RNAz_Confusion_Matrix_SISSI_vs_MULTIPERM_MONO.png' not found on input line 1362.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1333: Package pdftex.def Error: File `RNAz_Confusion_Matrix_SISSI_vs_MULTIPERM_MONO.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1362: Package pdftex.def Error: File `RNAz_Confusion_Matrix_SISSI_vs_MULTIPERM_MONO.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1333 ...sion_Matrix_SISSI_vs_MULTIPERM_MONO.png}
+l.1362 ...sion_Matrix_SISSI_vs_MULTIPERM_MONO.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `RNAz_Confusion_Matrix_SISSI_vs_MULTIPERM_DI.png' not found on input line 1338.
+LaTeX Warning: File `RNAz_Confusion_Matrix_SISSI_vs_MULTIPERM_DI.png' not found on input line 1367.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1338: Package pdftex.def Error: File `RNAz_Confusion_Matrix_SISSI_vs_MULTIPERM_DI.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1367: Package pdftex.def Error: File `RNAz_Confusion_Matrix_SISSI_vs_MULTIPERM_DI.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1338 ...fusion_Matrix_SISSI_vs_MULTIPERM_DI.png}
+l.1367 ...fusion_Matrix_SISSI_vs_MULTIPERM_DI.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `RNAz_Confusion_Matrix_SISSI_vs_ALN-SHUFFLE.png' not found on input line 1344.
+LaTeX Warning: File `RNAz_Confusion_Matrix_SISSI_vs_ALN-SHUFFLE.png' not found on input line 1373.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1344: Package pdftex.def Error: File `RNAz_Confusion_Matrix_SISSI_vs_ALN-SHUFFLE.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1373: Package pdftex.def Error: File `RNAz_Confusion_Matrix_SISSI_vs_ALN-SHUFFLE.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1344 ...nfusion_Matrix_SISSI_vs_ALN-SHUFFLE.png}
+l.1373 ...nfusion_Matrix_SISSI_vs_ALN-SHUFFLE.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1771,76 +1771,76 @@ Overfull \vbox (70.0488pt too high) has occurred while \output is active []
 
 [61]
 
-LaTeX Warning: File `RNAz_ROC_Curve_SISSI_vs_SISSIz_MONO.png' not found on input line 1364.
+LaTeX Warning: File `RNAz_ROC_Curve_SISSI_vs_SISSIz_MONO.png' not found on input line 1393.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1364: Package pdftex.def Error: File `RNAz_ROC_Curve_SISSI_vs_SISSIz_MONO.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1393: Package pdftex.def Error: File `RNAz_ROC_Curve_SISSI_vs_SISSIz_MONO.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1364 ...RNAz_ROC_Curve_SISSI_vs_SISSIz_MONO.png}
+l.1393 ...RNAz_ROC_Curve_SISSI_vs_SISSIz_MONO.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `RNAz_ROC_Curve_SISSI_vs_SISSIZ_DI.png' not found on input line 1370.
+LaTeX Warning: File `RNAz_ROC_Curve_SISSI_vs_SISSIZ_DI.png' not found on input line 1399.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1370: Package pdftex.def Error: File `RNAz_ROC_Curve_SISSI_vs_SISSIZ_DI.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1399: Package pdftex.def Error: File `RNAz_ROC_Curve_SISSI_vs_SISSIZ_DI.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1370 ...]{RNAz_ROC_Curve_SISSI_vs_SISSIZ_DI.png}
+l.1399 ...]{RNAz_ROC_Curve_SISSI_vs_SISSIZ_DI.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `RNAz_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png' not found on input line 1377.
+LaTeX Warning: File `RNAz_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png' not found on input line 1406.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1377: Package pdftex.def Error: File `RNAz_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1406: Package pdftex.def Error: File `RNAz_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1377 ...z_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png}
+l.1406 ...z_ROC_Curve_SISSI_vs_MULTIPERM_MONO.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `RNAz_ROC_Curve_SISSI_vs_MULTIPERM_DI.png' not found on input line 1383.
+LaTeX Warning: File `RNAz_ROC_Curve_SISSI_vs_MULTIPERM_DI.png' not found on input line 1412.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1383: Package pdftex.def Error: File `RNAz_ROC_Curve_SISSI_vs_MULTIPERM_DI.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1412: Package pdftex.def Error: File `RNAz_ROC_Curve_SISSI_vs_MULTIPERM_DI.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1383 ...NAz_ROC_Curve_SISSI_vs_MULTIPERM_DI.png}
+l.1412 ...NAz_ROC_Curve_SISSI_vs_MULTIPERM_DI.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-LaTeX Warning: File `RNAz_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png' not found on input line 1390.
+LaTeX Warning: File `RNAz_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png' not found on input line 1419.
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1390: Package pdftex.def Error: File `RNAz_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png' not found: using draft setting.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1419: Package pdftex.def Error: File `RNAz_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png' not found: using draft setting.
 
 See the pdftex.def package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1390 ...RNAz_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png}
+l.1419 ...RNAz_ROC_Curve_SISSI_vs_ALN-SHUFFLE.png}
                                                   
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1857,7 +1857,7 @@ Overfull \vbox (70.0488pt too high) has occurred while \output is active []
 [64]
 
 [65]
-Overfull \hbox (21.02962pt too wide) in paragraph at lines 1411--1412
+Overfull \hbox (21.02962pt too wide) in paragraph at lines 1440--1441
 \OT1/cmr/m/n/12 For the pre-dic-tion of RNA sec-ondary struc-tures, I down-loaded the NCBI database \OT1/cmtt/m/n/12 nt-prok.\OMS/cmsy/m/n/12 ^^B
  []
 
@@ -1871,25 +1871,25 @@ Overfull \hbox (21.02962pt too wide) in paragraph at lines 1411--1412
 
 [68]
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1494: LaTeX Error: Unicode character   (U+202F)
+d:/Masterarbeit/2.Versuch/Text/main.tex:1523: LaTeX Error: Unicode character   (U+202F)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1494 ...ich mittlerer Ähnlichkeiten (60–80 
+l.1523 ...ich mittlerer Ähnlichkeiten (60–80 
                                                   % MPI) überlegen war, wä...
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-Overfull \hbox (0.4649pt too wide) in paragraph at lines 1500--1501
+Overfull \hbox (0.4649pt too wide) in paragraph at lines 1529--1530
 []\OT1/cmr/m/n/12 Insgesamt zeigt ECS-finder, dass durch die Kom-bi-na-tion kom-ple-ment^^?arer Vorher-sagemeth-
  []
 
 
-Overfull \hbox (20.54802pt too wide) in paragraph at lines 1502--1504
+Overfull \hbox (20.54802pt too wide) in paragraph at lines 1531--1533
 \OT1/cmr/m/n/12 verbessern, in-dem die kom-ple-ment^^?aren St^^?arken der beste-hen-den Meth-o-den durch maschinelles
  []
 
@@ -1898,37 +1898,37 @@ Overfull \hbox (20.54802pt too wide) in paragraph at lines 1502--1504
 [69]
 
 [70]
-Overfull \hbox (21.27951pt too wide) in paragraph at lines 1515--1516
+Overfull \hbox (21.27951pt too wide) in paragraph at lines 1544--1545
 \OT1/cmr/m/n/12 Klap-proth et al. ein flex-i-bel ein-set-zbares, mod-u-lar aufge-bautes Machine-Learning-Framework,
  []
 
 
-Overfull \hbox (7.97594pt too wide) in paragraph at lines 1517--1518
+Overfull \hbox (7.97594pt too wide) in paragraph at lines 1546--1547
 \OT1/cmr/m/n/12 | ist vollst^^?andig in Python 3 im-ple-men-tiert und un-terst^^?utzt Multiple-Sequence-Alignments
  []
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1519: LaTeX Error: Unicode character   (U+202F)
+d:/Masterarbeit/2.Versuch/Text/main.tex:1548: LaTeX Error: Unicode character   (U+202F)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1519 ...ools wie RNAz Anwendung fanden – z. 
+l.1548 ...ools wie RNAz Anwendung fanden – z. 
                                                   B. Z-Score, Minimum Free E...
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1521: LaTeX Error: Unicode character   (U+202F)
+d:/Masterarbeit/2.Versuch/Text/main.tex:1550: LaTeX Error: Unicode character   (U+202F)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1521 ...g, deren genomische Eigenschaften (z. 
+l.1550 ...g, deren genomische Eigenschaften (z. 
                                                   B. Basenkomposition oder S...
 You may provide a definition with
 \DeclareUnicodeCharacter 
@@ -1937,31 +1937,31 @@ You may provide a definition with
 
 [71]
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1525: LaTeX Error: Unicode character   (U+202F)
+d:/Masterarbeit/2.Versuch/Text/main.tex:1554: LaTeX Error: Unicode character   (U+202F)
                not set up for use with LaTeX.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1525 ... In einem kombinierten Ansatz (wie z. 
+l.1554 ... In einem kombinierten Ansatz (wie z. 
                                                   B. in ECSfinder gezeigt), ...
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-Overfull \hbox (25.47437pt too wide) in paragraph at lines 1527--1528
+Overfull \hbox (25.47437pt too wide) in paragraph at lines 1556--1557
 []\OT1/cmr/m/n/12 Insgesamt bi-etet Svhip eine leis-tungsstarke und zukun-ftsweisende Plat-tform f^^?ur die genomweite
  []
 
 
-d:/Masterarbeit/2.Versuch/Text/main.tex:1534: LaTeX Error: \begin{large} on input line 208 ended by \end{document}.
+d:/Masterarbeit/2.Versuch/Text/main.tex:1563: LaTeX Error: \begin{large} on input line 237 ended by \end{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.1534 \end{document}
+l.1563 \end{document}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1985,11 +1985,11 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  8CA086A905F9D551CBE8ABA7992493A4;14739.
+(rerunfilecheck)             After:  B818EA4AEBB5F079FFACBC38FA613821;14739.
  )
 (\end occurred inside a group at level 2)
 
-### semi simple group (level 2) entered at line 208 (\begingroup)
+### semi simple group (level 2) entered at line 237 (\begingroup)
 ### semi simple group (level 1) entered at line 43 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
@@ -2001,7 +2001,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  75i,7n,79p,1207b,2216s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (72 pages, 443022 bytes).
+Output written on main.pdf (72 pages, 443021 bytes).
 PDF statistics:
  832 PDF objects out of 1000 (max. 8388607)
  710 compressed objects within 8 object streams
