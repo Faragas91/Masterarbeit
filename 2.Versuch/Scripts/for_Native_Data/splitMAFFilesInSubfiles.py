@@ -8,8 +8,18 @@ for j in os.listdir(input_path):
     splitted_file_name = input_file.split(".")[:-1]
     file_name=".".join(splitted_file_name )
     step = 6
+    header = ""
+    tree_reached = False
     full_path = os.path.join(input_path, input_file)
     out_prefix = f"C:/bla/Waste/MA/2.Versuch/Native_Data/MAF_Subfiles/{file_name}"
+
+    # with open(full_path, 'r') as file:
+    #     for line in file:
+    #         if line.startswith('# tree'): 
+    #             tree_reached = True
+    #         if tree_reached == False and not line.startswith('# tree'):    
+    #             header += line
+    #             print(header)
 
     records = list(SeqIO.parse(full_path, "maf"))
     if len(records) == 0:
