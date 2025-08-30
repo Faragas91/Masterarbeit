@@ -5,7 +5,7 @@ SISSIz="/home/sredl/Masterarbeit/tools/sissiz_v3/src/SISSIz"
 ALIFOLDZ="/home/sredl/Masterarbeit/tools/shuffle-aln.pl"
 MULTIPERM="/home/sredl/Masterarbeit/tools/multiperm-0.9.4/multiperm"
 SAMPLES_CLUSTAL="/home/sredl/Masterarbeit/2.Versuch/Native_Data/SAMPLES_CLUSTAL"
-SAMPLES_MAF="/home/sredl/Masterarbeit/2.Versuch/Native_Data/SAMPLES_MAF"
+SAMPLES_MAF="/home/sredl/Masterarbeit/2.Versuch/Native_Data/TEST_MAF"
 
 chmod +x "$SISSIz"
 chmod +x "$MULTIPERM"
@@ -23,7 +23,7 @@ for input_file in "$SAMPLES_MAF"/*.maf; do
     # SISSIz_mono_out="$SAMPLES_CLUSTAL/neg_sample_SISSIz_mono_${filename}"
     SISSIz_mono_out="$SAMPLES_MAF/neg_sample_SISSIz_mono_${filename}"
     if [ ! -f "$SISSIz_mono_out" ]; then
-        "$SISSIz" -s -i --maf "$input_file" > "$SISSIz_mono_out"
+        "$SISSIz" -s -i "$input_file" > "$SISSIz_mono_out"
         echo "SISSIz mono done"
     else
         echo "SISSIz mono exists"
@@ -33,7 +33,7 @@ for input_file in "$SAMPLES_MAF"/*.maf; do
     # SISSIz_di_out="$SAMPLES_CLUSTAL/neg_sample_SISSIz_di_${filename}"
     SISSIz_di_out="$SAMPLES_MAF/neg_sample_SISSIz_di_${filename}"
     if [ ! -f "$SISSIz_di_out" ]; then
-        "$SISSIz" -s -d --maf "$input_file" > "$SISSIz_di_out"
+        "$SISSIz" -s "$input_file" > "$SISSIz_di_out"
         echo "SISSIz di done"
     else
         echo "SISSIz di exists"
@@ -44,7 +44,7 @@ for input_file in "$SAMPLES_MAF"/*.maf; do
     MULTIPERM_mono_out="$SAMPLES_MAF/neg_sample_MULTIPERM_mono_${filename}"
     if [ ! -f "$MULTIPERM_mono_out" ]; then
         # "$MULTIPERM" -w --conservation=none "$input_file"
-        "$MULTIPERM" --conservation=none -v "$input_file"
+        "$MULTIPERM" --conservation=none "$input_file"
         # mv perm_001_*.clu "$MULTIPERM_mono_out" 2>/dev/null
         mv perm_001_*.maf "$MULTIPERM_mono_out" 2>/dev/null
         echo "MULTIPERM mono done"
@@ -56,7 +56,7 @@ for input_file in "$SAMPLES_MAF"/*.maf; do
     MULTIPERM_di_out="$SAMPLES_MAF/neg_sample_MULTIPERM_di_${filename}"
     if [ ! -f "$MULTIPERM_di_out" ]; then
         # "$MULTIPERM" -w "$input_file"
-        "$MULTIPERM" --conservation=level1 -v "$input_file"
+        "$MULTIPERM" "$input_file"
         # mv perm_001_*.clu "$MULTIPERM_di_out" 2>/dev/null
         mv perm_001_*.maf "$MULTIPERM_di_out" 2>/dev/null
         echo "MULTIPERM di done"

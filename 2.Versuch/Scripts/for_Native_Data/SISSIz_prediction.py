@@ -5,16 +5,18 @@ import time
 import threading
 
 # Define variables
-SISSIz = "/home/sredl/Masterarbeit/tools/sissiz_v3/src/SISSIz"
+SISSIz = "/usr/local/bin/SISSIz"
 SAMPLES_CLUSTAL = "/home/sredl/Masterarbeit/2.Versuch/Native_Data/SAMPLES_CLUSTAL"
-SISSIz_PRE_OUTPUT = "/home/sredl/Masterarbeit/2.Versuch/Native_Data/SISSIz_PREDICTION"
-NUM_CORES = 64  # Number of CPU cores to use
+SAMPLES_MAF = "/mnt/sdc2/home/c2210542009/Masterarbeit/NativeData/SAMPLES_MAF"
+SISSIz_PRE_OUTPUT = "/mnt/sdc2/home/c2210542009/Masterarbeit/NativeData//SISSIz_PREDICTION"
+NUM_CORES = 32  # Number of CPU cores to use
 
 # Make sure the executables have the necessary permissions
-os.chmod(SISSIz, 0o755)
+# os.chmod(SISSIz, 0o755)
 
 # Create the output directories if they don't exist
 os.makedirs(SAMPLES_CLUSTAL, exist_ok=True)
+os.makedirs(SAMPLES_MAF, exist_ok=True)
 os.makedirs(SISSIz_PRE_OUTPUT, exist_ok=True)
 
 # Function to run a command and return the output
@@ -34,7 +36,8 @@ def process_file_sissiz(file):
         print(f"{output_file} already exists, skipping...")
     else:
         # Run SISSIz prediction
-        run_command(f"{SISSIz} --sci {os.path.join(SAMPLES_CLUSTAL, file)} >> {output_file}")
+        # run_command(f"{SISSIz} --sci {os.path.join(SAMPLES_CLUSTAL, file)} >> {output_file}")
+        run_command(f"{SISSIz} --sci {os.path.join(SAMPLES_MAF, file)} >> {output_file}")
         print(f"{output_file} finished")
 
 # Start time measurement
@@ -57,7 +60,8 @@ def increment_count():
 
 # Run SISSIz predictions for all samples in parallel
 with ProcessPoolExecutor(max_workers=NUM_CORES) as executor:
-    futures = {executor.submit(process_file_sissiz, file): file for file in os.listdir(SAMPLES_CLUSTAL) if file.endswith(".clu")}
+    # futures = {executor.submit(process_file_sissiz, file): file for file in os.listdir(SAMPLES_CLUSTAL) if file.endswith(".clu")}
+    futures = {executor.submit(process_file_sissiz, file): file for file in os.listdir(SAMPLES_MAF) if file.endswith(".maf")}
     for future in as_completed(futures):
         future.result()
         increment_count()

@@ -42,7 +42,7 @@ for i in $(seq 1 $ITER); do
     
     if [ ! -f "$SISSI_OUTPUT" ]; then
         # Run the SISSI command to generate the SISSI sample
-        "$SISSI" -fs $FREQUENCIES_SINGLE -fd $FREQUENCIES_DOUBLE -nn $NEIGHBOURHOOD -l401 $TREE -oc -d > $SISSI_OUTPUT
+        "$SISSI" -fs $FREQUENCIES_SINGLE -fd $FREQUENCIES_DOUBLE -nn $NEIGHBOURHOOD -l401 $TREE -oc > $SISSI_OUTPUT
         sleep $(shuf -i 1-2 -n 1)
         echo "$SISSI finished"
     else 

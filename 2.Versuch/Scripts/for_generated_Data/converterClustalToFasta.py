@@ -1,10 +1,8 @@
 import os
 from Bio import SeqIO
 
-# SAMPLES_CLUSTAL = "D:/Masterarbeit_programmieren/2.Versuch/Data/SAMPLES_CLUSTAL/"
-SAMPLES_CLUSTAL = "/run/media/stefanre/CA6415EC6415DC4F/Masterarbeit/2.Versuch/Native_Data/SAMPLES_CLUSTAL/"
-#SAMPLES_FASTA = "D:/Masterarbeit_programmieren/2.Versuch/Data/SAMPLES_FASTA/"
-SAMPLES_FASTA = "/run/media/stefanre/CA6415EC6415DC4F/Masterarbeit/2.Versuch/Native_Data/SAMPLES_FASTA/"
+SAMPLES_CLUSTAL = "D:/Masterarbeit_programmieren/2.Versuch/Data/SAMPLES_CLUSTAL/"
+SAMPLES_FASTA = "D:/Masterarbeit_programmieren/2.Versuch/Data/SAMPLES_FASTA/"
 
 if not os.path.exists(SAMPLES_FASTA):
     os.makedirs(SAMPLES_FASTA)
