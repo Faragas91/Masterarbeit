@@ -2,10 +2,10 @@ import os
 from Bio import AlignIO
 
 # INPUT: Verzeichnis mit Stockholm-Dateien
-SAMPLES_STOCKHOLM = "/run/media/stefanre/CA6415EC6415DC4F/Masterarbeit/2.Versuch/Data/alignments/"
+SAMPLES_STOCKHOLM = "/home/sredl/Masterarbeit/2.Versuch/Native_Data/SAMPLES_STOCKHOLM/"
 
 # OUTPUT: Verzeichnis für Clustal-Dateien
-SAMPLES_CLUSTAL = "/run/media/stefanre/CA6415EC6415DC4F/Masterarbeit/2.Versuch/Native_Data/SAMPLES_CLUSTAL/"
+SAMPLES_CLUSTAL = "/home/sredl/Masterarbeit/2.Versuch/Native_Data/SAMPLES_CLUSTAL/"
 
 if not os.path.exists(SAMPLES_CLUSTAL):
     os.makedirs(SAMPLES_CLUSTAL)

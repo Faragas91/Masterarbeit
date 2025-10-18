@@ -1,8 +1,11 @@
 from Bio import AlignIO
 import os
 
-SAMPLES_CLUSTAL = "D:/Masterarbeit/2.Versuch/Data/SAMPLES_CLUSTAL/"
-SAMPLES_STOCKHOLM = "D:/Masterarbeit/2.Versuch/Data/SAMPLES_STOCKHOLM/"
+# SAMPLES_CLUSTAL = "D:/Masterarbeit/2.Versuch/Data/SAMPLES_CLUSTAL/"
+# SAMPLES_STOCKHOLM = "D:/Masterarbeit/2.Versuch/Data/SAMPLES_STOCKHOLM/"
+
+SAMPLES_CLUSTAL = "/home/sredl/Masterarbeit/2.Versuch/Data/SAMPLES_CLUSTAL/"
+SAMPLES_STOCKHOLM = "/home/sredl/Masterarbeit/2.Versuch/Data/SAMPLES_STOCKHOLM/"
 
 os.makedirs(SAMPLES_STOCKHOLM, exist_ok=True)
 
