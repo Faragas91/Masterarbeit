@@ -5,27 +5,36 @@ import time
 import threading
 
 # Define variables
-SISSIz = "/usr/local/bin/SISSIz"
-SAMPLES_CLUSTAL = "/home/sredl/Masterarbeit/2.Versuch/Native_Data/SAMPLES_CLUSTAL"
-SISSIz_PRE_OUTPUT = "/mnt/sdc2/home/c2210542009/Masterarbeit/NativeData//SISSIz_PREDICTION"
-NUM_CORES = 32  # Number of CPU cores to use
-
-# Make sure the executables have the necessary permissions
-# os.chmod(SISSIz, 0o755)
+SISSIz = "/home/sredl/programs/SISSIz/bin/SISSIz"
+SAMPLES_CLUSTAL = "/home/sredl/Masterarbeit/2.Versuch/Native_Data/SAMPLES_CLUSTAL_SUBFILES"
+SISSIz_PRE_OUTPUT = "/home/sredl/Masterarbeit/2.Versuch/Native_Data/SISSIz_PREDICTION"
+NUM_CORES = 64  # Number of CPU cores to use
+POSITIVE_SAMPLES = f"{SAMPLES_CLUSTAL}/positive"
+NEGATIVE_SAMPLES = f"{SAMPLES_CLUSTAL}/negative"
 
 # Create the output directories if they don't exist
-os.makedirs(SAMPLES_CLUSTAL, exist_ok=True)
 os.makedirs(SISSIz_PRE_OUTPUT, exist_ok=True)
 
 # Function to run a command and return the output
-def run_command(command):
-    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
-    stdout, stderr = process.communicate()
-    if process.returncode != 0:
-        print(f"Error running command: {command}\n{stderr}")
-    return stdout
+def run_command(command, timeout=10):
+    """Run a shell command with a timeout (in seconds)."""
+    try:
+        process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
+        stdout, stderr = process.communicate(timeout=timeout)
+        if process.returncode != 0:
+            print(f"Error running command: {command}\n{stderr}")
+        return stdout
+    except subprocess.TimeoutExpired:
+        process.kill()
+        with open("sissiz_timeouts.log", "a") as logf:
+            logf.write(f"Timeout after {timeout}s: {command}\n")
+        print(f"⚠️ Timeout: {command} exceeded {timeout} seconds and was terminated.")
+        return None
 
-def process_file_sissiz(file):
+
+
+def process_file_sissiz(file, base_path):
+    input_path = os.path.join(base_path, file)
     basename = os.path.splitext(file)[0]
     output_file = os.path.join(SISSIz_PRE_OUTPUT, f"{basename}.txt")
         
@@ -34,17 +43,8 @@ def process_file_sissiz(file):
         print(f"{output_file} already exists, skipping...")
     else:
         # Run SISSIz prediction
-        run_command(f"{SISSIz} --sci {os.path.join(SAMPLES_CLUSTAL, file)} >> {output_file}")
-        #run_command(f"{SISSIz} --sci {os.path.join(SAMPLES_MAF, file)} >> {output_file}")
+        run_command(f"{SISSIz} --sci {input_path} >> {output_file}", timeout=10)
         print(f"{output_file} finished")
-
-# Start time measurement
-start_time = time.time()
-start_time_str = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(start_time))
-print(f"Script started at: {start_time_str}")
-
-count = 0
-lock = threading.Lock()
 
 def increment_count():
     global count, start_time
@@ -56,13 +56,24 @@ def increment_count():
             with open("sissiz_execution_time.log", "a") as log_file:
                 log_file.write(f"Processed {count} files in {elapsed_time:.2f} seconds\n")
 
-# Run SISSIz predictions for all samples in parallel
-with ProcessPoolExecutor(max_workers=NUM_CORES) as executor:
-    futures = {executor.submit(process_file_sissiz, file): file for file in os.listdir(SAMPLES_CLUSTAL) if file.endswith(".clu")}
-    #futures = {executor.submit(process_file_sissiz, file): file for file in os.listdir(SAMPLES_MAF) if file.endswith(".maf")}
-    for future in as_completed(futures):
-        future.result()
-        increment_count()
+def predict_sissiz(file_path):
+    with ProcessPoolExecutor(max_workers=NUM_CORES) as executor:
+        futures = {executor.submit(process_file_sissiz, file, file_path): file for file in os.listdir(file_path) if file.endswith(".clu")}
+        for future in as_completed(futures):
+            future.result()
+            increment_count()
+
+# Start time measurement
+start_time = time.time()
+start_time_str = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(start_time))
+print(f"Script started at: {start_time_str}")
+
+count = 0
+lock = threading.Lock()
+
+# Run SISSIz predictions for all SAMPLES_CLUSTAL in parallel
+predict_sissiz(POSITIVE_SAMPLES)
+predict_sissiz(NEGATIVE_SAMPLES)
 
 print("\nProcessing completed.")
 

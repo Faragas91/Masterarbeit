@@ -4,18 +4,13 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 import time
 import threading
 
-
 # Define variables
 PETfold = "/home/sredl/Masterarbeit/tools/PETfold/bin/PETfold"
 SAMPLES_FASTA = "/home/sredl/Masterarbeit/2.Versuch/Native_Data/SAMPLES_FASTA"
 PETfold_PRE_OUTPUT = "/home/sredl/Masterarbeit/2.Versuch/Native_Data/PETfold_PREDICTION"
 NUM_CORES = 64  # Number of CPU cores to use
 
-# Make sure the executables have the necessary permissions
-os.chmod(PETfold, 0o755)
-
 # Create the output directories if they don't exist
-os.makedirs(SAMPLES_FASTA, exist_ok=True)
 os.makedirs(PETfold_PRE_OUTPUT, exist_ok=True)
 
 # Function to run a command and return the output
@@ -36,17 +31,17 @@ def process_file_PETfold(file):
     else:
         # Run PETfold prediction
         run_command(f"{PETfold} -f {os.path.join(SAMPLES_FASTA, file)} >> {output_file}")
-        #run_command(f"{PETfold} --sci {os.path.join(SAMPLES_MAF, file)} >> {output_file}")
         print(f"{output_file} finished")
 
 def increment_count():
     global count, start_time
-    count += 1
-    if count % 1000 == 0:
-        elapsed_time = time.time() - start_time
-        print(f"Processed {count} files in {elapsed_time:.2f} seconds")
-        with open("PETfold_execution_time.log", "a") as log_file:
-            log_file.write(f"Processed {count} files in {elapsed_time:.2f} seconds\n")
+    with lock:
+        count += 1
+        if count % 1000 == 0:
+            elapsed_time = time.time() - start_time
+            print(f"Processed {count} files in {elapsed_time:.2f} seconds")
+            with open("PETfold_execution_time.log", "a") as log_file:
+                log_file.write(f"Processed {count} files in {elapsed_time:.2f} seconds\n")
 
 # Start time measurement
 start_time = time.time()
@@ -58,7 +53,6 @@ lock = threading.Lock()
 
 with ProcessPoolExecutor(max_workers=NUM_CORES) as executor:
     futures = {executor.submit(process_file_PETfold, file): file for file in os.listdir(SAMPLES_FASTA) if file.endswith(".fasta")}
-    #futures = {executor.submit(process_file_PETfold, file): file for file in os.listdir(SAMPLES_MAF) if file.endswith(".maf")}
     for future in as_completed(futures):
         future.result()
         increment_count()

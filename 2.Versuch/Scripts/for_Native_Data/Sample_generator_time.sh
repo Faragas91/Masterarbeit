@@ -11,25 +11,29 @@ chmod +x "$SISSIz"
 chmod +x "$MULTIPERM"
 
 mkdir -p "$SAMPLES_CLUSTAL"
+mkdir -p "$SAMPLES_CLSTAL/positive"
+mkdir -p "$SAMPLES_CLSTAL/negative"
 
 start_all=$(date +%s.%N)
 start_sissiz_mono=$(date +%s.%N)
 echo "$start_sissiz_mono"
 
 # Loop through each input .clu file
-for input_file in "$SAMPLES_CLUSTAL"/*.clu; do
+for input_file in "$SAMPLES_CLUSTAL/positive"/*.clu; do
 # for input_file in "$SAMPLES_MAF"/*.maf; do
     filename=$(basename "$input_file")
     echo -e "\nProcessing: $filename"
-    SISSIz_mono_out="$SAMPLES_CLUSTAL/neg_sample_SISSIz_mono_${filename}"
+    SISSIz_mono_out="$SAMPLES_CLUSTAL/negative/neg_sample_SISSIz_mono_${filename}"
     # SISSIz_mono_out="$SAMPLES_MAF/neg_sample_SISSIz_mono_${filename}"
     if [ ! -f "$SISSIz_mono_out" ]; then
-        "$SISSIz" -s -i "$input_file" > "$SISSIz_mono_out"
-        echo "SISSIz mono done"
+        if timeout 10s "$SISSIz" -s -i "$input_file" > "$SISSIz_mono_out"; then
+            echo "SISSIz mono done"
+        else
+            echo "⚠️  Timeout or error for $filename — skipping"
+        fi
     else
         echo "SISSIz mono exists"
     fi
-
 done
 
 end_sissiz_mono=$(date +%s.%N)
@@ -40,15 +44,18 @@ start_sissiz_di=$(date +%s.%N)
 echo "$start_sissiz_di"
 
 # Loop through each input .clu file
-for input_file in "$SAMPLES_CLUSTAL"/*.clu; do
+for input_file in "$SAMPLES_CLUSTAL/positive"/*.clu; do
     filename=$(basename "$input_file")
     echo -e "\nProcessing: $filename"
-    SISSIz_di_out="$SAMPLES_CLUSTAL/neg_sample_SISSIz_di_${filename}"
+    SISSIz_di_out="$SAMPLES_CLUSTAL/negative/neg_sample_SISSIz_di_${filename}"
     # SISSIz_di_out="$SAMPLES_MAF/neg_sample_SISSIz_di_${filename}"
     if [ ! -f "$SISSIz_di_out" ]; then
-        "$SISSIz" -s -d "$input_file" > "$SISSIz_di_out"
-        echo "SISSIz di done"
-    else
+        if timeout 10s "$SISSIz" -s -d "$input_file" > "$SISSIz_di_out"; then
+            echo "SISSIz di done"
+        else
+            echo "⚠️  Timeout or error for $filename — skipping"
+        fi
+    else 
         echo "SISSIz di exists"
     fi
 done
@@ -61,21 +68,21 @@ start_multiperm_mono=$(date +%s.%N)
 echo "$start_multiperm_mono"
 
 # Loop through each input .clu file
-for input_file in "$SAMPLES_CLUSTAL"/*.clu; do
+for input_file in "$SAMPLES_CLUSTAL/positive"/*.clu; do
     filename=$(basename "$input_file")
     echo -e "\nProcessing: $filename"
-    MULTIPERM_mono_out="$SAMPLES_CLUSTAL/neg_sample_MULTIPERM_mono_${filename}"
+    MULTIPERM_mono_out="$SAMPLES_CLUSTAL/negative/neg_sample_MULTIPERM_mono_${filename}"
     # MULTIPERM_mono_out="$SAMPLES_MAF/neg_sample_MULTIPERM_mono_${filename}"
     if [ ! -f "$MULTIPERM_mono_out" ]; then
-        "$MULTIPERM" -w --conservation=none "$input_file"
-        # "$MULTIPERM" --conservation=none -v "$input_file"
-        mv perm_001_*.clu "$MULTIPERM_mono_out" 2>/dev/null
-        # mv perm_001_*.maf "$MULTIPERM_mono_out" 2>/dev/null
-        echo "MULTIPERM mono done"
+        if timeout 10s "$MULTIPERM" -w --conservation=none "$input_file"; then
+            mv perm_001_*.clu "$MULTIPERM_mono_out" 2>/dev/null
+            echo "MULTIPERM mono done"
+        else
+            echo "⚠️  Timeout or error for $filename — skipping"
+        fi
     else
         echo "MULTIPERM mono exists"
     fi
-
 done
 
 end_multiperm_mono=$(date +%s.%N)
@@ -86,21 +93,21 @@ start_multiperm_di=$(date +%s.%N)
 echo "$start_multiperm_di"
 
 # Loop through each input .clu file
-for input_file in "$SAMPLES_CLUSTAL"/*.clu; do
+for input_file in "$SAMPLES_CLUSTAL/positive"/*.clu; do
     filename=$(basename "$input_file")
     echo -e "\nProcessing: $filename"
-    MULTIPERM_di_out="$SAMPLES_CLUSTAL/neg_sample_MULTIPERM_di_${filename}"
+    MULTIPERM_di_out="$SAMPLES_CLUSTAL/negative/neg_sample_MULTIPERM_di_${filename}"
     # MULTIPERM_di_out="$SAMPLES_MAF/neg_sample_MULTIPERM_di_${filename}"
     if [ ! -f "$MULTIPERM_di_out" ]; then
-        "$MULTIPERM" -w "$input_file"
-        # "$MULTIPERM" --conservation=level1 -v "$input_file"
-        mv perm_001_*.clu "$MULTIPERM_di_out" 2>/dev/null
-        # mv perm_001_*.maf "$MULTIPERM_di_out" 2>/dev/null
-        echo "MULTIPERM di done"
+        if timeout 10s "$MULTIPERM" -w --conservation=level1 "$input_file"; then
+            mv perm_001_*.clu "$MULTIPERM_di_out" 2>/dev/null
+            echo "MULTIPERM di done"
+        else
+            echo "⚠️  Timeout or error for $filename — skipping"
+        fi
     else
         echo "MULTIPERM di exists"
     fi
-
 done
 
 end_multiperm_di=$(date +%s.%N)
@@ -111,13 +118,16 @@ start_alifoldz=$(date +%s.%N)
 echo "$start_alifoldz"
 
 # Loop through each input .clu file
-for input_file in "$SAMPLES_CLUSTAL"/*.clu; do
+for input_file in "$SAMPLES_CLUSTAL/positive"/*.clu; do
     filename=$(basename "$input_file")
     echo -e "\nProcessing: $filename"
-    ALIFOLDZ_out="$SAMPLES_CLUSTAL/neg_sample_ALIFOLDz_${filename}"
+    ALIFOLDZ_out="$SAMPLES_CLUSTAL/negative/neg_sample_ALIFOLDz_${filename}"
     if [ ! -f "$ALIFOLDZ_out" ]; then
-        perl "$ALIFOLDZ" < "$input_file" > "$ALIFOLDZ_out"
-        echo "ALIFOLDz done"
+        if timeout 10s perl "$ALIFOLDZ" < "$input_file" > "$ALIFOLDZ_out"; then
+            echo "ALIFOLDz done"
+        else
+            echo "⚠️  Timeout or error for $filename — skipping"
+        fi
     else
         echo "ALIFOLDz exists"
     fi

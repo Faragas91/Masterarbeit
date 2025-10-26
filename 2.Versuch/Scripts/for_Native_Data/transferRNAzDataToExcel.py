@@ -34,14 +34,12 @@ def createExcelData(data, count, nameOfFile, excelName):
     df = pd.DataFrame(data)
     df.to_excel(f"{excelName}.xlsx", index=False)
 
-    output_dir = "D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAz_Excel"
-    # output_dir = "/mnt/hdd/Masterarbeit/2.Versuch/Native_Data/RNAz_Excel"
+    output_dir = "/mnt/bernhard/Masterarbeit/2.Versuch/Result/Native_Results/RNAz_Excel"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
     print(f"Your data was succsessfully transfered to {excelName}.xlsx.")
-    shutil.move(f"D:/Masterarbeit/{excelName}.xlsx", f"D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAz_Excel/{excelName}.xlsx")
-    # shutil.move(f"/mnt/hdd/Masterarbeit/{excelName}.xlsx", f"/mnt/hdd/Masterarbeit/2.Versuch/Native_Data/RNAz_Excel/{excelName}.xlsx")
+    shutil.move(f"/mnt/bernhard/Masterarbeit/{excelName}.xlsx", f"/mnt/bernhard/Masterarbeit/2.Versuch/Native_Results/RNAz_Excel/{excelName}.xlsx")
     return count
 
 
@@ -58,20 +56,16 @@ def createNativeExcelData(data, count, excelName):
     df = pd.DataFrame(data)
     df.to_excel(f"{excelName}.xlsx", index=False)
 
-    output_dir = "D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAz_Excel"
-    # output_dir = "/mnt/hdd/Masterarbeit/2.Versuch/Native_Data/RNAz_Excel"
+    output_dir = "/mnt/bernhard/Masterarbeit/2.Versuch/Native_Results/RNAz_Excel"
+    # output_dir = "/mnt/hdd/Masterarbeit/2.Versuch/Native_Results_Excel"
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
     print(f"Your data was succsessfully transfered to {excelName}.xlsx.")
-    shutil.move(f"D:/Masterarbeit/{excelName}.xlsx", f"D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAz_Excel/{excelName}.xlsx")
+    shutil.move(f"/mnt/bernhard/Masterarbeit/{excelName}.xlsx", f"/mnt/bernhard/Masterarbeit/2.Versuch/Native_Results/RNAz_Excel/{excelName}.xlsx")
     return count 
 
-directory = "D:/Masterarbeit/2.Versuch/Result/Native_Results/RNAz_PREDICTION/"
-    # shutil.move(f"/mnt/hdd/Masterarbeit/{excelName}.xlsx", f"/mnt/hdd/Masterarbeit/2.Versuch/Native_Data/RNAz_Excel/{excelName}.xlsx")
-    # return count 
-
-# directory = "/mnt/hdd/Masterarbeit/2.Versuch/Native_Data/RNAz_PREDICTION/"
+directory = "/mnt/bernhard/Masterarbeit/2.Versuch/Native_Results/RNAz_PREDICTION/"
 
 count = 0
 pos_data = []
